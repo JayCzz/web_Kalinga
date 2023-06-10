@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+
+		<!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+		<!-- google fonts link  -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+
+        <!-- bootstrap css link  -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="css/citizen_profile.css">
+    </head>
+
+    <body>
+        <!-- header section starts -->
+
+        <header class="header">
+            <section class="flex">
+                <a href="citizen_index.html" class="logo">
+                    Citizen
+                </a>
+            
+                <form action="search.html" method="post" class="search-form">
+                    <input type="text" name="search_box" required placeholder="search..." maxlength="100">
+                    <button type="submit" class="fas fa-search"></button>
+                </form>
+            
+                <div class="icons">
+                    <div id="menu-btn" class="fas fa-bars"></div>
+                    <div id="search-btn" class="fas fa-search"></div>
+                    <div id="user-btn" class="fas fa-user"></div>
+                    <div id="toggle-btn" class="fas fa-sun"></div>
+                </div>
+            
+                <div class="profile">
+                    <img src="uploaded_qr/FN-01001.png" class="image" alt="">
+                    <h3 class="name">Dwyane Wade</h3>
+                    <p class="role">Citizen</p>
+                    <a href="citizen_profile.php" class="btn">view profile</a>
+                </div>
+            </section>
+        </header>
+
+        <!-- header section ends -->
+
+        <!-- side bar section starts  -->
+
+        <div class="side-bar">
+            <div id="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+        
+            <div class="profile">
+                <img src="uploaded_qr/FN-01001.png" class="image" alt="">
+                <h3 class="name">Dwyane Wade</h3>
+                <p class="role">Citizen</p>
+                <a href="citizen_profile.php" class="btn">view profile</a>
+            </div>
+                    
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <a href="citizen_index.php">
+                            <i class="fa fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-calendar-check"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-file-text"></i>
+                            <span>Prescription</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bell"></i>
+                            <span>Notification</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-plus"></i>
+                            <span>Queueing</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-question"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                
+                    <li class="logout">
+                        <a href="../components/logout.php">
+                            <i class="fa fa-sign-out"></i>
+                            <span>Sign Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- side bar section ends -->
+        
+        <section class="dashboard">
+            <h1 class="heading">Medical Consultation Window</h1>
+
+            <div class="payat">
+                <table class="table lamesa">
+                    <thead class="thead-dark pangalan">
+                        <tr>
+                            <th scope="col" class="omsim">Queue Number</th>
+                            <th scope="col" class="omsim">Name</th>
+                            <th scope="col" class="omsim">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="pangalan">
+                        <tr>
+                            <th scope="row" class="omsims">QUEUE 0001</th>
+                            <td class="omsims">Lebron James</td>
+                            <td class="omsims">Waiting</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="omsims">QUEUE 0002</th>
+                            <td class="omsims">Kevin Durant</td>
+                            <td class="omsims">Waiting</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="omsims">QUEUE 0003</th>
+                            <td class="omsims">Kyrie Irving</td>
+                            <td class="omsims">Waiting</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- custom js file link  -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
