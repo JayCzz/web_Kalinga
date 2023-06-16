@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `lastName` varchar(100) NOT NULL,
   `birthday` date NOT NULL,
   `age` int NOT NULL,
-  `sex` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `sex` enum('Male','Female') CHARACTER SET utf8mb4  NOT NULL,
   `adminNumber` varchar(8) NOT NULL,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   KEY `username` (`username`),
   KEY `email` (`email`),
   KEY `phoneNumber` (`phoneNumber`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `admin`
@@ -74,7 +74,7 @@ INSERT INTO `admin` (`id`, `user_id`, `type`, `firstName`, `lastName`, `birthday
 
 DROP TABLE IF EXISTS `consultation`;
 CREATE TABLE IF NOT EXISTS `consultation` (
-  `consultation_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `consultation_name` varchar(100) CHARACTER SET utf8mb4  NOT NULL,
   `adress` varchar(100) NOT NULL,
   `date` date NOT NULL,
   `familyNumber` varchar(8) NOT NULL,
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `consultation` (
   KEY `cnumber` (`cnumber`),
   KEY `consultation` (`consultation`(250)),
   KEY `consultation_name` (`consultation_name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `consultations` (
   KEY `familyNumber` (`familyNumber`),
   KEY `cnumber` (`cnumber`),
   KEY `consultation` (`consultation`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `consultations`
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `doctor` (
   `lastName` varchar(100) NOT NULL,
   `birthday` date NOT NULL,
   `age` bigint NOT NULL,
-  `sex` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `sex` enum('Male','Female') CHARACTER SET utf8mb4  NOT NULL,
   `doctorNumber` varchar(8) NOT NULL,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -161,7 +161,7 @@ CREATE TABLE IF NOT EXISTS `doctor` (
   KEY `username` (`username`),
   KEY `email` (`email`),
   KEY `phoneNumber` (`phoneNumber`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `doctor`
@@ -180,11 +180,11 @@ INSERT INTO `doctor` (`id`, `user_id`, `type`, `firstName`, `lastName`, `birthda
 DROP TABLE IF EXISTS `inventory`;
 CREATE TABLE IF NOT EXISTS `inventory` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `quantity` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
+  `quantity` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `inventory`
@@ -230,7 +230,7 @@ CREATE TABLE IF NOT EXISTS `nurse` (
   KEY `username` (`username`),
   KEY `email` (`email`),
   KEY `phoneNumber` (`phoneNumber`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `nurse`
@@ -262,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `prescriptions` (
   KEY `familyNumber` (`familyNumber`),
   KEY `cnumber` (`cnumber`),
   KEY `prescription` (`prescription`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `prescriptions`
@@ -283,7 +283,7 @@ CREATE TABLE IF NOT EXISTS `qr_code` (
   `name` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `qr_code`
@@ -308,7 +308,7 @@ DROP TABLE IF EXISTS `queue_id_value`;
 CREATE TABLE IF NOT EXISTS `queue_id_value` (
   `id` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `queue_id_value`
@@ -332,9 +332,9 @@ CREATE TABLE IF NOT EXISTS `queue_list` (
   `qnumber` bigint NOT NULL,
   `name` varchar(255) NOT NULL,
   `type` enum('Medical','Dental') NOT NULL,
-  `status` enum('Active','Waiting','Done','No Show') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `status` enum('Active','Waiting','Done','No Show') CHARACTER SET utf8mb4  NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `queue_list`
@@ -418,7 +418,7 @@ CREATE TABLE IF NOT EXISTS `schedule_list` (
   `start_datetime` datetime NOT NULL,
   `end_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `schedule_list`
@@ -442,8 +442,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `lastName` varchar(100) NOT NULL,
   `birthday` date NOT NULL,
   `age` bigint NOT NULL,
-  `sex` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `familyNumber` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `sex` enum('Male','Female') CHARACTER SET utf8mb4  NOT NULL,
+  `familyNumber` varchar(8) CHARACTER SET utf8mb4  NOT NULL,
   `height` bigint NOT NULL,
   `weight` bigint NOT NULL,
   `bp` varchar(8) NOT NULL,
@@ -467,7 +467,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `weight` (`weight`),
   KEY `bp` (`bp`),
   KEY `updated` (`updated`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `users`
