@@ -423,7 +423,7 @@ section{
    margin-bottom: 15rem;
 }
 
-.services .lead{
+.services .lead {
    text-transform: capitalize;
    font-size: 4rem;
    font-weight: 500;
@@ -465,20 +465,22 @@ section{
 /* Services section ends */
 
 section.services-block {
-   background: rgb(239, 98, 146);
-   background: -webkit-linear-gradient(bottom left,rgba(239, 98, 146) 0,rgb(239, 98, 146) 100%),url(../images/services-bg.jpg);
-   background: -o-linear-gradient(bottom left,rgba(239, 98, 146) 0,rgba(239, 98, 146) 100%),url(../images/services-bg.jpg);
-   background: linear-gradient(to top right,rgba(239, 98, 146) 0,rgba(239, 98, 146) 100%),url(../images/services-bg.jpg);
+   background: #ef6292;
+   background: -webkit-linear-gradient(bottom left,rgba(239, 98, 145,.7) 0,rgba(201, 40, 93, 0.7) 100%),url(../img/services-bg.jpg);
+   background: -o-linear-gradient(bottom left,rgba(239, 98, 146,.7) 0,rgba(201, 40, 93, 0.7) 100%),url(../img/services-bg.jpg);
+   background: linear-gradient(to top right,rgba(239, 98, 146,.7) 0,rgba(201, 40, 93, 0.7) 100%),url(../img/services-bg.jpg);
    background-repeat: no-repeat;
    background-size: 100% auto;
    padding-top: 88px;
-   padding-bottom: 88px
+   padding-bottom: 88px;
+
 }
+
 
 @media (max-width: 767.98px) {
    section.services-block {
        background-size:auto;
-       background-repeat: repeat
+       background-repeat: repeat;
    }
 }
 
@@ -494,6 +496,10 @@ section.services-block .block-introduction h2 {
 section.services-block .block-introduction h2 .emphasize {
    color: #fff!important;
    letter-spacing: 1.5px
+}
+
+section.services-block .services-txt{
+   color: #fff;
 }
 
 @media (max-width: 767.98px) {
@@ -553,8 +559,8 @@ section.services-block .services-block .col-sm-4 .services-item li:nth-child(2) 
 }
 
 @media (max-width: 767.98px) {
-   section.services-block .services-block .col-sm-4 .services-item {
-       text-align:center
+   section.services-block .services-block .col-sm-4 .services-item .h3 {
+       text-align:center;
    }
 }
 
@@ -569,13 +575,12 @@ section.services-block .services-block .col-sm-4 .services-item li:nth-child(2) 
 h2.block-title>span {
    color: #333;
    font-weight: 800;
-   font-size: 4rem;
 }
 
 h2.block-title>span.emphasize {
    color: #ef6292!important;
    font-weight: 800;
-   font-size: 4rem;
+   font-size:4rem;
 }
 
 section.features-block .container .block-introduction {
