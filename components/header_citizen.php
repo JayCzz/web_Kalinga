@@ -61,7 +61,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="citizen_prescription.php">
                     <i class="fas fa-file-text"></i>
                     <span>Prescription</span>
                 </a>
