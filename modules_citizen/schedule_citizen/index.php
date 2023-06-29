@@ -41,6 +41,12 @@
 </head>
 
 <body class="bg-light">
+
+    <!-- Admin Header -->
+    <?php
+    include '../components/header_citizen.php';
+    ?>
+    
     <div class="container py-5" id="page-container">
         <div class="row">
             <div class="col-md-9">
