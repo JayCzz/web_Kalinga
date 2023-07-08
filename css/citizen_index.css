@@ -625,17 +625,22 @@ section.features-block .container .row .features--item {
 
 @media (min-width: 576px) {
    section.features-block .container .row .features--item .img-block {
-       flex-basis:16%
+       flex-basis:16%;
+       
+       
    }
 }
 
 section.features-block .container .row .features--item .img-block img {
-   margin-top: 4px
+   margin-top: 4px;
+   
+   
 }
 
 @media (max-width: 767.98px) {
    section.features-block .container .row .features--item .img-block img {
        width:88px;
+       
        margin: 0 auto!important
    }
 }
@@ -654,6 +659,8 @@ section.features-block .container .row .features--item .txt-block h3 {
 section.features-block .container .row .features--item .txt-block p {
    font-size: 14px;
    line-height: 1.7
+   
+   
 }
 
 section.features-block .container .row .features--item .txt-block p span.emphasize {
@@ -713,6 +720,216 @@ section.features-block .container .row .features--item .txt-block p span.emphasi
    }
 }
 
+
+
+/* Benefits of Family Planning */
+
+
+ .item-wrapper {
+   background-color: var(--main-color);
+   width: 400px;
+   position: relative;
+   overflow: hidden;
+   margin: 20px auto;
+   padding: 20px;
+ }
+ 
+ .item-wrapper .line {
+   background-color: var(--white);
+   position: absolute;
+ }
+ 
+ .item-wrapper .line span {
+   background-color: #e3e3e3;
+   position: inherit;
+   display: block;
+   transition: all 0.4s ease-out;
+ }
+ .item-wrapper .line-top{
+   top: 0;
+   left: 0;
+   width:100%;
+   height:4px;
+ }
+ .item-wrapper .line-right{
+   top: 0;
+   right: 0;
+   width:4px;
+   height:100%;
+ }
+ .item-wrapper .line-bottom{
+   right: 0;
+   bottom: 0;
+   width:100%;
+   height:4px;
+ }
+ .item-wrapper .line-left {
+   left: 0;
+   bottom: 0;
+   width: 4px;
+   height: 100%;
+ }
+ .item-wrapper .line-top span{
+   top:inherit;
+   left:inherit;
+   width:0;
+   height:100%;
+ }
+ .item-wrapper .line-right span{
+   top:inherit;
+   right:inherit;
+   width:100%;
+   height:0;
+ }
+ .item-wrapper .line-bottom span{
+   right:inherit;
+   bottom:inherit;
+   width:0;
+   height:100%;
+ }
+ .item-wrapper .line-left span {
+   left: inherit;
+   bottom: inherit;
+   width: 100%;
+   height: 0;
+ }
+ .item-wrapper:hover .line-top span,
+ .item-wrapper:hover .line-bottom span{
+   width:100%;
+ }
+ .item-wrapper:hover .line-left span,
+ .item-wrapper:hover .line-right span{
+   height:100%;
+ }
+ .item-wrapper > .item{
+   padding:40px 30px;
+   text-transform: uppercase;
+   text-align: justify;
+ }
+ .item-wrapper > .item > h2{
+   font-size: 46px;
+   line-height: 40px;
+   color: #fff;
+ }
+
+ .item-wrapper > .item > h2 .title{
+   color:#fff;
+   font-weight: 800;
+ }
+ 
+ .item-wrapper > .item > h3{
+   color: #fff;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   line-height: 1.9;
+ }
+ 
+/* Benefits of Family Planning ends */
+
+/* Importance of Family Planning */
+
+.item-wrapper2 {
+   background-color: #ef6292;
+   width: 400px;
+   position: relative;
+   overflow: hidden;
+   margin: 20px auto;
+   padding: 20px;
+ }
+ 
+ .item-wrapper2 .line2 {
+   background-color: var(--white);
+   position: absolute;
+ }
+ 
+ .item-wrapper2 .line2 span {
+   background-color: #e3e3e3;
+   position: inherit;
+   display: block;
+   transition: all 0.4s ease-out;
+ }
+ .item-wrapper2 .line-top{
+   top: 0;
+   left: 0;
+   width:100%;
+   height:4px;
+ }
+ .item-wrapper2 .line-right{
+   top: 0;
+   right: 0;
+   width:4px;
+   height:100%;
+ }
+ .item-wrapper2 .line-bottom{
+   right: 0;
+   bottom: 0;
+   width:100%;
+   height:4px;
+ }
+ .item-wrapper2 .line-left {
+   left: 0;
+   bottom: 0;
+   width: 4px;
+   height: 100%;
+ }
+ .item-wrapper2 .line-top span{
+   top:inherit;
+   left:inherit;
+   width:0;
+   height:100%;
+ }
+ .item-wrapper2 .line-right span{
+   top:inherit;
+   right:inherit;
+   width:100%;
+   height:0;
+ }
+ .item-wrapper2 .line-bottom span{
+   right:inherit;
+   bottom:inherit;
+   width:0;
+   height:100%;
+ }
+ .item-wrapper2 .line-left span {
+   left: inherit;
+   bottom: inherit;
+   width: 100%;
+   height: 0;
+ }
+ .item-wrapper2:hover .line-top span,
+ .item-wrapper2:hover .line-bottom span{
+   width:100%;
+ }
+ .item-wrapper2:hover .line-left span,
+ .item-wrapper2:hover .line-right span{
+   height:100%;
+ }
+ .item-wrapper2 > .item2{
+   padding:40px 30px;
+   text-transform: uppercase;
+   text-align: justify;
+ }
+ .item-wrapper2 > .item2 > h2{
+   font-size: 46px;
+   line-height: 40px;
+   color: #fff;
+ }
+
+ .item-wrapper2 > .item2 > h2 .title2{
+   color:#fff;
+   font-weight: 800;
+ }
+ 
+ .list{
+  color: #fff; 
+  line-height: 40px;
+  font-size: 20px;
+  padding:40px 30px;
+  text-align: left;
+ }
+
+
+
 /* Kalinga Features end */
 
 /* About section starts */
@@ -729,6 +946,7 @@ section.features-block .container .row .features--item .txt-block p span.emphasi
    font-size: 18px;
    line-height: 1.5;
    margin: 15px 0px;
+   text-align: justify;
 }
 /* About section ends */
 

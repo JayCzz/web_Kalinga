@@ -88,3 +88,23 @@ function random_num($length)
 
 	return $text;
 }
+
+function verification_code($haba)
+{
+
+	$letra = "";
+	if($haba < 6)
+	{
+		$haba = 6;
+	}
+
+	$leni = rand(6,$haba);
+
+	for ($i=0; $i < $leni; $i++) { 
+		# code...
+
+		$letra .= rand(0,9);
+	}
+
+	return $letra;
+}

@@ -74,37 +74,37 @@ $user_data = check_login($con);
             <div class="box">
                 <img src="../img/service01.png" alt="">
                 <h3>Medical Consultation</h3>
-                <p>Free checkups are provided for the residents</p>
+                <p>Free checkups are provided for the residents.</p>
             </div>
 
             <div class="box">
                 <img src="../img/service02.png" alt="">
-                <h3>Dental care</h3>
-                <p>Free checkups are provided for the residents</p>
+                <h3>Emergency Help</h3>
+                <p>Emergency hotlines to call or text.</p>
             </div>
 
             <div class="box">
                 <img src="../img/service03.png" alt="">
-                <h3>Nutritional support</h3>
-                <p>Provides inpatient consultation for all aspects of nutrition support</p>
+                <h3>First Aid</h3>
+                <p>First aid services for patients.</p>
             </div>
 
             <div class="box">
-                <img src="../img/service03.png" alt="">
+                <img src="../img/healthcare_pink.png" alt="">
                 <h3>Preventive care</h3>
-                <p>Free checkups, and patient counseling to prevent illnesses, disease, or other health problems</p>
+                <p>Patient counseling to prevent illnesses, disease, or other health problems.</p>
             </div>
 
             <div class="box">
-                <img src="../img/service03.png" alt="">
+                <img src="../img/medication-bottle_pink.png" alt="">
                 <h3>Pharmaceutical care</h3>
-                <p>Free Pharmaceutical Care to optimize the patient's health-related quality of life</p>
+                <p>Pharmaceutical care for responsible provision of drug therapy to patient.</p>
             </div>
 
             <div class="box">
-                <img src="../img/service03.png" alt="">
-                <h3>Medical Assistance Program (MAP)</h3>
-                <p>free medicine program for indigents</p>
+                <img src="../img/medicine_pink.png" alt="">
+                <h3>Medical Assistance Program</h3>
+                <p>Free medicine program for residents.</p>
             </div>
         </div>
     </section>
@@ -189,6 +189,68 @@ $user_data = check_login($con);
     </section>
     <!-- Guidelines End -->
 
+<!-- Benefits of Family Planning -->
+
+<div class="site-wrapper">
+     <div class="item-wrapper">
+       <div class="line line-top">
+         <span></span>
+       </div>
+       <div class="line line-right">
+        <span></span>
+      </div>
+      <div class="line line-bottom">
+        <span></span>
+      </div>
+      <div class="line line-left">
+        <span></span>
+      </div>
+      <div class="item">
+        <h2>Family <br /><span class="title">Planning</span> Benefits</h2>
+
+            <h3> 1. Family planning helps parents take better care of their children. <br>
+                 2. Prevents unexpected or unintended pregnancies. <br>
+                3. Family planning improves the health of the mother. </h3>
+      </div>
+     </div>
+   </div>
+
+   <!-- Benefits of Family Planning ends -->
+
+<!-- Importance of Family Planning -->
+
+<div class="site-wrapper2">
+    <div class="item-wrapper2">
+    <div class="line2 line-top">
+            <span> </span>
+        </div>
+        <div class="line2 line-right">
+            <span> </span>
+        </div>
+        <div class="line2 line-bottom">
+            <span> </span>
+        </div>
+        <div class="line2 line-left">
+            <span> </span>
+        </div>
+        <div class="item2">
+            <h2> <span class="title2">Birth</span> <br />   Control Methods </h2>
+
+            <ul class="list">
+                <li> Sterilization </li>
+                <li> Hormonal implants </li>
+                <li> Short-acting hormonal methods </li>
+                <li> Barrier methods </li>
+                <li> Abstinence </li>  
+    </div>
+</div>
+        
+
+           <!-- Importance of Family Planning ends --> 
+
+
+    
+
     <!-- Kalinga Features  -->
     <section class="features-block block" id="features">
         <div class="container">
@@ -201,69 +263,63 @@ $user_data = check_login($con);
                     <div class="features">
                         <div class="features--item" data-aos="fade-right" data-aos-duration="400">
                             <div class="img-block">
-                                <img src="https://klinika.ph/klinika/images/features/patient-information.svg"
-                                    alt="Klinika - Clinic Management System for Doctors">
+                                <img src="../img/contacts_pink.png" alt="" width="50" height="50">
                             </div>
                             <div class="txt-block">
-                                <h3>Patient Information</h3>
-                                <p>Access and update of the Citizen <span class="emphasize">Records</span></p>
+                                <h3>Family List </h3>
+                                <p>Shows <span class="emphasize">records</span> of each member of a family.
                             </div>
+                          
                         </div>
                         <div class="features--item" data-aos="fade-right" data-aos-duration="800">
                             <div class="img-block">
-                                <img src="https://klinika.ph/klinika/images/features/medical-notes.svg"
-                                    alt="Klinika - Clinic Management System for Doctors">
+                            <img src="../img/prescription_pink.png" alt="" width="50" height="50">
                             </div>
                             <div class="txt-block">
                                 <h3>Medical Notes</h3>
-                                <p>Keep track of your patient's latest <span class="emphasize"> Medical Condition</span>
-                                    anytime, anywhere.</p>
+                                <p>View <span class="emphasize"> medical records</span> of a patient.</p>
                             </div>
                         </div>
                         <div class="features--item" data-aos="fade-right" data-aos-duration="1200">
                             <div class="img-block">
-                                <img src="https://klinika.ph/klinika/images/features/patient-images.svg"
-                                    alt="Klinika - Clinic Management System for Doctors">
+                            <img src="../img/qr-code_pink.png" alt="" width="50" height="50"> 
+                                    
                             </div>
                             <div class="txt-block">
                                 <h3>QR Code Modules</h3>
-                                <p>Quick and easy access of informations on the <span class="emphasize">Citizen</span>
-                                    and for each patient.</p>
+                                <p> <span class="emphasize">Scan</span>
+                                    QR code for the patient's information.</p>
                             </div>
                         </div>
                         <div class="features--item" data-aos="fade-right" data-aos-duration="1600">
                             <div class="img-block">
-                                <img src="https://klinika.ph/klinika/images/features/schedule.svg"
-                                    alt="Klinika - Clinic Management System for Doctors">
+                            <img src="../img/calendar_pink.png" alt="" width="50" height="50">
                             </div>
                             <div class="txt-block">
                                 <h3>Calendar</h3>
-                                <p>Keep track of the weekly and daily <span class="emphasize">Events</span> on the healt
-                                    center</p>
+                                <p>Keep track of the different <span class="emphasize">events</span> of the health
+                                    center.</p>
                             </div>
                         </div>
                         <div class="features--item" data-aos="fade-right" data-aos-duration="2000"
                             style="margin-bottom: 0;">
                             <div class="img-block">
-                                <img src="https://klinika.ph/klinika/images/features/payments.svg"
-                                    alt="Klinika - Clinic Management System for Doctors">
+                            <img src="../img/information_pink.png" alt="" width="50" height="50">
                             </div>
                             <div class="txt-block">
-                                <h3>Family List </h3>
-                                <p>Keep track of your patient <span class="emphasize">Cash</span> and <span
-                                        class="emphasize">Installment</span> payments.</p>
+                                <h3>Patient Information</h3>
+                                <p>Shows the <span class="emphasize">records</span> of the patient in the health center.</p>
                             </div>
+                            
                         </div>
                         <div class="features--item" data-aos="fade-right" data-aos-duration="2400"
                             style="margin-bottom: 0;">
                             <div class="img-block">
-                                <img src="https://klinika.ph/klinika/images/features/reports.svg"
-                                    alt="Klinika - Clinic Management System for Doctors">
+                            <img src="../img/ticket_pink.png" alt="" width="50" height="50">
                             </div>
                             <div class="txt-block">
                                 <h3>Queueing</h3>
-                                <p>Generate <span class="emphasize">Income</span> and <span
-                                        class="emphasize">Expenses</span> report in an instant.</p>
+                                <p>Log an <span class="emphasize">appointment</span> on the health center.</p>
                             </div>
                         </div>
                     </div>

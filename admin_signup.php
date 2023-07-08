@@ -8,7 +8,9 @@
 
 		//something was posted
 		$firstName = $_POST['firstName'];
+        $middleName = $_POST['middleName'];
 		$lastName = $_POST['lastName'];
+        $suffix = $_POST['suffix'];
 		$birthday = $_POST['birthday'];
 		$age = $_POST['age'];
 		$sex = $_POST['sex'];
@@ -17,12 +19,13 @@
 		$email = $_POST['email'];
 		$phoneNumber = $_POST['phoneNumber'];
 		$password = $_POST['password'];
+        $verify_token = verification_code(6);
 
 		if(!empty($firstName) && !empty($lastName) && !empty($birthday) && !empty($age) && !empty($adminNumber) && !empty($username) && !empty($email) && !empty($phoneNumber) && !empty($password) && !is_numeric($firstName) && !is_numeric($lastName) && !is_numeric($usename) && !is_numeric($email)) {
 
 			//save to database
 			$user_id = random_num(20);
-			$query = "insert into admin (user_id,type,firstName,lastName,birthday,age,sex,adminNumber,username,email,phoneNumber,password) values ('$user_id','Admin','$firstName','$lastName','$birthday','$age','$sex','$adminNumber','$username','$email','$phoneNumber','$password')";
+			$query = "insert into admin (user_id,type,firstName,middleName,middleInitial,lastName,suffix,birthday,age,sex,adminNumber,username,email,phoneNumber,password,verify_token) values ('$user_id','Admin','$firstName','$middleName','$middleName','$lastName','$suffix','$birthday','$age','$sex','$adminNumber','$username','$email','$phoneNumber','$password','$verify_token')";
 
 			mysqli_query($con, $query);
 
@@ -65,8 +68,18 @@
                     </div>
 
                     <div class="user-input-box">
+                        <label for="middleName">Middle Name</label>
+                        <input type="text" id="middleName" name="middleName" placeholder="Enter Middle Name" required/>
+                    </div>
+
+                    <div class="user-input-box">
                         <label for="lastName">Last Name</label>
                         <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" required/>
+                    </div>
+
+                    <div class="user-input-box">
+                        <label for="suffix">Suffix</label>
+                        <input type="text" id="suffix" name="suffix" placeholder="Enter Suffix"/>
                     </div>
 
                     <div class="user-input-box">
