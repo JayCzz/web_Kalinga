@@ -68,7 +68,7 @@
             </li>
         
             <li>
-                <a href="#">
+                <a href="citizen_queueing_live.php">
                     <i class="fa fa-bell"></i>
                     <span>Live Queueing</span>
                 </a>

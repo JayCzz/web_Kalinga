@@ -78,7 +78,7 @@
                     </div>
 
                     <div class="user-input-box">
-                        <label for="suffix">Suffix</label>
+                        <label for="suffix">Suffix (Optional)</label>
                         <input type="text" id="suffix" name="suffix" placeholder="Enter Suffix"/>
                     </div>
 
