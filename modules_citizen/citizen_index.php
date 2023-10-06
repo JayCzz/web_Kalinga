@@ -23,7 +23,8 @@ $user_data = check_login($con);
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
 
     <!-- bootstrap link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../css/citizen_index.css">
@@ -41,7 +42,7 @@ $user_data = check_login($con);
     <section class="dashboard">
 
         <h1 class="heading">Home</h1>
-        
+
         <!-- Slideshow container -->
         <div class="slideshow-container fade">
 
@@ -69,7 +70,10 @@ $user_data = check_login($con);
 
     <!-- Services section starts  -->
     <section class="services mt-5" id="services">
-        <h2 class="lead">Healthcare Services</h2>
+
+        <div class="section-header">
+            <h2 class="section-title wow fadeInDown">Our Services</h2>
+        </div>
 
         <div class="box-container ">
             <div class="box">
@@ -113,322 +117,397 @@ $user_data = check_login($con);
 
     <!-- Guidelines -->
     <!-- -->
-    <section class="services-block ">
+    <section class="guidelines-block ">
         <div class="container">
             <div class="block-introduction">
                 <h2 class="block-title" style="font-size: 4rem;">STOP THE SPREAD OF <span class="emphasize">GERMS</span>
                 </h2>
             </div>
-            <div class="services-block row">
+
+            <div class="guidelines-circle row">
+
+                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="800">
+                    <ul class="services-item">
+                        <li>
+                            <picture>
+                                <img src="../img/sneezing.png" alt="sneezing" class="guide-picture">
+                            </picture>
+                        </li>
+                        <div class="services-txt">
+                            <h4 class="">Cover your mouth or nose</h4>
+                            <p class="">Cover your mouth and nose with a tissue when you cough or sneeze. Throw used
+                                tissues in the trash. If you don't have a tissue, cough or sneeze into your elbow, not
+                                your hands.</p>
+                        </div>
+                    </ul>
+                </div>
+
                 <div class="col-sm-4" data-aos="flip-left" data-aos-duration="400">
-                    <ul class="services-item">
+                    <div class="services-item ">
                         <li>
                             <picture>
-                                <img src="../img/distance.png">
+                                <img src="../img/distance.png" alt="distance" class="guide-picture">
                             </picture>
                         </li>
-                        <h3 class="services-txt mt-4">Practice the one meter social distancing</h3>
-                    </ul>
+                        <div class="services-txt">
+                            <h4 class="">Maintain distance</h4>
+                            <p class=""> the practice of keeping distance between yourself and people you don't live
+                                with. It also involves avoiding groups, gatherings and crowds in both indoor and outdoor
+                                spaces.</p>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="col-sm-4" data-aos="flip-left" data-aos-duration="800">
                     <ul class="services-item">
                         <li>
                             <picture>
-                                <img src="../img/sneezing.png">
+                                <img src="../img/disinfect.png" alt="disinfect" class="guide-picture">
                             </picture>
                         </li>
-                        <h3 class="services-txt mt-4">Cover your cough or sneeze with a tissue then throw the
-                            tissue in the trash</h3>
-                    </ul>
-                </div>
-                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="800">
-                    <ul class="services-item">
-                        <li>
-                            <picture>
-                                <img src="../img/disinfect.png">
-                            </picture>
-                        </li>
-                        <h3 class="services-txt mt-4">Clean and disinfect frequently touched objects and surfaces</h3>
+                        <div class="services-txt">
+                            <h4 class="">Disinfect</h4>
+                            <p class="">
+                                Disinfecting can kill harmful germs that remain on surfaces after cleaning. By killing
+                                germs on a surface after cleaning, disinfecting can further lower the risk of spreading
+                                disease.</p>
+                        </div>
                     </ul>
                 </div>
             </div>
-            <div class="services-block row">
-                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="1200">
-                    <ul class="services-item">
-                        <li>
-                            <picture>
-                                <img src="../img/no-touch.png">
-                            </picture>
-                        </li>
-                        <h3 class="services-txt mt-4">Avoid touching your eyes, nose and mouth</h3>
-                    </ul>
-                </div>
-                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="2000">
-                    <ul class="services-item">
-                        <li>
-                            <picture>
-                                <img src="../img/quarantine.png">
-                            </picture>
-                        </li>
-                        <h3 class="services-txt mt-4">Stay home when you are sick except to get medical care</h3>
 
-                    </ul>
+            <!-- Second row -->
+
+            <div class="guidelines-circle row mt-5">
+
+                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="400">
+                    <div class="services-item ">
+                        <li>
+                            <picture>
+                                <img src="../img/no-touch.png" alt="distance" class="guide-picture">
+                            </picture>
+                        </li>
+                        <div class="services-txt">
+                            <h4 class="">Avoid touching your eyes, nose and mouth</h4>
+                            <p class="">Hands touch many surfaces and can pick up viruses. Once contaminated, hands can
+                                transfer the virus to your eyes, nose or mouth. From there, the virus can enter your
+                                body and can make you sick.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="2400">
+
+                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="800">
                     <ul class="services-item">
                         <li>
                             <picture>
-                                <img src="../img/wash-your-hands.png">
+                                <img src="../img/quarantine.png" alt="sneezing" class="guide-picture">
                             </picture>
                         </li>
-                        <h3 class="services-txt mt-4">Wash your hands often with soap and water for at least 20 seconds
-                        </h3>
+                        <div class="services-txt">
+                            <h4 class="">Seek medical care early</h4>
+                            <p class="">Stay home if you feel unwell. If you have a fever, cough and difficulty
+                                breathing, seek medical attention and call in advance. Follow the directions of your
+                                local health authority.</p>
+                        </div>
                     </ul>
+                </div>
+
+                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="800">
+                    <ul class="services-item">
+                        <li>
+                            <picture>
+                                <img src="../img/wash-your-hands.png" alt="disinfect" class="guide-picture">
+                            </picture>
+                        </li>
+                        <div class="services-txt">
+                            <h4 class="">Wash your hands frequently</h4>
+                            <p class="">Wash your hands often with soap and water for at least 20 seconds. Washing your
+                                hands with soap and water or using alcohol-based hand rub kills viruses that may be on
+                                your hands.</p>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+    </section>
+
+    <!-- Guidelines End -->
+
+    <!-- Articles -->
+
+    <div class="article-block">
+
+      
+        <div class="section-header ">
+            <h2 class="section-title wow fadeInDown">Articles</h2>
+        </div>
+
+        <div class="container row">
+            <div class="square">
+                <img src="https://happytummy.aashirvaad.com/en/wp-content/uploads/2023/05/Good-Eating-Habits.jpeg"
+                    class="mask">
+                <div class="h1">Move More, Eat Right</div>
+                <p>A life lived long and healthy starts with a balanced diet and enough exercise. A healthy diet and exercise protects you from obesity and non-communicable diseases like heart disease, cancers, diabetes, kidney disease, among others.</p>
+    
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/move-more-eat-right" target="_"
+                        class="button">Read More</a></div>
+            </div>
+
+            <div class="square">
+                <img src="https://images.mid-day.com/images/images/2021/aug/environmental%20day_d.jpg"
+                    class="mask">
+                <div class="h1">Be Clean, Live Sustainably</div>
+                <p>The environment, climate, and disasters can have a great impact on health. Putting focus on personal hygiene, cleaner surroundings and sustainable living can greatly improve the health of the individual and the community.</p>
+    
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/be-clean-live-sustainably" target="_"
+                        class="button">Read More</a></div>
+            </div>
+
+            <div class="square">
+                <img src="https://www.adb.org/sites/default/files/content-media/124816-vv-12162020-philippines-vaccination090-copy.jpeg"
+                    class="mask">
+                <div class="h1">Get Vaccinated</div>
+                <p>Immunization is the best protection against vaccine preventable diseases for all ages.</p>
+    
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/get-vaccinated" target="_"
+                        class="button">Read More</a></div>
+            </div>
+
+            <div class="square">
+                <img src="https://t4.ftcdn.net/jpg/04/10/78/23/360_F_410782386_wRjZM340f2erGZjuMKZzcsuKDUUiQ2ZD.jpg"
+                    class="mask">
+                <div class="h1">Don't Smoke, Avoid Alcohol, Say No to Drugs</div>
+                <p>Substance Abuse can be defined as a pattern of harmful use of any substance for mood-altering purposes. The overwhelming effects of substance abuse on individuals, families and societies demands an effective mechanism of deterrence.</p>
+    
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/dont-smoke-avoid-alcohol-say-no-to-drugs" target="_"
+                        class="button">Read More</a></div>
+            </div>
+
+            <div class="square">
+                <img src="https://images.squarespace-cdn.com/content/v1/5e875f6f608bdc72a92cea19/74273a7b-6d9b-46b4-a129-220314b20dbb/image0.jpeg"
+                    class="mask">
+                <div class="h1">Care for Yourself, Care for Others</div>
+                <p>There is no health without mental health. Our mental health is an integral part of our overall health and it is necessary that we take care of it. Remember, your mental health matters.</p>
+    
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/care-for-yourself-care-for-others" target="_"
+                        class="button">Read More</a></div>
+            </div>
+
+            <div class="square">
+                <img src="https://www.winnetworkdetroit.org/wp/wp-content/uploads/2020/07/Safe-Sex.png"
+                    class="mask">
+                <div class="h1">Practice Safe Sex</div>
+                <p>Sexual and reproductive health (SRH) is fundamental to one's overall health and well-being. People must be able to make informed decisions about their SRH, and be assured that their human rights are respected, protected, and fulfilled.</p>
+    
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/practice-safe-sex" target="_"
+                        class="button">Read More</a></div>
+            </div>
+            
+        </div>
+
+    </div>
+ 
+    <!-- Articles Ends -->
+
+
+
+    <!-- Kalinga Features  -->
+    <section class="features-block block" id="features">
+        <div class="container">
+
+            <div class="section-header mt-5">
+                <h2 class="section-title wow fadeInDown"><span class="emphasize">Kalinga</span> Features</h2>
+            </div>
+
+            <div class="row justify-content-between align-items-center">
+                <div class="col-sm-6">
+                    <div class="features">
+
+                        <div class="features--item" data-aos="fade-right" data-aos-duration="400">
+                            <div class="img-block">
+                                <img src="../img/contacts_pink.png" alt="" width="50" height="50">
+                            </div>
+                            <div class="txt-block">
+                                <h3>Family List </h3>
+                                <p>Shows <span class="emphasize">records</span> of each member of a family.
+                            </div>
+
+                        </div>
+                        <div class="features--item" data-aos="fade-right" data-aos-duration="800">
+                            <div class="img-block">
+                                <img src="../img/prescription_pink.png" alt="" width="50" height="50">
+                            </div>
+                            <div class="txt-block">
+                                <h3>Medical Notes</h3>
+                                <p>View <span class="emphasize"> medical records</span> of a patient.</p>
+                            </div>
+                        </div>
+                        <div class="features--item" data-aos="fade-right" data-aos-duration="1200">
+                            <div class="img-block">
+                                <img src="../img/qr-code_pink.png" alt="" width="50" height="50">
+
+                            </div>
+                            <div class="txt-block">
+                                <h3>QR Code Modules</h3>
+                                <p> <span class="emphasize">Scan</span>
+                                    QR code for the patient's information.</p>
+                            </div>
+                        </div>
+                        <div class="features--item" data-aos="fade-right" data-aos-duration="1600">
+                            <div class="img-block">
+                                <img src="../img/calendar_pink.png" alt="" width="50" height="50">
+                            </div>
+                            <div class="txt-block">
+                                <h3>Calendar</h3>
+                                <p>Keep track of the different <span class="emphasize">events</span> of the health
+                                    center.</p>
+                            </div>
+                        </div>
+                        <div class="features--item" data-aos="fade-right" data-aos-duration="2000"
+                            style="margin-bottom: 0;">
+                            <div class="img-block">
+                                <img src="../img/information_pink.png" alt="" width="50" height="50">
+                            </div>
+                            <div class="txt-block">
+                                <h3>Patient Information</h3>
+                                <p>Shows the <span class="emphasize">records</span> of the patient in the health
+                                    center.</p>
+                            </div>
+
+                        </div>
+                        <div class="features--item" data-aos="fade-right" data-aos-duration="2400"
+                            style="margin-bottom: 0;">
+                            <div class="img-block">
+                                <img src="../img/ticket_pink.png" alt="" width="50" height="50">
+                            </div>
+                            <div class="txt-block">
+                                <h3>Queueing</h3>
+                                <p>Log an <span class="emphasize">appointment</span> on the health center.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5" data-aos="fade-left" data-aos-duration="1200">
+                    <img src="../img/Doctor-rafiki.svg" alt="">
                 </div>
             </div>
         </div>
     </section>
-    <!-- Guidelines End -->
 
-    <!-- Benefits of Family Planning -->
+    <!-- Kalinga Features End-->
 
-    <div class="site-wrapper">
-        <div class="item-wrapper">
-            <div class="line line-top">
-                <span></span>
-            </div>
-            <div class="line line-right">
-                <span></span>
-            </div>
-            <div class="line line-bottom">
-                <span></span>
-            </div>
-            <div class="line line-left">
-                <span></span>
-            </div>
-            <div class="item">
-                <h2>Family <br /><span class="title">Planning</span> Benefits</h2>
+    <!--Parallax-->
+    <style>
+        .parallax {
+            /* The image used */
+            background-image: url("../img/logo1.png");
 
-                <h3> 1. Family planning helps parents take better care of their children. <br>
-                    2. Prevents unexpected or unintended pregnancies. <br>
-                    3. Family planning improves the health of the mother. </h3>
+            /* Set a specific height */
+            min-height: 500px;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <div class="parallax mb-5"></div>
+    <!-- Container element -->
+
+    <!-- About section starts  -->
+    <section class="services" id="services">
+   
+        <div class="section-header mt-5">
+            <h2 class="section-title wow fadeInDown">About Us</h2>
+        </div>
+
+        <div class="container">
+            <div class="row min-vh-100 align-items-center text-center text-md-left">
+                <div class="col-md-6 pr-md-5">
+                    <img src="../img/home_mission.png" width="100%" alt="">
+                </div>
+
+                <div class="col-md-6 pl-md-5 mission">
+                    <h1><span>Mission</span></h1>
+                    <p>Providing health care services to the community particularly the poor and vulnerable groups
+                        (lactating mothers, malnourished children, school children, pregnant mothers, etc.) so that
+                        they
+                        can contribute actively, productively and participate meaningfully in community life,
+                        practicing
+                        healthy lifestyles.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row min-vh-100 align-items-center text-center text-md-left">
+                <div class="col-md-6 pr-md-5">
+                    <img src="../img/home_vision.png" width="100%" alt="">
+                </div>
+
+                <div class="col-md-6 pl-md-5 vision">
+                    <h1><span>Vision</span></h1>
+                    <p>A united, cooperative and highly professional staff of health care delivery workers whose
+                        focus
+                        and passion is to help the community become a conducive, healthful and productive
+                        environment
+                        using the most modern technology and health care delivery systems to respond to the needs of
+                        its
+                        members, thereby making the CHO a model office that is respected, trusted and recognized by
+                        the
+                        officials and loved by the community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About section ends  -->
+
+
+    <!-- footer section starts  -->
+    <div class="footer">
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-phone"></i>
+                <h3>phone number</h3>
+                <p>586-4836</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>our address</h3>
+                <p>Makabayan St., Nangka, Marikina City.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-clock"></i>
+                <h3>opening hours</h3>
+                <p>08:00 AM to 05:00 PM</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <h3>email address</h3>
+                <p>nangka.health.center@gmail.com</p>
             </div>
         </div>
     </div>
+    
+    <!-- footer section ends -->
 
-    <!-- Benefits of Family Planning ends -->
-
-    <!-- Importance of Family Planning -->
-
-    <div class="site-wrapper2">
-        <div class="item-wrapper2">
-            <div class="line2 line-top">
-                <span> </span>
-            </div>
-            <div class="line2 line-right">
-                <span> </span>
-            </div>
-            <div class="line2 line-bottom">
-                <span> </span>
-            </div>
-            <div class="line2 line-left">
-                <span> </span>
-            </div>
-            <div class="item2">
-                <h2> <span class="title2">Birth</span> <br /> Control Methods </h2>
-
-                <ul class="list">
-                    <li> Sterilization </li>
-                    <li> Hormonal implants </li>
-                    <li> Short-acting hormonal methods </li>
-                    <li> Barrier methods </li>
-                    <li> Abstinence </li>
-            </div>
-        </div>
-
-
-        <!-- Importance of Family Planning ends -->
-
-
-
-
-        <!-- Kalinga Features  -->
-        <section class="features-block block" id="features">
-            <div class="container">
-                <div class="block-introduction">
-                    <h2 class="block-title" style="font-size: 4rem;"><span class="emphasize">Kalinga</span> Features</h2>
-                </div>
-
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-sm-6">
-                        <div class="features">
-                            <div class="features--item" data-aos="fade-right" data-aos-duration="400">
-                                <div class="img-block">
-                                    <img src="../img/contacts_pink.png" alt="" width="50" height="50">
-                                </div>
-                                <div class="txt-block">
-                                    <h3>Family List </h3>
-                                    <p>Shows <span class="emphasize">records</span> of each member of a family.
-                                </div>
-
-                            </div>
-                            <div class="features--item" data-aos="fade-right" data-aos-duration="800">
-                                <div class="img-block">
-                                    <img src="../img/prescription_pink.png" alt="" width="50" height="50">
-                                </div>
-                                <div class="txt-block">
-                                    <h3>Medical Notes</h3>
-                                    <p>View <span class="emphasize"> medical records</span> of a patient.</p>
-                                </div>
-                            </div>
-                            <div class="features--item" data-aos="fade-right" data-aos-duration="1200">
-                                <div class="img-block">
-                                    <img src="../img/qr-code_pink.png" alt="" width="50" height="50">
-
-                                </div>
-                                <div class="txt-block">
-                                    <h3>QR Code Modules</h3>
-                                    <p> <span class="emphasize">Scan</span>
-                                        QR code for the patient's information.</p>
-                                </div>
-                            </div>
-                            <div class="features--item" data-aos="fade-right" data-aos-duration="1600">
-                                <div class="img-block">
-                                    <img src="../img/calendar_pink.png" alt="" width="50" height="50">
-                                </div>
-                                <div class="txt-block">
-                                    <h3>Calendar</h3>
-                                    <p>Keep track of the different <span class="emphasize">events</span> of the health
-                                        center.</p>
-                                </div>
-                            </div>
-                            <div class="features--item" data-aos="fade-right" data-aos-duration="2000" style="margin-bottom: 0;">
-                                <div class="img-block">
-                                    <img src="../img/information_pink.png" alt="" width="50" height="50">
-                                </div>
-                                <div class="txt-block">
-                                    <h3>Patient Information</h3>
-                                    <p>Shows the <span class="emphasize">records</span> of the patient in the health center.</p>
-                                </div>
-
-                            </div>
-                            <div class="features--item" data-aos="fade-right" data-aos-duration="2400" style="margin-bottom: 0;">
-                                <div class="img-block">
-                                    <img src="../img/ticket_pink.png" alt="" width="50" height="50">
-                                </div>
-                                <div class="txt-block">
-                                    <h3>Queueing</h3>
-                                    <p>Log an <span class="emphasize">appointment</span> on the health center.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-5" data-aos="fade-left" data-aos-duration="1200">
-                        <img src="../img/Doctor-rafiki.svg" alt="Klinika - Clinic Management System for Doctors">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Kalinga Features End-->
-
-        <!--Parallax-->
-        <style>
-            .parallax {
-                /* The image used */
-                background-image: url("../img/logo1.png");
-
-                /* Set a specific height */
-                min-height: 500px;
-
-                /* Create the parallax scrolling effect */
-                background-attachment: fixed;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-        </style>
-        <div class="parallax"></div>
-        <!-- Container element -->
-
-        <!-- About section starts  -->
-        <section class="services" id="services">
-            <h2 class="lead">About Us</h2>
-
-            <div class="container">
-                <div class="row min-vh-100 align-items-center text-center text-md-left">
-                    <div class="col-md-6 pr-md-5">
-                        <img src="../img/home_mission.png" width="100%" alt="">
-                    </div>
-
-                    <div class="col-md-6 pl-md-5 mission">
-                        <h1><span>Mission</span></h1>
-                        <p>Providing health care services to the community particularly the poor and vulnerable groups
-                            (lactating mothers, malnourished children, school children, pregnant mothers, etc.) so that they
-                            can contribute actively, productively and participate meaningfully in community life, practicing
-                            healthy lifestyles.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row min-vh-100 align-items-center text-center text-md-left">
-                    <div class="col-md-6 pr-md-5">
-                        <img src="../img/home_vision.png" width="100%" alt="">
-                    </div>
-
-                    <div class="col-md-6 pl-md-5 vision">
-                        <h1><span>Vision</span></h1>
-                        <p>A united, cooperative and highly professional staff of health care delivery workers whose focus
-                            and passion is to help the community become a conducive, healthful and productive environment
-                            using the most modern technology and health care delivery systems to respond to the needs of its
-                            members, thereby making the CHO a model office that is respected, trusted and recognized by the
-                            officials and loved by the community.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- About section ends  -->
-
-
-        <!-- footer section starts  -->
-        <div class="footer">
-            <div class="box-container">
-                <div class="box">
-                    <i class="fas fa-phone"></i>
-                    <h3>phone number</h3>
-                    <p>586-4836</p>
-                </div>
-
-                <div class="box">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>our address</h3>
-                    <p>Makabayan St., Nangka, Marikina City.</p>
-                </div>
-
-                <div class="box">
-                    <i class="fas fa-clock"></i>
-                    <h3>opening hours</h3>
-                    <p>08:00 AM to 05:00 PM</p>
-                </div>
-
-                <div class="box">
-                    <i class="fas fa-envelope"></i>
-                    <h3>email address</h3>
-                    <p>nangka.health.center@gmail.com</p>
-                </div>
-            </div>
-        </div>
-        <!-- footer section ends -->
-
-        <!-- custom js file link  -->
-        <script src="../js/citizen_slideShow.js"></script>
-        <script src="../js/script.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- custom js file link  -->
+    <script src="../js/citizen_slideShow.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

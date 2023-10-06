@@ -380,84 +380,6 @@ section{
    margin: 1rem 0;
 }
 
-/*Prescription Header*/
-
-/*Form*/
-
-.prescription_logo {
-   height: 150px;
-   width: 150px;
-   margin-right: 20px;
-
-}
-
-.header_title {
-   font-size: 3rem;
-   font-weight: bold;
-   color: #ef6292;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-.header_prescription {
-   font-size: 2rem;
-   font-weight: bold;
-   color: black;
-   margin-bottom: 1rem;
-}
-
-.text {
-   font-size: 1.2rem;
-   margin-bottom: 1rem;
-}
-
-hr.style1 {
-   border-top: 1px solid black;
-}
-
-.rx_logo {
-   height: 80px;
-   width: 110px;
-}
-
-.rx_title {
-   font-size: 2rem;
-   font-weight: bold;
-   margin-right: 20px;
-   display: flex;
-   align-items: center;
-}
-
-table, th, td {
-   border: 1px solid black;
-   border-collapse: collapse;
- }
-
- .info {
-   font-size: 1.2rem;
-   color: white;
-   margin-right: 5px;
-
-}
-
-.center {
-   margin-left: auto;
-   margin-right: auto;
-   width: 90%;
-}
-
-.content {
-   font-size: 1.2rem;
-   text-align: center;
-}
-
-.prescription-footer {
-   background-color: #ef6292;
-}
-
-/*Form Ends*/
-
 @media (max-width:1200px){
    body{
       padding-left: 0;
@@ -536,5 +458,83 @@ table, th, td {
    .home .slide .content h3{
       font-size: 7rem;
    }
- 
  }
+
+/*Prescription Header*/
+
+/*Form*/
+
+.prescription_logo {
+   height: 150px;
+   width: 150px;
+   margin-right: 20px;
+
+}
+
+.header_title {
+   font-size: 3rem;
+   font-weight: bold;
+   color: #ef6292;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.header_prescription {
+   font-size: 2rem;
+   font-weight: bold;
+   color: black;
+   margin-bottom: 1rem;
+}
+
+.text {
+   font-size: 1.2rem;
+   margin-bottom: 1rem;
+}
+
+hr.style1 {
+   border-top: 1px solid black;
+}
+
+.rx_logo {
+   height: 80px;
+   width: 110px;
+}
+
+.rx_title {
+   font-size: 2rem;
+   font-weight: bold;
+   margin-right: 20px;
+   display: flex;
+   align-items: center;
+}
+
+table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+ }
+
+ .info {
+   font-size: 1.2rem;
+   color: white;
+   margin-right: 5px;
+
+}
+
+.center {
+   margin-left: auto;
+   margin-right: auto;
+   width: 90%;
+}
+
+.content {
+   font-size: 1.2rem;
+   text-align: center;
+}
+
+.prescription-footer {
+   background-color: #ef6292;
+}
+
+/*Form Ends*/
+
