@@ -69,7 +69,7 @@ $user_data = check_login($con);
     <!-- Home section ends -->
 
     <!-- Services section starts  -->
-    <section class="services mt-5" id="services">
+    <section class="services" id="services">
 
         <div class="section-header">
             <h2 class="section-title wow fadeInDown">Our Services</h2>
@@ -137,7 +137,7 @@ $user_data = check_login($con);
                             <h4 class="">Cover your mouth or nose</h4>
                             <p class="">Cover your mouth and nose with a tissue when you cough or sneeze. Throw used
                                 tissues in the trash. If you don't have a tissue, cough or sneeze into your elbow, not
-                                your hands.</p>
+                                your hands. </p>
                         </div>
                     </ul>
                 </div>
@@ -236,7 +236,6 @@ $user_data = check_login($con);
 
     <div class="article-block">
 
-      
         <div class="section-header ">
             <h2 class="section-title wow fadeInDown">Articles</h2>
         </div>
@@ -246,20 +245,23 @@ $user_data = check_login($con);
                 <img src="https://happytummy.aashirvaad.com/en/wp-content/uploads/2023/05/Good-Eating-Habits.jpeg"
                     class="mask">
                 <div class="h1">Move More, Eat Right</div>
-                <p>A life lived long and healthy starts with a balanced diet and enough exercise. A healthy diet and exercise protects you from obesity and non-communicable diseases like heart disease, cancers, diabetes, kidney disease, among others.</p>
-    
+                <p>A life lived long and healthy starts with a balanced diet and enough exercise. A healthy diet and
+                    exercise protects you from obesity and non-communicable diseases like heart disease, cancers,
+                    diabetes, kidney disease, among others.</p>
+
                 <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/move-more-eat-right" target="_"
                         class="button">Read More</a></div>
             </div>
 
             <div class="square">
-                <img src="https://images.mid-day.com/images/images/2021/aug/environmental%20day_d.jpg"
-                    class="mask">
+                <img src="https://images.mid-day.com/images/images/2021/aug/environmental%20day_d.jpg" class="mask">
                 <div class="h1">Be Clean, Live Sustainably</div>
-                <p>The environment, climate, and disasters can have a great impact on health. Putting focus on personal hygiene, cleaner surroundings and sustainable living can greatly improve the health of the individual and the community.</p>
-    
-                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/be-clean-live-sustainably" target="_"
-                        class="button">Read More</a></div>
+                <p>The environment, climate, and disasters can have a great impact on health. Putting focus on personal
+                    hygiene, cleaner surroundings and sustainable living can greatly improve the health of the
+                    individual and the community.</p>
+
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/be-clean-live-sustainably"
+                        target="_" class="button">Read More</a></div>
             </div>
 
             <div class="square">
@@ -267,7 +269,7 @@ $user_data = check_login($con);
                     class="mask">
                 <div class="h1">Get Vaccinated</div>
                 <p>Immunization is the best protection against vaccine preventable diseases for all ages.</p>
-    
+
                 <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/get-vaccinated" target="_"
                         class="button">Read More</a></div>
             </div>
@@ -276,36 +278,40 @@ $user_data = check_login($con);
                 <img src="https://t4.ftcdn.net/jpg/04/10/78/23/360_F_410782386_wRjZM340f2erGZjuMKZzcsuKDUUiQ2ZD.jpg"
                     class="mask">
                 <div class="h1">Don't Smoke, Avoid Alcohol, Say No to Drugs</div>
-                <p>Substance Abuse can be defined as a pattern of harmful use of any substance for mood-altering purposes. The overwhelming effects of substance abuse on individuals, families and societies demands an effective mechanism of deterrence.</p>
-    
-                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/dont-smoke-avoid-alcohol-say-no-to-drugs" target="_"
-                        class="button">Read More</a></div>
+                <p>Substance Abuse can be defined as a pattern of harmful use of any substance for mood-altering
+                    purposes. The overwhelming effects of substance abuse on individuals, families and societies demands
+                    an effective mechanism of deterrence.</p>
+
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/dont-smoke-avoid-alcohol-say-no-to-drugs"
+                        target="_" class="button">Read More</a></div>
             </div>
 
             <div class="square">
                 <img src="https://images.squarespace-cdn.com/content/v1/5e875f6f608bdc72a92cea19/74273a7b-6d9b-46b4-a129-220314b20dbb/image0.jpeg"
                     class="mask">
                 <div class="h1">Care for Yourself, Care for Others</div>
-                <p>There is no health without mental health. Our mental health is an integral part of our overall health and it is necessary that we take care of it. Remember, your mental health matters.</p>
-    
-                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/care-for-yourself-care-for-others" target="_"
-                        class="button">Read More</a></div>
+                <p>There is no health without mental health. Our mental health is an integral part of our overall health
+                    and it is necessary that we take care of it. Remember, your mental health matters.</p>
+
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/care-for-yourself-care-for-others"
+                        target="_" class="button">Read More</a></div>
             </div>
 
             <div class="square">
-                <img src="https://www.winnetworkdetroit.org/wp/wp-content/uploads/2020/07/Safe-Sex.png"
-                    class="mask">
+                <img src="https://www.winnetworkdetroit.org/wp/wp-content/uploads/2020/07/Safe-Sex.png" class="mask">
                 <div class="h1">Practice Safe Sex</div>
-                <p>Sexual and reproductive health (SRH) is fundamental to one's overall health and well-being. People must be able to make informed decisions about their SRH, and be assured that their human rights are respected, protected, and fulfilled.</p>
-    
+                <p>Sexual and reproductive health (SRH) is fundamental to one's overall health and well-being. People
+                    must be able to make informed decisions about their SRH, and be assured that their human rights are
+                    respected, protected, and fulfilled.</p>
+
                 <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/practice-safe-sex" target="_"
                         class="button">Read More</a></div>
             </div>
-            
+
         </div>
 
     </div>
- 
+
     <!-- Articles Ends -->
 
 
@@ -314,8 +320,8 @@ $user_data = check_login($con);
     <section class="features-block block" id="features">
         <div class="container">
 
-            <div class="section-header mt-5">
-                <h2 class="section-title wow fadeInDown"><span class="emphasize">Kalinga</span> Features</h2>
+            <div class="Features-header">
+                <h2 class="Features-title wow fadeInDown"><span class="emphasize">Kalinga</span> Features</h2>
             </div>
 
             <div class="row justify-content-between align-items-center">
@@ -416,7 +422,7 @@ $user_data = check_login($con);
 
     <!-- About section starts  -->
     <section class="services" id="services">
-   
+
         <div class="section-header mt-5">
             <h2 class="section-title wow fadeInDown">About Us</h2>
         </div>
@@ -493,7 +499,7 @@ $user_data = check_login($con);
             </div>
         </div>
     </div>
-    
+
     <!-- footer section ends -->
 
     <!-- custom js file link  -->
