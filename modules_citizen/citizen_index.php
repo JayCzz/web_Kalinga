@@ -16,6 +16,9 @@ $user_data = check_login($con);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
+    <!-- Icon -->
+    <link rel="icon" href="img/brgylogoreal.png">
+
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
@@ -29,6 +32,9 @@ $user_data = check_login($con);
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../css/citizen_index.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -39,10 +45,9 @@ $user_data = check_login($con);
     ?>
 
     <!-- Home section starts -->
+
     <section class="dashboard">
-
         <h1 class="heading">Home</h1>
-
         <!-- Slideshow container -->
         <div class="slideshow-container fade">
 
@@ -64,54 +69,53 @@ $user_data = check_login($con);
             <a class="forward" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br>
-
     </section>
-    <!-- Home section ends -->
 
     <!-- Services section starts  -->
     <section class="services" id="services">
 
         <div class="section-header">
-            <h2 class="section-title wow fadeInDown">Our Services</h2>
+            <h2 class="section-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" >Our Services</h2>
         </div>
 
         <div class="box-container ">
-            <div class="box">
+            <div class="box" data-aos="fade-right" data-aos-duration="800">
                 <img src="../img/service01.png" alt="">
                 <h3>Medical Consultation</h3>
                 <p>Free checkups are provided for the residents.</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-duration="800">
                 <img src="../img/service02.png" alt="">
                 <h3>Emergency Help</h3>
                 <p>Emergency hotlines to call or text.</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="fade-left" data-aos-duration="800">
                 <img src="../img/service03.png" alt="">
                 <h3>First Aid</h3>
                 <p>First aid services for patients.</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="fade-right" data-aos-duration="1200">
                 <img src="../img/healthcare_pink.png" alt="">
                 <h3>Preventive care</h3>
                 <p>Patient counseling to prevent illnesses, disease, or other health problems.</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="fade-up" data-aos-duration="1200">
                 <img src="../img/medication-bottle_pink.png" alt="">
                 <h3>Pharmaceutical care</h3>
                 <p>Pharmaceutical care for responsible provision of drug therapy to patient.</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="fade-left" data-aos-duration="1200">
                 <img src="../img/medicine_pink.png" alt="">
                 <h3>Medical Assistance Program</h3>
                 <p>Free medicine program for residents.</p>
             </div>
         </div>
+
     </section>
     <!-- Services section ends  -->
 
@@ -119,14 +123,14 @@ $user_data = check_login($con);
     <!-- -->
     <section class="guidelines-block ">
         <div class="container">
-            <div class="block-introduction">
-                <h2 class="block-title" style="font-size: 4rem;">STOP THE SPREAD OF <span class="emphasize">GERMS</span>
+            <div class="block-introduction ">
+                <h2 class="block-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" style="font-size: 4rem;">STOP THE SPREAD OF <span class="emphasize">GERMS</span>
                 </h2>
             </div>
 
             <div class="guidelines-circle row">
 
-                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="800">
+                <div class="col-sm-4" data-aos="zoom-in-right" data-aos-duration="800">
                     <ul class="services-item">
                         <li>
                             <picture>
@@ -142,7 +146,7 @@ $user_data = check_login($con);
                     </ul>
                 </div>
 
-                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="400">
+                <div class="col-sm-4" data-aos="zoom-in-right" data-aos-duration="800">
                     <div class="services-item ">
                         <li>
                             <picture>
@@ -158,7 +162,7 @@ $user_data = check_login($con);
                     </div>
                 </div>
 
-                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="800">
+                <div class="col-sm-4" data-aos="zoom-in-right" data-aos-duration="800">
                     <ul class="services-item">
                         <li>
                             <picture>
@@ -180,7 +184,7 @@ $user_data = check_login($con);
 
             <div class="guidelines-circle row mt-5">
 
-                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="400">
+                <div class="col-sm-4" data-aos="zoom-in-right" data-aos-duration="800">
                     <div class="services-item ">
                         <li>
                             <picture>
@@ -196,7 +200,7 @@ $user_data = check_login($con);
                     </div>
                 </div>
 
-                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="800">
+                <div class="col-sm-4" data-aos="zoom-in-right" data-aos-duration="800">
                     <ul class="services-item">
                         <li>
                             <picture>
@@ -212,7 +216,7 @@ $user_data = check_login($con);
                     </ul>
                 </div>
 
-                <div class="col-sm-4" data-aos="flip-left" data-aos-duration="800">
+                <div class="col-sm-4" data-aos="zoom-in-right" data-aos-duration="800">
                     <ul class="services-item">
                         <li>
                             <picture>
@@ -228,6 +232,7 @@ $user_data = check_login($con);
                     </ul>
                 </div>
             </div>
+
     </section>
 
     <!-- Guidelines End -->
@@ -237,11 +242,11 @@ $user_data = check_login($con);
     <div class="article-block">
 
         <div class="section-header ">
-            <h2 class="section-title wow fadeInDown">Articles</h2>
+            <h2 class="section-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Articles</h2>
         </div>
 
         <div class="container row">
-            <div class="square">
+            <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
                 <img src="https://happytummy.aashirvaad.com/en/wp-content/uploads/2023/05/Good-Eating-Habits.jpeg"
                     class="mask">
                 <div class="h1">Move More, Eat Right</div>
@@ -253,7 +258,7 @@ $user_data = check_login($con);
                         class="button">Read More</a></div>
             </div>
 
-            <div class="square">
+            <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
                 <img src="https://images.mid-day.com/images/images/2021/aug/environmental%20day_d.jpg" class="mask">
                 <div class="h1">Be Clean, Live Sustainably</div>
                 <p>The environment, climate, and disasters can have a great impact on health. Putting focus on personal
@@ -264,7 +269,7 @@ $user_data = check_login($con);
                         target="_" class="button">Read More</a></div>
             </div>
 
-            <div class="square">
+            <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
                 <img src="https://www.adb.org/sites/default/files/content-media/124816-vv-12162020-philippines-vaccination090-copy.jpeg"
                     class="mask">
                 <div class="h1">Get Vaccinated</div>
@@ -274,7 +279,7 @@ $user_data = check_login($con);
                         class="button">Read More</a></div>
             </div>
 
-            <div class="square">
+            <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
                 <img src="https://t4.ftcdn.net/jpg/04/10/78/23/360_F_410782386_wRjZM340f2erGZjuMKZzcsuKDUUiQ2ZD.jpg"
                     class="mask">
                 <div class="h1">Don't Smoke, Avoid Alcohol, Say No to Drugs</div>
@@ -286,9 +291,8 @@ $user_data = check_login($con);
                         target="_" class="button">Read More</a></div>
             </div>
 
-            <div class="square">
-                <img src="https://images.squarespace-cdn.com/content/v1/5e875f6f608bdc72a92cea19/74273a7b-6d9b-46b4-a129-220314b20dbb/image0.jpeg"
-                    class="mask">
+            <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
+                <img src="https://i.ytimg.com/vi/aLKcZu_1_vY/mqdefault.jpg" class="mask">
                 <div class="h1">Care for Yourself, Care for Others</div>
                 <p>There is no health without mental health. Our mental health is an integral part of our overall health
                     and it is necessary that we take care of it. Remember, your mental health matters.</p>
@@ -297,7 +301,7 @@ $user_data = check_login($con);
                         target="_" class="button">Read More</a></div>
             </div>
 
-            <div class="square">
+            <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
                 <img src="https://www.winnetworkdetroit.org/wp/wp-content/uploads/2020/07/Safe-Sex.png" class="mask">
                 <div class="h1">Practice Safe Sex</div>
                 <p>Sexual and reproductive health (SRH) is fundamental to one's overall health and well-being. People
@@ -314,14 +318,12 @@ $user_data = check_login($con);
 
     <!-- Articles Ends -->
 
-
-
     <!-- Kalinga Features  -->
     <section class="features-block block" id="features">
         <div class="container">
 
             <div class="Features-header">
-                <h2 class="Features-title wow fadeInDown"><span class="emphasize">Kalinga</span> Features</h2>
+                <h2 class="Features-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"><span class="emphasize">Kalinga</span> Features</h2>
             </div>
 
             <div class="row justify-content-between align-items-center">
@@ -336,8 +338,8 @@ $user_data = check_login($con);
                                 <h3>Family List </h3>
                                 <p>Shows <span class="emphasize">records</span> of each member of a family.
                             </div>
-
                         </div>
+
                         <div class="features--item" data-aos="fade-right" data-aos-duration="800">
                             <div class="img-block">
                                 <img src="../img/prescription_pink.png" alt="" width="50" height="50">
@@ -368,34 +370,32 @@ $user_data = check_login($con);
                                     center.</p>
                             </div>
                         </div>
-                        <div class="features--item" data-aos="fade-right" data-aos-duration="2000"
-                            style="margin-bottom: 0;">
-                            <div class="img-block">
-                                <img src="../img/information_pink.png" alt="" width="50" height="50">
-                            </div>
-                            <div class="txt-block">
-                                <h3>Patient Information</h3>
-                                <p>Shows the <span class="emphasize">records</span> of the patient in the health
-                                    center.</p>
-                            </div>
-
+                        <div class="features--item" data-aos="fade-right" data-aos-duration="2000">
+                            <div class=" img-block">
+                            <img src="../img/information_pink.png" alt="" width="50" height="50">
                         </div>
-                        <div class="features--item" data-aos="fade-right" data-aos-duration="2400"
-                            style="margin-bottom: 0;">
-                            <div class="img-block">
-                                <img src="../img/ticket_pink.png" alt="" width="50" height="50">
-                            </div>
-                            <div class="txt-block">
-                                <h3>Queueing</h3>
-                                <p>Log an <span class="emphasize">appointment</span> on the health center.</p>
-                            </div>
+                        <div class="txt-block">
+                            <h3>Patient Information</h3>
+                            <p>Shows the <span class="emphasize">records</span> of the patient in the health
+                                center.</p>
+                        </div>
+
+                    </div>
+                    <div class="features--item" data-aos="fade-right" data-aos-duration="2400">
+                        <div class="img-block">
+                            <img src="../img/ticket_pink.png" alt="" width="50" height="50">
+                        </div>
+                        <div class="txt-block">
+                            <h3>Queueing</h3>
+                            <p>Log an <span class="emphasize">appointment</span> on the health center.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5" data-aos="fade-left" data-aos-duration="1200">
-                    <img src="../img/Doctor-rafiki.svg" alt="">
-                </div>
             </div>
+            <div class="col-sm-5" data-aos="fade-left" data-aos-duration="1200">
+                <img src="../img/Doctor-rafiki.svg" alt="">
+            </div>
+        </div>
         </div>
     </section>
 
@@ -424,16 +424,16 @@ $user_data = check_login($con);
     <section class="services" id="services">
 
         <div class="section-header mt-5">
-            <h2 class="section-title wow fadeInDown">About Us</h2>
+            <h2 class="section-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">About Us</h2>
         </div>
 
         <div class="container">
             <div class="row min-vh-100 align-items-center text-center text-md-left">
-                <div class="col-md-6 pr-md-5">
+                <div class="col-md-6 pr-md-5" data-aos="fade-right" data-aos-duration="1200">
                     <img src="../img/home_mission.png" width="100%" alt="">
                 </div>
 
-                <div class="col-md-6 pl-md-5 mission">
+                <div class="col-md-6 pl-md-5 mission" data-aos="fade-left" data-aos-duration="1200">
                     <h1><span>Mission</span></h1>
                     <p>Providing health care services to the community particularly the poor and vulnerable groups
                         (lactating mothers, malnourished children, school children, pregnant mothers, etc.) so that
@@ -446,12 +446,12 @@ $user_data = check_login($con);
         </div>
 
         <div class="container">
-            <div class="row min-vh-100 align-items-center text-center text-md-left">
+            <div class="row min-vh-100 align-items-center text-center text-md-left" data-aos="fade-right" data-aos-duration="1200">
                 <div class="col-md-6 pr-md-5">
                     <img src="../img/home_vision.png" width="100%" alt="">
                 </div>
 
-                <div class="col-md-6 pl-md-5 vision">
+                <div class="col-md-6 pl-md-5 vision" data-aos="fade-left" data-aos-duration="1200">
                     <h1><span>Vision</span></h1>
                     <p>A united, cooperative and highly professional staff of health care delivery workers whose
                         focus
@@ -503,6 +503,7 @@ $user_data = check_login($con);
     <!-- footer section ends -->
 
     <!-- custom js file link  -->
+
     <script src="../js/citizen_slideShow.js"></script>
     <script src="../js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -514,6 +515,12 @@ $user_data = check_login($con);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <!-- Include AOS library script at the end of the body -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

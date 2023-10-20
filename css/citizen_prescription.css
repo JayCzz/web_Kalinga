@@ -45,6 +45,7 @@ html::-webkit-scrollbar-thumb{
    background-color: var(--main-color);
 }
 
+/*Home Body*/
 body{
    background-color: var(--light-bg);
    padding-left: 30rem;
@@ -70,7 +71,7 @@ section{
    margin: 0 auto;
    max-width: 1200px;
 }
-
+/*Header*/
 .heading{
    font-size: 2.5rem;
    color:var(--black);
