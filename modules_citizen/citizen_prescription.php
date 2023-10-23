@@ -44,13 +44,13 @@ $user_data = check_login($con);
         <h1 class="heading">Prescription</h1>
     </section>
 
-    <div class="row justify-content-center">
+    <div class="row mb-5">
 
         <!-- col for the form -->
-        <div class="col-md-8 shadow p-5 mb-5 " style="background-color: white;">
+        <div class="prescription-form ">
             <br>
             <br>
-            <div class="container">
+            <div class="container ">
                 <div class="row">
                     <div class="col">
                         <h1 class="header_title"> <img class="prescription_logo" src="../img/brgylogoreal.png" alt="">
@@ -85,7 +85,7 @@ $user_data = check_login($con);
             </div>
 
             <div class="container mt-5">
-                <div class="row">
+                <div class="item row">
                     <div class="col ">
                         <h3 class="header_prescription"> Patient Information </h3>
                         <p class="text"><strong>Name:</strong> John Doe</p>
@@ -104,14 +104,11 @@ $user_data = check_login($con);
                 </div>
             </div>
 
-            <br>
+        
             <hr class="style1">
-            <br>
+           
 
             <div class="container mt-5">
-
-
-
                 <h1 class="rx_title"><img class="rx_logo" src="../img/rx-logo.png" alt="">List of Prescriped
                     Medication
                 </h1>
@@ -159,15 +156,16 @@ $user_data = check_login($con);
             <br>
             <br>
 
-            <div class="prescription-footer p-3 mb-2">
+            <div class="prescription-footer ">
+
                 <div class="row">
                     <div class="col ">
-                        <p class="info text-center"><i class="info fas fa-phone me-3"></i> 586-4836</p>
+                        <p class="info" ><i class="info fas fa-phone me-3"></i> 586-4836</p>
 
                     </div>
 
                     <div class="col ">
-                        <p class="info text-center"><i class="info fas fa-envelope me-3"></i>
+                        <p class="info" ><i class="info fas fa-envelope me-3"></i>
                             nangka.health.center@gmail.com</p>
                     </div>
                 </div>
