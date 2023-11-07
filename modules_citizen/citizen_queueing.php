@@ -64,6 +64,8 @@ if (isset($_POST['add_product'])) {
                 <input type="submit" name="add_product" class="btn" value="Add Queue">
             </form>
         </div>
+
+        
     </div>
 
     <!-- custom js file link  -->

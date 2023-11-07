@@ -38,26 +38,30 @@ $user_data = check_login($con);
     <!-- QR Code Menu -->
     <section class="dashboard">
         <h1 class="heading">Live Queueing</h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <h3>Medical Consultation Live Queueing</h3>
-                <a href="admin_queueing_window_medical.php" class="btn">Open Medical Consultation Live Queueing</a>
-            </div>
-        </div>
-
-        <br>
-        <br>
-
-        <div class="box-container">
-            <div class="box">
-                <h3>Dental Consultation Live Queueing</h3>
-                <a href="admin_qr_generator.php" class="btn">Open Dental Consultation Live Queueing</a>
-            </div>
-        </div>
-
     </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="box-form">
+
+                <div class="box">
+                    <h3>Medical Consultation Live Queueing</h3>
+                    <a href="admin_queueing_window_medical.php" class="btn">Open Medical Consultation Live Queueing</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="box-form">
+                <div class="box">
+                    <h3>Dental Consultation Live Queueing</h3>
+                    <a href="admin_qr_generator.php" class="btn">Open Dental Consultation Live Queueing</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
 
 
