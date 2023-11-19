@@ -3,40 +3,6 @@
 
     include 'components/connection.php';
 	include 'components/functions.php';
-
-	if($_SERVER['REQUEST_METHOD'] == "POST") {
-
-		//something was posted
-		$firstName = $_POST['firstName'];
-        $middleName = $_POST['middleName'];
-		$lastName = $_POST['lastName'];
-        $suffix = $_POST['suffix'];
-		$birthday = $_POST['birthday'];
-		$age = $_POST['age'];
-		$sex = $_POST['sex'];
-		$doctorNumber = $_POST['doctorNumber'];
-		$username = $_POST['username'];
-		$email = $_POST['email'];
-		$phoneNumber = $_POST['phoneNumber'];
-		$password = $_POST['password'];
-        $verify_token = verification_code(6);
-
-		if(!empty($firstName) && !empty($lastName) && !empty($birthday) && !empty($age) && !empty($doctorNumber) && !empty($username) && !empty($email) && !empty($phoneNumber) && !empty($password) && !is_numeric($firstName) && !is_numeric($lastName) && !is_numeric($usename) && !is_numeric($email)) {
-
-			//save to database
-			$user_id = random_num(20);
-			$query = "insert into doctor (user_id,type,firstName,middleName,middleInitial,lastName,suffix,birthday,age,sex,doctorNumber,username,email,phoneNumber,password,verify_token) values ('$user_id','Doctor','$firstName','$middleName','$middleName','$lastName','$suffix','$birthday','$age','$sex','$doctorNumber','$username','$email','$phoneNumber','$password','$verify_token')";
-
-			mysqli_query($con, $query);
-
-			header("Location: doctor_login.php");
-			die;
-		}
-        
-        else {
-			echo "Please enter some valid information!";
-		}
-	}
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +26,7 @@
         <div class="container">
             <h1 class="form-title">Registration</h1>
             
-            <form method="post">
+            <form action="action/signup.php" method="post">
                 <div class="main-user-info">
                     <div class="user-input-box">
                         <label for="firstName">First Name</label>
@@ -84,7 +50,7 @@
 
                     <div class="user-input-box">
                         <label for="birthday">Birthday</label>
-                        <input type="text" id="birthday" name="birthday" placeholder="Enter Birthday (yyyy-mm-dd)" required/>
+                        <input type="date" id="birthday" name="birthday" placeholder="Enter Birthday (yyyy-mm-dd)" required/>
                     </div>
 
                     <div class="user-input-box">
@@ -137,11 +103,15 @@
                 </div>
 
                 <div class="form-submit-btn">
-                    <input id="button" type="submit" value="Register">
+                    <input id="button" type="submit" name="doctor_signup" value="Register">
                 </div>
                 
                 <div class="signup-link">Already have an account? <a href="doctor_login.php">Login here</a></div>
             </form>
         </div>
+
+        <!-- sweetalert cdn file link -->
+        <script src="js/sweetalert.min.js"></script>
+		<?php include 'includes/message.php'; ?>
     </body>
 </html>

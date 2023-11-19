@@ -1,40 +1,8 @@
 <?php 
 	session_start();
 
-    include 'components/connection.php';
+	include 'components/connection.php';
 	include 'components/functions.php';
-
-	if($_SERVER['REQUEST_METHOD'] == "POST") {
-
-		//something was posted
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-
-		if(!empty($username) && !empty($password) && !is_numeric($username)) { 
-			
-			//read from database
-			$query = "select * from doctor where username = '$username' limit 1";
-			$result = mysqli_query($con, $query);
-
-			if($result) {
-				if($result && mysqli_num_rows($result) > 0) {
-					$user_data = mysqli_fetch_assoc($result);
-					
-					if($user_data['password'] === $password) {
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: modules_doctor/doctor_index.php");
-						die;
-					}
-				}
-			}
-			
-			$warning_msg[] = 'Wrong Username or Password!';
-		}
-		
-		else {
-			echo "wrong username or password!";
-		}
-	}
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +31,7 @@
                 <div class="separator"></div>
                 <p class="welcome-message">Please, provide login credential to proceed and have access to all our services</p>
 
-                <form class="login-form" method="post">
+                <form class="login-form" action="action/login.php" method="post">
                     <div class="form-control">
                         <input type="text" name="username" placeholder="Username" required>
                         <i class="fas fa-user"></i>
@@ -74,15 +42,16 @@
                         <i class="fas fa-lock"></i>
                     </div>
 
-                    <button class="submit" type="submit">Login</button>
+                    <a href="components/forgot_password/confirm_email.php" class="forgot-password">Forgot Password</a>
+
+                    <button class="submit" type="submit" name="doctor_login">Login</button>
                     <div class="signup-link">Not a member? <a href="doctor_signup.php">Signup now</a></div>
                 </form>
             </div>
         </section>
-		
-		<!-- sweetalert cdn link -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
-		<?php include 'components/message.php'; ?>
+        <!-- sweetalert cdn file link -->
+        <script src="js/sweetalert.min.js"></script>
+		<?php include 'includes/message.php'; ?>
     </body>
 </html>

@@ -1,5 +1,3 @@
-<!-- sweetalert cdn link -->
-<script src="js/sweetalert.min.js"></script>
 <?php
     if(isset($_SESSION['status']) && $_SESSION['status'] !='')
     {

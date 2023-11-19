@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 22, 2023 at 02:13 PM
+-- Generation Time: Nov 19, 2023 at 10:15 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -33,7 +33,10 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `user_id` bigint NOT NULL,
   `type` enum('Admin','Doctor','Nurse','Citizen') NOT NULL,
   `firstName` varchar(100) NOT NULL,
+  `middleName` varchar(255) NOT NULL,
+  `middleInitial` varchar(1) NOT NULL,
   `lastName` varchar(100) NOT NULL,
+  `suffix` varchar(255) NOT NULL,
   `birthday` date NOT NULL,
   `age` int NOT NULL,
   `sex` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
@@ -43,6 +46,11 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `phoneNumber` bigint NOT NULL,
   `password` varchar(100) NOT NULL,
   `image` varchar(255) NOT NULL,
+  `verify_token` varchar(255) NOT NULL,
+  `verify_status` tinyint(1) DEFAULT '0' COMMENT '0 = no, 1 = yes',
+  `otp` varchar(255) NOT NULL,
+  `activation_code` varchar(255) NOT NULL,
+  `recovery_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `firstName` (`firstName`),
@@ -53,18 +61,23 @@ CREATE TABLE IF NOT EXISTS `admin` (
   KEY `adminNumber` (`adminNumber`),
   KEY `username` (`username`),
   KEY `email` (`email`),
-  KEY `phoneNumber` (`phoneNumber`)
+  KEY `phoneNumber` (`phoneNumber`),
+  KEY `middleName` (`middleName`),
+  KEY `middleInitial` (`middleInitial`),
+  KEY `suffix` (`suffix`),
+  KEY `verify_token` (`verify_token`),
+  KEY `verify_status` (`verify_status`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `user_id`, `type`, `firstName`, `lastName`, `birthday`, `age`, `sex`, `adminNumber`, `username`, `email`, `phoneNumber`, `password`, `image`) VALUES
-(1, 8895796828849, 'Admin', 'Marife', 'Obama', '1976-01-05', 47, 'Female', 'AD-01004', 'marife05', 'marife@gmail.com', 9123456789, 'marife05', ''),
-(2, 37902449718055365, 'Admin', 'Lebron', 'James', '1984-12-30', 38, 'Male', 'AD-01001', 'admin123', 'lebron.james@gmail.com', 9123456789, 'admin123', '2544.png'),
-(3, 551841738, 'Admin', 'Jimmy', 'Butler', '1989-09-14', 33, 'Male', 'AD-01022', 'jimmy22', 'j.buckets@gmail.com', 9123456789, 'jimmy22', ''),
-(4, 2405454626350408020, 'Admin', 'Jimmy', 'Butler', '1989-09-14', 33, 'Male', 'AD-01022', 'jimmy22', 'j.buckets@gmail.com', 9123456789, 'jimmy22', '');
+INSERT INTO `admin` (`id`, `user_id`, `type`, `firstName`, `middleName`, `middleInitial`, `lastName`, `suffix`, `birthday`, `age`, `sex`, `adminNumber`, `username`, `email`, `phoneNumber`, `password`, `image`, `verify_token`, `verify_status`, `otp`, `activation_code`, `recovery_time`) VALUES
+(1, 8895796828849, 'Admin', 'Marife', '', '', 'Obama', '', '1976-01-05', 47, 'Female', 'AD-01004', 'marife05', 'marife@gmail.com', 9123456789, 'marife05', '', '', 0, '', '', '0000-00-00 00:00:00'),
+(2, 37902449718055365, 'Admin', 'Lebron', '', '', 'James', '', '1984-12-30', 38, 'Male', 'AD-01001', 'admin123', 'lebron.james@gmail.com', 9123456789, 'admin123', '2544.png', '', 0, '', '', '0000-00-00 00:00:00'),
+(3, 551841738, 'Admin', 'Jimmy', '', '', 'Butler', '', '1989-09-14', 33, 'Male', 'AD-01022', 'jimmy22', 'j.buckets@gmail.com', 9123456789, 'jimmy22', '', '', 0, '', '', '0000-00-00 00:00:00'),
+(4, 2405454626350408020, 'Admin', 'Jimmy', '', '', 'Butler', '', '1989-09-14', 33, 'Male', 'AD-01022', 'jimmy22', 'j.buckets@gmail.com', 9123456789, 'jimmy22', '', '', 0, '', '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -110,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `consultations` (
   KEY `familyNumber` (`familyNumber`),
   KEY `cnumber` (`cnumber`),
   KEY `consultation` (`consultation`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `consultations`
@@ -127,7 +140,8 @@ INSERT INTO `consultations` (`id`, `name`, `address`, `date`, `familyNumber`, `c
 (8, 'Juan Dela Cruz', 'Nangka, Marikina City', '2023-05-06', 'FN-01006', 9066614, 'High fever'),
 (9, 'Juan Dela Cruz', 'Nangka, Marikina City', '2023-05-06', 'FN-01006', 9066614, 'High fever'),
 (10, 'Natsu Dragneel', 'Nangka, Marikina City', '2023-05-06', 'FN-01001', 1637790318133398323, 'Dry cough'),
-(11, 'Lorena Santos', 'Nangka, Marikina City', '2023-05-07', 'FN-01002', 652946296, 'High Fever');
+(11, 'Lorena Santos', 'Nangka, Marikina City', '2023-05-07', 'FN-01002', 652946296, 'High Fever'),
+(12, 'Natsu Dragneel', 'Nangka, Marikina City', '2023-05-23', 'FN-01001', 1637790318133398323, 'Adsadadsadsa');
 
 -- --------------------------------------------------------
 
@@ -141,7 +155,10 @@ CREATE TABLE IF NOT EXISTS `doctor` (
   `user_id` bigint NOT NULL,
   `type` enum('Doctor') NOT NULL,
   `firstName` varchar(100) NOT NULL,
+  `middleName` varchar(255) NOT NULL,
+  `middleInitial` varchar(1) NOT NULL,
   `lastName` varchar(100) NOT NULL,
+  `suffix` varchar(255) NOT NULL,
   `birthday` date NOT NULL,
   `age` bigint NOT NULL,
   `sex` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
@@ -150,6 +167,11 @@ CREATE TABLE IF NOT EXISTS `doctor` (
   `email` varchar(100) NOT NULL,
   `phoneNumber` bigint NOT NULL,
   `password` varchar(100) NOT NULL,
+  `verify_token` varchar(255) NOT NULL,
+  `verify_status` tinyint NOT NULL DEFAULT '0' COMMENT '0 = no, 1 = yes',
+  `otp` varchar(255) NOT NULL,
+  `activation_code` varchar(255) NOT NULL,
+  `recovery_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `firstName` (`firstName`),
@@ -160,16 +182,21 @@ CREATE TABLE IF NOT EXISTS `doctor` (
   KEY `doctorNumber` (`doctorNumber`),
   KEY `username` (`username`),
   KEY `email` (`email`),
-  KEY `phoneNumber` (`phoneNumber`)
+  KEY `phoneNumber` (`phoneNumber`),
+  KEY `middleName` (`middleName`),
+  KEY `middleInitial` (`middleInitial`),
+  KEY `suffix` (`suffix`),
+  KEY `verify_token` (`verify_token`),
+  KEY `verify_status` (`verify_status`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `doctor`
 --
 
-INSERT INTO `doctor` (`id`, `user_id`, `type`, `firstName`, `lastName`, `birthday`, `age`, `sex`, `doctorNumber`, `username`, `email`, `phoneNumber`, `password`) VALUES
-(1, 6898, 'Doctor', 'Grace', 'Chua', '1980-08-25', 42, 'Female', 'DN-01001', 'chua25', 'grace@gmail.com', 9798456123, 'chua25'),
-(2, 507539, 'Doctor', 'Jomar', 'Dela Pena', '1998-01-03', 25, 'Male', 'DN-01002', 'doctor123', 'jom.delapena@gmail.com', 9123498765, 'doctor123');
+INSERT INTO `doctor` (`id`, `user_id`, `type`, `firstName`, `middleName`, `middleInitial`, `lastName`, `suffix`, `birthday`, `age`, `sex`, `doctorNumber`, `username`, `email`, `phoneNumber`, `password`, `verify_token`, `verify_status`, `otp`, `activation_code`, `recovery_time`) VALUES
+(1, 6898, 'Doctor', 'Grace', '', '', 'Chua', '', '1980-08-25', 42, 'Female', 'DN-01001', 'chua25', 'grace@gmail.com', 9798456123, 'chua25', '', 0, '', '', '0000-00-00 00:00:00'),
+(2, 507539, 'Doctor', 'Jomar', '', '', 'Dela Pena', '', '1998-01-03', 25, 'Male', 'DN-01002', 'doctor123', 'jom.delapena@gmail.com', 9123498765, 'doctor123', '', 0, '', '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -181,22 +208,22 @@ DROP TABLE IF EXISTS `inventory`;
 CREATE TABLE IF NOT EXISTS `inventory` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `type` varchar(255) NOT NULL,
   `quantity` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `inventory`
 --
 
-INSERT INTO `inventory` (`id`, `name`, `quantity`, `image`) VALUES
-(1, 'Vitamin B', '10', 'med 01.png'),
-(4, 'Bioflu', '50', 'med 01.png'),
-(5, 'Lagundi Complex', '50', 'med 01.png'),
-(6, 'Mefenamic Acid', '25', 'med 01.png'),
-(7, 'Lozartan', '100', 'med 01.png'),
-(8, 'Rozelle Macaraeg', 'FN-01005', '');
+INSERT INTO `inventory` (`id`, `name`, `type`, `quantity`, `image`) VALUES
+(9, 'Losartan', 'ARB', '100', ''),
+(12, 'Vitamin B12', 'Vitamins', '100', ''),
+(11, 'Mefenamic acid', 'NSAID', '100', ''),
+(10, 'Metformin', 'Non-sulfonylureas', '100', ''),
+(13, 'Robitussin', 'Expectorants', '100', '');
 
 -- --------------------------------------------------------
 
@@ -210,7 +237,10 @@ CREATE TABLE IF NOT EXISTS `nurse` (
   `user_id` bigint NOT NULL,
   `type` enum('Nurse') NOT NULL,
   `firstName` varchar(100) NOT NULL,
+  `middleName` varchar(255) NOT NULL,
+  `middleInitial` varchar(1) NOT NULL,
   `lastName` varchar(100) NOT NULL,
+  `suffix` varchar(255) NOT NULL,
   `birthday` date NOT NULL,
   `age` bigint NOT NULL,
   `sex` enum('m','f') NOT NULL,
@@ -219,6 +249,11 @@ CREATE TABLE IF NOT EXISTS `nurse` (
   `email` varchar(100) NOT NULL,
   `phoneNumber` bigint NOT NULL,
   `password` varchar(100) NOT NULL,
+  `verify_token` varchar(255) NOT NULL,
+  `verify_status` tinyint NOT NULL DEFAULT '0' COMMENT '0 = no, 1 = yes',
+  `otp` varchar(255) NOT NULL,
+  `activation_code` varchar(255) NOT NULL,
+  `recovery_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `firstName` (`firstName`),
@@ -229,16 +264,18 @@ CREATE TABLE IF NOT EXISTS `nurse` (
   KEY `nurseNumber` (`nurseNumber`),
   KEY `username` (`username`),
   KEY `email` (`email`),
-  KEY `phoneNumber` (`phoneNumber`)
+  KEY `phoneNumber` (`phoneNumber`),
+  KEY `verify_token` (`verify_token`),
+  KEY `verify_status` (`verify_status`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `nurse`
 --
 
-INSERT INTO `nurse` (`id`, `user_id`, `type`, `firstName`, `lastName`, `birthday`, `age`, `sex`, `nurseNumber`, `username`, `email`, `phoneNumber`, `password`) VALUES
-(1, 589359300, 'Nurse', 'Lucy', 'Parker', '1992-09-08', 30, 'f', 'NN-01002', 'lparker08', 'parker0908@gmail.com', 9123789456, 'lparker08'),
-(2, 62150284570216927, 'Nurse', 'Maria', 'Clara', '2000-01-01', 23, 'f', 'NN-01001', 'nurse123', 'm.clara@gmail.com', 9123654987, 'nurse123');
+INSERT INTO `nurse` (`id`, `user_id`, `type`, `firstName`, `middleName`, `middleInitial`, `lastName`, `suffix`, `birthday`, `age`, `sex`, `nurseNumber`, `username`, `email`, `phoneNumber`, `password`, `verify_token`, `verify_status`, `otp`, `activation_code`, `recovery_time`) VALUES
+(1, 589359300, 'Nurse', 'Lucy', '', '', 'Parker', '', '1992-09-08', 30, 'f', 'NN-01002', 'lparker08', 'parker0908@gmail.com', 9123789456, 'lparker08', '', 0, '', '', '0000-00-00 00:00:00'),
+(2, 62150284570216927, 'Nurse', 'Maria', '', '', 'Clara', '', '2000-01-01', 23, 'f', 'NN-01001', 'nurse123', 'm.clara@gmail.com', 9123654987, 'nurse123', '', 0, '', '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -308,7 +345,7 @@ DROP TABLE IF EXISTS `queue_id_value`;
 CREATE TABLE IF NOT EXISTS `queue_id_value` (
   `id` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `queue_id_value`
@@ -317,7 +354,12 @@ CREATE TABLE IF NOT EXISTS `queue_id_value` (
 INSERT INTO `queue_id_value` (`id`) VALUES
 (5),
 (6),
-(7);
+(7),
+(8),
+(9),
+(10),
+(11),
+(12);
 
 -- --------------------------------------------------------
 
@@ -334,7 +376,7 @@ CREATE TABLE IF NOT EXISTS `queue_list` (
   `type` enum('Medical','Dental') NOT NULL,
   `status` enum('Active','Waiting','Done','No Show') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `queue_list`
@@ -389,8 +431,13 @@ INSERT INTO `queue_list` (`id`, `queue_id`, `qnumber`, `name`, `type`, `status`)
 (46, 'Queue 0003', 37902449718055365, 'Adrian Wong', 'Medical', 'Done'),
 (47, 'Queue 0004', 37902449718055365, 'Taylor Swift', 'Medical', 'Done'),
 (48, 'Queue 0005', 37902449718055365, 'Evan Turner', 'Medical', 'No Show'),
-(49, 'Queue 0006', 37902449718055365, 'Marc Pingris', 'Dental', 'Active'),
-(50, 'Queue 0007', 37902449718055365, 'Trae Young', 'Dental', 'Waiting');
+(49, 'Queue 0006', 37902449718055365, 'Marc Pingris', 'Dental', 'No Show'),
+(50, 'Queue 0007', 37902449718055365, 'Trae Young', 'Dental', 'Active'),
+(51, 'Queue 0008', 37902449718055365, 'James Carlos Yap', 'Dental', 'Waiting'),
+(52, 'Queue 0009', 37902449718055365, 'Armando Candelaria', 'Medical', 'Waiting'),
+(53, 'Queue 0010', 62150284570216927, 'Robert Cruz', 'Medical', ''),
+(54, 'Queue 0011', 1637790318133398323, 'Lebron James', 'Medical', 'Waiting'),
+(55, 'Queue 0012', 1637790318133398323, 'Stepen Sorry', 'Dental', 'Waiting');
 
 --
 -- Triggers `queue_list`
@@ -430,6 +477,54 @@ INSERT INTO `schedule_list` (`id`, `title`, `description`, `start_datetime`, `en
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `service`
+--
+
+DROP TABLE IF EXISTS `service`;
+CREATE TABLE IF NOT EXISTS `service` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `service`
+--
+
+INSERT INTO `service` (`id`, `title`, `description`, `image`) VALUES
+(1, 'Medical Consultation', 'Free checkups are provided for the residents.', 'service01.png'),
+(2, 'Emergency Help', 'Emergency hotlines to text or call.', 'service02.png'),
+(3, 'First Aid', 'Free first aid services for patients.', 'service03.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+DROP TABLE IF EXISTS `services`;
+CREATE TABLE IF NOT EXISTS `services` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `title`, `description`, `image`) VALUES
+(1, 'Medical Consultation', 'Free checkups are provided for the residents.', 'service01.png'),
+(2, 'Emergency Help', 'Emergency hotlines to text or call.', 'service02.png'),
+(3, 'First Aid', 'Free first aid services for patients.', 'service03.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -439,7 +534,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_id` bigint NOT NULL,
   `type` enum('Citizen') NOT NULL,
   `firstName` varchar(100) NOT NULL,
+  `middleName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `middleInitial` varchar(1) NOT NULL,
   `lastName` varchar(100) NOT NULL,
+  `suffix` varchar(255) NOT NULL,
   `birthday` date NOT NULL,
   `age` bigint NOT NULL,
   `sex` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
@@ -452,6 +550,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(100) NOT NULL,
   `phoneNumber` bigint NOT NULL,
   `password` varchar(100) NOT NULL,
+  `verify_token` varchar(255) NOT NULL,
+  `verify_status` tinyint NOT NULL DEFAULT '0' COMMENT '0 = no, 1 = yes',
+  `otp` varchar(255) NOT NULL,
+  `activation_code` varchar(255) NOT NULL,
+  `recovery_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `firstName` (`firstName`),
@@ -466,27 +569,50 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `height` (`height`),
   KEY `weight` (`weight`),
   KEY `bp` (`bp`),
-  KEY `updated` (`updated`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `updated` (`updated`),
+  KEY `midleName` (`middleName`),
+  KEY `middleInitial` (`middleInitial`),
+  KEY `suffix` (`suffix`),
+  KEY `verify_token` (`verify_token`),
+  KEY `verify_status` (`verify_status`)
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_id`, `type`, `firstName`, `lastName`, `birthday`, `age`, `sex`, `familyNumber`, `height`, `weight`, `bp`, `updated`, `username`, `email`, `phoneNumber`, `password`) VALUES
-(3, 1637790318133398323, 'Citizen', 'Natsu', 'Dragneel', '2000-07-27', 22, 'Male', 'FN-01001', 168, 79, '120/90', '2023-05-06', 'natsu27', 'natsu.dragneel.main0727@gmail.com', 9074403149, '789789'),
-(4, 7580310745353323131, 'Citizen', 'Dwyane', 'Wade', '1982-02-16', 40, 'Male', 'FN-01002', 193, 100, '125/80', '2023-04-25', 'dwade03', 'd.wade03@gmail.com', 9123455678, 'dwade4ever'),
-(5, 7265107912895991, 'Citizen', 'Armin', 'Candelaria', '2000-10-05', 22, 'Male', 'FN-01003', 0, 0, '', '0000-00-00', 'armin05', 'qavcandelaria@tip.edu.ph', 9452385340, 'arminpogi'),
-(6, 76972479655037, 'Citizen', 'Jerry', 'Clarito', '1967-10-09', 55, 'Male', 'FN-01004', 0, 0, '', '0000-00-00', 'jerryclarito', 'bbclarito09@gmail.com', 9053902090, 'jerry1'),
-(7, 7111055, 'Citizen', 'Concepcion', 'Clarito', '1967-10-09', 55, 'Female', 'FN-01004', 0, 0, '', '0000-00-00', 'conc', 'bbclarito09@gmail.com', 9123456789, '123123'),
-(8, 69071362844102318, 'Citizen', 'James', 'Mendoza', '2000-07-09', 22, 'Male', 'FN-01005', 0, 0, '', '0000-00-00', 'james123', 'james.mendoza@gmail.com', 9987654321, 'james123'),
-(9, 155011987532, 'Citizen', 'Jayc', 'Espina', '2000-01-01', 23, 'Male', 'FN-01006', 0, 0, '', '0000-00-00', 'jayc01', 'jayc.espina@gmail.com', 9456789123, '123456'),
-(10, 9066614, 'Citizen', 'Juan', 'Dela Cruz', '2000-05-01', 22, 'Male', 'FN-01006', 0, 0, '', '0000-00-00', 'juan11', 'james.mendoza@gmail.com', 9452385340, '789789'),
-(11, 7042025769213999, 'Citizen', 'James Carlos', 'Yap', '2000-07-18', 22, 'Male', 'FN-01007', 188, 94, '120/90', '2023-04-26', 'jcyap18', 'jcyap18@gmail.com', 9234561231, 'jcy1800'),
-(12, 7465830599584826, 'Citizen', 'LeBron', 'James', '1984-12-30', 38, 'Male', 'FN-01007', 205, 100, '120/90', '2023-03-23', 'lbj23', 'lebron.james@gmail.com', 9452385340, 'lbj23'),
-(13, 652946296, 'Citizen', 'Lorena', 'Santos', '1950-02-22', 72, 'Female', 'FN-01002', 155, 59, '125/90', '2023-04-26', 'lsantos', 'lorena@gmail.com', 9123456789, 'lsantos'),
-(14, 7698546815, 'Citizen', 'Rozelle', 'Macaraeg', '2000-07-25', 22, 'Female', 'FN-01005', 0, 0, '', '0000-00-00', 'zellegearacam', 'roselle.macaraeg@gmail.com', 9458011141, 'haduken1234'),
-(15, 849696174405, 'Citizen', 'Terence', 'Romeo', '2000-06-29', 22, 'Male', 'FN-01001', 0, 0, '', '0000-00-00', '12345', 'tr7@gmail.com', 9123456789, '12345');
+INSERT INTO `users` (`id`, `user_id`, `type`, `firstName`, `middleName`, `middleInitial`, `lastName`, `suffix`, `birthday`, `age`, `sex`, `familyNumber`, `height`, `weight`, `bp`, `updated`, `username`, `email`, `phoneNumber`, `password`, `verify_token`, `verify_status`, `otp`, `activation_code`, `recovery_time`) VALUES
+(3, 1637790318133398323, 'Citizen', 'Natsu', '', '', 'Dragneel', '', '2000-07-27', 22, 'Male', 'FN-01001', 168, 79, '120/90', '2023-05-06', 'natsu27', 'natsu.dragneel.main0727@gmail.com', 9074403149, '789789', '0', 0, '416328', '82ixpwbjdgfkcream7zhsqtlnu5v7yo8', '2023-11-15 14:02:26'),
+(4, 7580310745353323131, 'Citizen', 'Dwyane', '', '', 'Wade', '', '1982-02-16', 41, 'Male', 'FN-01002', 193, 100, '125/80', '2023-04-25', 'dwade03', 'd.wade03@gmail.com', 9123455678, 'dwade4ever', '0', 0, '831706', 'sa7otuhfx7p7mbwv9d6k1jeclziqn8ryg', '2023-11-13 17:45:01'),
+(5, 7265107912895991, 'Citizen', '', '', '', 'Candelaria', '', '2000-10-05', 22, 'Male', 'FN-01003', 0, 0, '', '0000-00-00', 'armin05', 'qavcandelaria@tip.edu.ph', 9452385340, 'arminpogi', '0', 0, '841305', 'p8i3yjgck0sa8ohtfn06bmlxvuedw4rqz', '2023-11-02 13:30:59'),
+(6, 76972479655037, 'Citizen', 'Jerry', '', '', 'Clarito', '', '1967-10-09', 55, 'Male', 'FN-01004', 0, 0, '', '0000-00-00', 'jerryclarito', 'bbclarito09@gmail.com', 9053902090, 'jerry1', '0', 0, '', '', '0000-00-00 00:00:00'),
+(7, 7111055, 'Citizen', 'Concepcion', '', '', 'Clarito', '', '1967-10-09', 55, 'Female', 'FN-01004', 0, 0, '', '0000-00-00', 'conc', 'bbclarito09@gmail.com', 9123456789, '123123', '0', 0, '', '', '0000-00-00 00:00:00'),
+(8, 69071362844102318, 'Citizen', 'James', '', '', 'Mendoza', '', '2000-07-09', 22, 'Male', 'FN-01005', 0, 0, '', '0000-00-00', 'james123', 'james.mendoza@gmail.com', 9987654321, 'james123', '0', 0, '', '', '0000-00-00 00:00:00'),
+(9, 155011987532, 'Citizen', 'Jayc', '', '', 'Espina', '', '2000-01-01', 23, 'Male', 'FN-01006', 0, 0, '', '0000-00-00', 'jayc01', 'jayc.espina@gmail.com', 9456789123, '123456', '0', 0, '', '', '0000-00-00 00:00:00'),
+(10, 9066614, 'Citizen', 'Juan', '', '', 'Dela Cruz', '', '2000-05-01', 23, 'Male', 'FN-01006', 0, 0, '', '0000-00-00', 'juan11', 'james.mendoza@gmail.com', 9452385341, 'juan11', '0', 0, '', '', '0000-00-00 00:00:00'),
+(11, 7042025769213999, 'Citizen', 'James Carlos', '', '', 'Yap', '', '2000-07-18', 22, 'Male', 'FN-01007', 188, 94, '120/90', '2023-04-26', 'jcyap18', 'jcyap18@gmail.com', 9234561231, 'jcy1800', '0', 0, '327690', 'pqj7wuy6ctogbarlsf31vexim2k4nh2zd', '2023-11-14 11:11:57'),
+(12, 7465830599584826, 'Citizen', 'LeBron', '', '', 'James', '', '1984-12-30', 38, 'Male', 'FN-01007', 205, 100, '120/90', '2023-03-23', 'lbj23', 'lebron.james@gmail.com', 9452385340, 'lbj23', '0', 0, '057326', '7rk5vzohicb6wuepdjgmqax3tlf3n3ys1', '2023-11-13 17:51:44'),
+(13, 652946296, 'Citizen', 'Lorena', '', '', 'Santos', '', '1950-02-22', 72, 'Female', 'FN-01002', 155, 59, '125/90', '2023-04-26', 'lsantos', 'lorena@gmail.com', 9123456789, 'lsantos', '0', 0, '287605', '7et8oliy6xvsnaumbwpqzgd4j2r8k3hfc', '2023-11-14 12:01:04'),
+(14, 7698546815, 'Citizen', 'Rozelle', '', '', 'Macaraeg', '', '2000-07-25', 22, 'Female', 'FN-01005', 0, 0, '', '0000-00-00', 'zellegearacam', 'roselle.macaraeg@gmail.com', 9458011141, 'haduken1234', '0', 0, '203179', 'wa5gbfn7i0qpvs5y2etoklhdrjuzm0xc', '2023-11-02 17:15:55'),
+(15, 849696174405, 'Citizen', 'Terence', '', '', 'Romeo', '', '2000-06-22', 22, 'Male', 'FN-01001', 0, 0, '', '0000-00-00', '12345', 'tr7@gmail.com', 9123456782, '12345', '0', 0, '', '', '0000-00-00 00:00:00'),
+(16, 17281382106, 'Citizen', 'Rodrigo', '', '', 'Bato', '', '2000-07-09', 22, 'Male', 'FN-01001', 0, 0, '', '0000-00-00', 'rrb123', 'bigboygaming582@gmail.com', 9074403149, 'rrb123', '0', 0, '980457', 'iv1yrwp4utdf0macez1ohgskn64qb9lxj', '2023-11-19 19:28:51'),
+(17, 948706184928995932, 'Citizen', 'Rodrigo', 'Rona', 'R', 'Bato', '', '2000-07-09', 22, 'Male', 'FN-01001', 0, 0, '', '0000-00-00', 'rrb123', 'bigboygaming582@gmail.com', 9074403149, 'rrb123', '0', 0, '980457', 'iv1yrwp4utdf0macez1ohgskn64qb9lxj', '2023-11-19 19:28:51'),
+(18, 686777744717144033, 'Citizen', 'Jack', 'Nano', 'N', 'Poy', 'Jr', '2000-05-01', 23, '', 'FN-01001', 0, 0, '', '0000-00-00', 'jnp123', 'jnp123@gmail.com', 9123456785, 'jnp123', '0', 0, '', '', '0000-00-00 00:00:00'),
+(19, 6619, 'Citizen', 'Ma', 'Dee', 'D', 'Kit', '', '1982-02-16', 40, 'Female', 'FN-01002', 0, 0, '', '0000-00-00', 'mdk123', 'mdk123@gmail.com', 9074403148, 'mdk123', '0', 0, '613089', 'nl2rymub2egopkia5qw0xzsdt62hvj6fc', '2023-11-14 18:32:34'),
+(20, 11956, 'Citizen', 'Jaime', 'Jason', 'J', 'Jaques', 'Jr', '1999-01-02', 24, 'Male', 'FN-01002', 0, 0, '', '0000-00-00', 'jjjj11', 'jaimejaquez@gmail.com', 9123456765, 'jjjj11', '5', 0, '', '', '0000-00-00 00:00:00'),
+(21, 35274541, 'Citizen', 'Orlando', 'Magic', 'M', 'Robinson', '', '2000-07-09', 23, 'Male', 'FN-01001', 0, 0, '', '0000-00-00', 'omr25', 'bigboygaming582@gmail.com', 9074403149, 'omr25', '0', 0, '980457', 'iv1yrwp4utdf0macez1ohgskn64qb9lxj', '2023-11-19 19:28:51'),
+(22, 7559817057262110, 'Citizen', 'Peter', 'June', 'J', 'Simon', '', '2000-05-01', 23, 'Male', 'FN-01001', 0, 0, '', '0000-00-00', 'pj08', 'bigboygaming582@gmail.com', 9074403149, 'pj08', '792168', 0, '980457', 'iv1yrwp4utdf0macez1ohgskn64qb9lxj', '2023-11-19 19:28:51'),
+(23, 22686424320785, 'Citizen', 'Jason', 'Will', 'W', 'Richardson', 'Jr', '0000-00-00', 22, 'Male', 'FN-01002', 0, 0, '', '0000-00-00', 'jr00', 'bigboygaming582@gmail.com', 9074403149, 'jr00', '77994', 0, '980457', 'iv1yrwp4utdf0macez1ohgskn64qb9lxj', '2023-11-19 19:28:51'),
+(24, 11800882225, 'Citizen', 'Tyler', 'Tio', 'T', 'Johnson', 'Jr', '0000-00-00', 22, 'Male', 'FN-01004', 0, 0, '', '0000-00-00', 'qwerty123', 'bigboygaming582@gmail.com', 0, 'qwerty123', '994666', 0, '980457', 'iv1yrwp4utdf0macez1ohgskn64qb9lxj', '2023-11-19 19:28:51'),
+(27, 43466, 'Citizen', 'Jason', 'William', 'W', 'Castro', 'Jr', '2000-07-17', 23, 'Male', 'FN-01002', 0, 0, '', '0000-00-00', 'jayson17', 'theophilus052527@gmail.com', 9150371233, '123456', '77d49d5cdbd63d14175e1ba1fa901f40', 0, '', '', '2023-11-19 20:25:08'),
+(28, 10301, 'Citizen', 'Emmanuel', 'Tite', 'T', 'Jumauan', 'none', '2006-10-14', 17, 'Male', 'FN-01001', 0, 0, '', '0000-00-00', 'kaiju14', 'asrofcandelaria@gmail.con', 9074403149, 'kaiju14', '19c718b363f1574a614f285b06c362fb', 0, '', '', '0000-00-00 00:00:00'),
+(29, 2174640833, 'Citizen', 'Paul', 'Dalistan', 'D', 'Lee', '', '2000-07-09', 23, 'Male', 'FN-01002', 0, 0, '', '0000-00-00', 'poli03', 'zaffre.san@gmail.com', 9150371233, 'poli03', '59d4dbe3b43d18383f26e5b608e0ebf1', 1, '', '', '0000-00-00 00:00:00'),
+(30, 544489973535640028, 'Citizen', 'Zayden', 'Macaraeg', 'M', 'Candelaria', '', '2000-07-27', 23, 'Male', 'FN-01001', 0, 0, '', '0000-00-00', 'zaydenmc', 'babykulet27@gmail.com', 9150371233, 'zaydenmc', '30166a1a9d914ac5c93046c9bd17f594', 1, '', '', '0000-00-00 00:00:00'),
+(31, 5420184842739315579, 'Citizen', 'Ma. Aramae', 'Villanueva', 'V', 'Candelaria', '', '2004-09-08', 19, 'Female', 'FN-01002', 0, 0, '', '0000-00-00', 'aramae1849', 'aracandelaria59@gmail.com', 9123456785, 'aramae1849', '22829c356b555dcbc08507da4721b313', 1, '761932', 'srftmojlq8nke5a91xuhwivc4zg2dyp3b', '2023-11-19 19:31:56'),
+(32, 944254142107, 'Citizen', 'Emmanuel', 'Tite', 'T', 'Jumauan', '', '2006-10-14', 17, 'Male', 'FN-01001', 0, 0, '', '0000-00-00', 'kaiju14', 'asrofcandelaria@gmail.com', 9074403149, 'kaiju14', 'c31ea9f187d6032ee806d2b3aa77556d', 0, '', '', '0000-00-00 00:00:00'),
+(33, 63334028116209, 'Citizen', 'adsadad', 'sadasd', 's', 'dsadsad', 'Jr', '2000-07-09', 23, '', 'FN-01003', 0, 0, '', '0000-00-00', 'tipsyd', 'zaffre.sana@gmail.com', 9150371233, 'tipsyd', 'a18af55a6a0e3b394a8cc790dfd97249', 0, '', '', '0000-00-00 00:00:00'),
+(34, 547115970236283, 'Citizen', 'Brian', 'Smug', 'S', 'Lao', '', '2000-01-05', 23, 'Male', 'FN-01003', 0, 0, '', '0000-00-00', 'smuglaz', 'armin.candelaria.s@gmail.com', 9074403149, 'smuglaz', 'cecb005e5e833a399fc66521a4370e95', 0, '', '', '0000-00-00 00:00:00'),
+(35, 3080, 'Citizen', 'Lei', 'Concepcion', 'C', 'Butler', '', '2000-01-05', 23, 'Female', 'FN-01003', 0, 0, '', '0000-00-00', 'chocolate', 'chocolate012345@gmail.com', 9074403187, 'chocolate', '5307a64a618281ab405011684d7907b5', 0, '', '', '0000-00-00 00:00:00');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

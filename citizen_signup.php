@@ -110,6 +110,8 @@
             </form>
         </div>
 
-		<?php include 'includes/scripts.php'; ?>
+        <!-- sweetalert cdn file link -->
+        <script src="js/sweetalert.min.js"></script>
+		<?php include 'includes/message.php'; ?>
     </body>
 </html>

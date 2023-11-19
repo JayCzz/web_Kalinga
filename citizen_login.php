@@ -1,4 +1,4 @@
-<?php
+<?php 
 	session_start();
 
 	include 'components/connection.php';
@@ -42,12 +42,16 @@
                         <i class="fas fa-lock"></i>
                     </div>
 
+                    <a href="components/forgot_password/confirm_email.php" class="forgot-password">Forgot Password</a>
+
                     <button class="submit" type="submit" name="citizen_login">Login</button>
                     <div class="signup-link">Not a member? <a href="citizen_signup.php">Signup now</a></div>
                 </form>
             </div>
         </section>
 
-		<?php include 'includes/scripts.php'; ?>
+        <!-- sweetalert cdn file link -->
+        <script src="js/sweetalert.min.js"></script>
+		<?php include 'includes/message.php'; ?>
     </body>
 </html>
