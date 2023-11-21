@@ -5,9 +5,6 @@
 	include '../functions.php';
 
     $activation_code = $_GET['code'];
-
-    $query = "SELECT * FROM users WHERE activation_code = '$activation_code'";
-    $result = mysqli_query($con, $query);
 ?>
 
 <!DOCTYPE html>
@@ -35,11 +32,57 @@
                 
                 <form action="../../action/forget_password.php" method="POST">
                 <?php
-                    while($row = mysqli_fetch_assoc($result)){
+		            // Email Exists or not in admin db
+                    $admin_query = "SELECT * FROM admin WHERE activation_code = '$activation_code'";
+                    $admin_result = mysqli_query($con, $admin_query);
+                    while($admin_row = mysqli_fetch_assoc($admin_result))
+                    {
                 ?>
                     <div class="row">
                         <i class="fas fa-envelope"></i>
-                        <input type="text" name="email" value="<?php echo $row['email']; ?>" readonly>
+                        <input type="text" name="email" value="<?php echo $admin_row['email']; ?>" readonly>
+                    </div>
+                <?php
+                    };
+                ?>
+                <?php
+		            // Email Exists or not in doctor db
+                    $doctor_query = "SELECT * FROM doctor WHERE activation_code = '$activation_code'";
+                    $doctor_result = mysqli_query($con, $doctor_query);
+                    while($doctor_row = mysqli_fetch_assoc($doctor_result))
+                    {
+                ?>
+                    <div class="row">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" name="email" value="<?php echo $doctor_row['email']; ?>" readonly>
+                    </div>
+                <?php
+                    };
+                ?>
+                <?php
+		            // Email Exists or not in nurse db
+                    $nurse_query = "SELECT * FROM nurse WHERE activation_code = '$activation_code'";
+                    $nurse_result = mysqli_query($con, $nurse_query);
+                    while($nurse_row = mysqli_fetch_assoc($nurse_result))
+                    {
+                ?>
+                    <div class="row">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" name="email" value="<?php echo $nurse_row['email']; ?>" readonly>
+                    </div>
+                <?php
+                    };
+                ?>
+                <?php
+		            // Email Exists or not in users db
+                    $users_query = "SELECT * FROM users WHERE activation_code = '$activation_code'";
+                    $users_result = mysqli_query($con, $users_query);
+                    while($users_row = mysqli_fetch_assoc($users_result))
+                    {
+                ?>
+                    <div class="row">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" name="email" value="<?php echo $users_row['email']; ?>" readonly>
                     </div>
                 <?php
                     };

@@ -26,16 +26,50 @@
 
         if (!empty($firstName) && !empty($middleName) && !empty($lastName) && !empty($birthday) && !empty($age) && !empty($adminNumber) && !empty($username) && !empty($email) && !empty($phoneNumber) && !empty($password) && !empty($confirmPassword) && !is_numeric($firstName) && !is_numeric($middleName) && !is_numeric($lastName) && !is_numeric($username) && !is_numeric($email))
         {
-            // Email Exists or not
-            $check_email_query = "SELECT email FROM admin WHERE email = '$email' LIMIT 1";
-            $check_email_query_run = mysqli_query($con, $check_email_query);
+            // Email Exists or not in admin db
+            $check_email_admin_query = "SELECT email FROM admin WHERE email = '$email' LIMIT 1";
+            $check_email_admin_query_run = mysqli_query($con, $check_email_admin_query);
 
-            if (mysqli_num_rows($check_email_query_run) > 0)
+            if (mysqli_num_rows($check_email_admin_query_run) > 0)
             {
                 $_SESSION['status'] = "Email Already Registered";
                 $_SESSION['status_code'] = "warning";
                 header("Location: ../admin_signup.php");
             }
+
+            // Email Exists or not in doctor db
+            $check_email_doctor_query = "SELECT email FROM doctor WHERE email = '$email' LIMIT 1";
+            $check_email_doctor_query_run = mysqli_query($con, $check_email_doctor_query);
+
+            if (mysqli_num_rows($check_email_doctor_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../admin_signup.php");
+            }
+
+            // Email Exists or not in nurse db
+            $check_email_nurse_query = "SELECT email FROM nurse WHERE email = '$email' LIMIT 1";
+            $check_email_nurse_query_run = mysqli_query($con, $check_email_nurse_query);
+
+            if (mysqli_num_rows($check_email_nurse_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../admin_signup.php");
+            }
+
+            // Email Exists or not in users db
+            $check_email_users_query = "SELECT email FROM users WHERE email = '$email' LIMIT 1";
+            $check_email_users_query_run = mysqli_query($con, $check_email_users_query);
+
+            if (mysqli_num_rows($check_email_users_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../admin_signup.php");
+            }
+            
             else 
             {
                 // Insert User / Save to database
@@ -85,16 +119,50 @@
 
         if (!empty($firstName) && !empty($middleName) && !empty($lastName) && !empty($birthday) && !empty($age) && !empty($doctorNumber) && !empty($username) && !empty($email) && !empty($phoneNumber) && !empty($password) && !empty($confirmPassword) && !is_numeric($firstName) && !is_numeric($middleName) && !is_numeric($lastName) && !is_numeric($username) && !is_numeric($email))
         {
-            // Email Exists or not
-            $check_email_query = "SELECT email FROM doctor WHERE email = '$email' LIMIT 1";
-            $check_email_query_run = mysqli_query($con, $check_email_query);
+            // Email Exists or not in admin db
+            $check_email_admin_query = "SELECT email FROM admin WHERE email = '$email' LIMIT 1";
+            $check_email_admin_query_run = mysqli_query($con, $check_email_admin_query);
 
-            if (mysqli_num_rows($check_email_query_run) > 0)
+            if (mysqli_num_rows($check_email_admin_query_run) > 0)
             {
                 $_SESSION['status'] = "Email Already Registered";
                 $_SESSION['status_code'] = "warning";
                 header("Location: ../doctor_signup.php");
             }
+
+            // Email Exists or not in doctor db
+            $check_email_doctor_query = "SELECT email FROM doctor WHERE email = '$email' LIMIT 1";
+            $check_email_doctor_query_run = mysqli_query($con, $check_email_doctor_query);
+
+            if (mysqli_num_rows($check_email_doctor_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../doctor_signup.php");
+            }
+
+            // Email Exists or not in nurse db
+            $check_email_nurse_query = "SELECT email FROM nurse WHERE email = '$email' LIMIT 1";
+            $check_email_nurse_query_run = mysqli_query($con, $check_email_nurse_query);
+
+            if (mysqli_num_rows($check_email_nurse_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../doctor_signup.php");
+            }
+
+            // Email Exists or not in users db
+            $check_email_users_query = "SELECT email FROM users WHERE email = '$email' LIMIT 1";
+            $check_email_users_query_run = mysqli_query($con, $check_email_users_query);
+
+            if (mysqli_num_rows($check_email_users_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../doctor_signup.php");
+            }
+            
             else 
             {
                 // Insert User / Save to database
@@ -144,16 +212,50 @@
 
         if (!empty($firstName) && !empty($middleName) && !empty($lastName) && !empty($birthday) && !empty($age) && !empty($nurseNumber) && !empty($username) && !empty($email) && !empty($phoneNumber) && !empty($password) && !empty($confirmPassword) && !is_numeric($firstName) && !is_numeric($middleName) && !is_numeric($lastName) && !is_numeric($username) && !is_numeric($email))
         {
-            // Email Exists or not
-            $check_email_query = "SELECT email FROM nurse WHERE email = '$email' LIMIT 1";
-            $check_email_query_run = mysqli_query($con, $check_email_query);
+            // Email Exists or not in admin db
+            $check_email_admin_query = "SELECT email FROM admin WHERE email = '$email' LIMIT 1";
+            $check_email_admin_query_run = mysqli_query($con, $check_email_admin_query);
 
-            if (mysqli_num_rows($check_email_query_run) > 0)
+            if (mysqli_num_rows($check_email_admin_query_run) > 0)
             {
                 $_SESSION['status'] = "Email Already Registered";
                 $_SESSION['status_code'] = "warning";
                 header("Location: ../nurse_signup.php");
             }
+
+            // Email Exists or not in doctor db
+            $check_email_doctor_query = "SELECT email FROM doctor WHERE email = '$email' LIMIT 1";
+            $check_email_doctor_query_run = mysqli_query($con, $check_email_doctor_query);
+
+            if (mysqli_num_rows($check_email_doctor_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../nurse_signup.php");
+            }
+
+            // Email Exists or not in nurse db
+            $check_email_nurse_query = "SELECT email FROM nurse WHERE email = '$email' LIMIT 1";
+            $check_email_nurse_query_run = mysqli_query($con, $check_email_nurse_query);
+
+            if (mysqli_num_rows($check_email_nurse_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../nurse_signup.php");
+            }
+
+            // Email Exists or not in users db
+            $check_email_users_query = "SELECT email FROM users WHERE email = '$email' LIMIT 1";
+            $check_email_users_query_run = mysqli_query($con, $check_email_users_query);
+
+            if (mysqli_num_rows($check_email_users_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../nurse_signup.php");
+            }
+
             else 
             {
                 // Insert User / Save to database
@@ -203,16 +305,50 @@
 
         if (!empty($firstName) && !empty($middleName) && !empty($lastName) && !empty($birthday) && !empty($age) && !empty($familyNumber) && !empty($username) && !empty($email) && !empty($phoneNumber) && !empty($password) && !empty($confirmPassword) && !is_numeric($firstName) && !is_numeric($middleName) && !is_numeric($lastName) && !is_numeric($username) && !is_numeric($email))
         {
-            // Email Exists or not
-            $check_email_query = "SELECT email FROM users WHERE email = '$email' LIMIT 1";
-            $check_email_query_run = mysqli_query($con, $check_email_query);
+            // Email Exists or not in admin db
+            $check_email_admin_query = "SELECT email FROM admin WHERE email = '$email' LIMIT 1";
+            $check_email_admin_query_run = mysqli_query($con, $check_email_admin_query);
 
-            if (mysqli_num_rows($check_email_query_run) > 0)
+            if (mysqli_num_rows($check_email_admin_query_run) > 0)
             {
                 $_SESSION['status'] = "Email Already Registered";
                 $_SESSION['status_code'] = "warning";
                 header("Location: ../citizen_signup.php");
             }
+
+            // Email Exists or not in doctor db
+            $check_email_doctor_query = "SELECT email FROM doctor WHERE email = '$email' LIMIT 1";
+            $check_email_doctor_query_run = mysqli_query($con, $check_email_doctor_query);
+
+            if (mysqli_num_rows($check_email_doctor_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../citizen_signup.php");
+            }
+
+            // Email Exists or not in nurse db
+            $check_email_nurse_query = "SELECT email FROM nurse WHERE email = '$email' LIMIT 1";
+            $check_email_nurse_query_run = mysqli_query($con, $check_email_nurse_query);
+
+            if (mysqli_num_rows($check_email_nurse_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../citizen_signup.php");
+            }
+
+            // Email Exists or not in users db
+            $check_email_users_query = "SELECT email FROM users WHERE email = '$email' LIMIT 1";
+            $check_email_users_query_run = mysqli_query($con, $check_email_users_query);
+
+            if (mysqli_num_rows($check_email_users_query_run) > 0)
+            {
+                $_SESSION['status'] = "Email Already Registered";
+                $_SESSION['status_code'] = "warning";
+                header("Location: ../citizen_signup.php");
+            }
+
             else 
             {
                 // Insert User / Save to database
