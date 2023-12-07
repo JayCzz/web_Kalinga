@@ -489,6 +489,17 @@ section{
    color: var(--white);
 }
 
+@media only screen and (max-width: 600px) {
+   .product-display .product-display-table th,
+   .product-display .product-display-table td {
+      font-size: 1.5rem;
+   }
+
+   .product-display .product-display-table td img {
+      padding: 0.5rem;
+   }
+}
+
 @media (max-width:1200px){
    body{
       padding-left: 0;
@@ -542,13 +553,7 @@ section{
        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
-    .product-display{
-       overflow-y:scroll;
-    }
- 
-    .product-display .product-display-table{
-       width: 80rem;
-    }
+
  
  }
  

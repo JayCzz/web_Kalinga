@@ -26,7 +26,7 @@
                     <span>Account Recovery</span>
                 </div>
                 
-                <p>To help keep your account safe. Kalinga wants to make sure that it's really you trying to sign in.</p>
+                <p class="note" >To help keep your account safe. Kalinga wants to make sure that it's really you trying to sign in.</p>
                 
                 <form action="../../action/forget_password.php" method="POST">
                     <div class="row">

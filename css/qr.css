@@ -494,6 +494,8 @@ section{
    color: var(--white);
 }
 
+
+
 @media (max-width:1200px){
    body{
       padding-left: 0;
@@ -545,14 +547,6 @@ section{
  
     .header .flex .search-form.active{
        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-
-    .product-display{
-       overflow-y:scroll;
-    }
- 
-    .product-display .product-display-table{
-       width: 80rem;
     }
  
  }

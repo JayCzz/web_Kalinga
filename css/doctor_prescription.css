@@ -26,6 +26,8 @@
    color:#fff;
 }
 
+
+
 html{
    font-size: 62.5%;
    overflow-x: hidden;
@@ -47,6 +49,7 @@ html::-webkit-scrollbar-thumb{
 body{
    background-color: var(--light-bg);
    padding-left: 30rem;
+
 }
 
 body.dark{
@@ -343,6 +346,7 @@ section{
    left: -30rem;
 }
 
+/* Form */
 .property-form form{
    background-color: var(--white);
    padding: 2rem;
@@ -354,7 +358,27 @@ section{
    text-align: center;
    padding-bottom: 1rem;
    color: var(--black);
-   text-transform: capitalize;
+   text-transform: uppercase;
+   margin-top: 3.5rem;
+   margin-bottom: 3rem;
+
+}
+
+.property-form form .title {
+   font-size: 2rem;
+   padding-bottom: 1rem;
+   color: var(--black);
+   text-transform: uppercase;
+   
+}
+
+.property-form form .title1 {
+   font-size: 2rem;
+   padding-bottom: 1rem;
+   text-align: center;
+   color: var(--black);
+   text-transform: uppercase;
+   margin-top: 2rem;
 }
 
 .property-form form .flex{
@@ -366,7 +390,7 @@ section{
 }
 
 .property-form form .box{
-   flex: 1 1 40rem;
+   flex: 40rem;
 }
 
 .property-form form .box .input{
@@ -384,10 +408,11 @@ section{
    resize: none;
 }
 
-.property-form form .box p{
-   font-size: 2rem;
+.property-form form .box p  {
+   font-size: 1.5rem;
    color: var(--black);
    padding-top: 1rem;
+   font-weight: bolder;
 }
 
 .property-form form .box p span{
@@ -397,6 +422,118 @@ section{
 .updt{
    text-align: center;
 }
+
+
+/*section 3*/
+
+.wrapper {
+   margin: 40px auto;
+   padding: 10px;
+   border-radius: 5px;
+   background: white;
+   box-shadow: 0px 10px 40px 0px rgba(47,47,47,.1);
+ }
+
+.row {
+   display: flex;
+}
+
+.col-md-4 {
+   flex: 0 0 33.33%;
+   max-width: 33.33%;
+   padding: 0 15px;
+   box-sizing: border-box;
+}
+
+.label 
+{
+   font-size: 1.5rem;
+}.label1
+{
+   font-size: 1.5rem;
+}
+
+.mediv {
+   background: #fff;
+   border: 1px solid #ddd;
+   box-shadow: 1px 2px 3px #ccc;
+   border-radius: 7px;
+   text-align: center;
+   width: 100%;
+   box-sizing: border-box;
+   font-size: 1.5rem;
+   margin: 8px 0;
+}
+
+select {
+   width: 100%;
+   padding: 10px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   height: 40px;
+}
+
+input[type="text"] {
+   width: 100%;
+   padding: 12px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   font-size: 1.5rem;
+}
+
+.med_quantity {
+   width: 100%;
+   padding: 12px;
+   margin: 8px 0;
+   box-sizing: border-box;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 1.5rem;
+}
+
+/*ADD N REMOVE BTN*/
+.property-form a{
+   text-decoration: none;
+   font-size: small;
+}
+
+.property-form .btn1 {
+   width: 100%;
+   padding: 12px;
+   margin: 8px 0;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 1.5rem;
+   background-color: var(--main-color);
+   color: #fff; 
+}
+
+.property-form .btn-danger {
+   background-color: rgb(179, 1, 1);
+   color: #fff;
+}
+
+.property-form .col-md-2 {
+   flex: 0 0 20%; /* You can adjust the percentage as needed */
+   max-width: 20%;
+}
+
+.property-form .btn1:hover{
+   background-color: var(--black);
+}
+
+/*ADD N REMOVE BTN END*/
+
+
+
+
+/*responsive view*/
 
 @media (max-width:1200px){
    body{

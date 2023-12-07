@@ -38,7 +38,7 @@ body {
 }
 
 header.sticky {
-    padding: 10px 100px;
+    padding: 10px 10%;
     background: #f5f5f5;
 }
 
@@ -971,4 +971,24 @@ div.footnotes .row .footnote a:nth-child(2)::before {
     top: 50%;
     left: 0;
     transform: translate(0, -50%)
+}
+
+.copyright {
+    color: #6D6D6D;
+    background: #E9E9E9;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center; /* Align text to the center */
+}
+
+#top {
+    position: relative;
+}
+
+.topHome {
+    position: fixed;
+    color: #e84a5f;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
 }

@@ -94,3 +94,8 @@ form .row input::placeholder {
     border: 1px solid #e84a5f;
     cursor: pointer;
 }
+
+.note{
+    padding: 6%;
+    text-align: justify;
+}

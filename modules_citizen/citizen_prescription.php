@@ -121,9 +121,8 @@ $user_data = check_login($con);
                         <tr class="content">
                             <th class="" scope="col">#</th>
                             <th class="" scope="col">Medication Name</th>
-                            <th class="" scope="col">Purpose</th>
-                            <th class="" scope="col">Dosage</th>
                             <th class="" scope="col">Frequency</th>
+                            <th class="" scope="col">Duration</th>
                         </tr>
                     </thead>
                     <tbody>

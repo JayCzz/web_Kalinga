@@ -27,7 +27,6 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `user_id` bigint NOT NULL,
@@ -39,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `suffix` varchar(255) NOT NULL,
   `birthday` date NOT NULL,
   `age` int NOT NULL,
-  `sex` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `sex` enum('Male','Female') CHARACTER SET utf8mb4  NOT NULL,
   `adminNumber` varchar(8) NOT NULL,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -50,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `verify_status` tinyint(1) DEFAULT '0' COMMENT '0 = no, 1 = yes',
   `otp` varchar(255) NOT NULL,
   `activation_code` varchar(255) NOT NULL,
-  `recovery_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `recovery_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `firstName` (`firstName`),
@@ -67,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   KEY `suffix` (`suffix`),
   KEY `verify_token` (`verify_token`),
   KEY `verify_status` (`verify_status`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `admin`
@@ -87,7 +86,7 @@ INSERT INTO `admin` (`id`, `user_id`, `type`, `firstName`, `middleName`, `middle
 
 DROP TABLE IF EXISTS `consultation`;
 CREATE TABLE IF NOT EXISTS `consultation` (
-  `consultation_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `consultation_name` varchar(100) CHARACTER SET utf8mb4  NOT NULL,
   `adress` varchar(100) NOT NULL,
   `date` date NOT NULL,
   `familyNumber` varchar(8) NOT NULL,
@@ -99,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `consultation` (
   KEY `cnumber` (`cnumber`),
   KEY `consultation` (`consultation`(250)),
   KEY `consultation_name` (`consultation_name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -123,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `consultations` (
   KEY `familyNumber` (`familyNumber`),
   KEY `cnumber` (`cnumber`),
   KEY `consultation` (`consultation`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `consultations`
@@ -161,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `doctor` (
   `suffix` varchar(255) NOT NULL,
   `birthday` date NOT NULL,
   `age` bigint NOT NULL,
-  `sex` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `sex` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `doctorNumber` varchar(8) NOT NULL,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -171,24 +170,12 @@ CREATE TABLE IF NOT EXISTS `doctor` (
   `verify_status` tinyint NOT NULL DEFAULT '0' COMMENT '0 = no, 1 = yes',
   `otp` varchar(255) NOT NULL,
   `activation_code` varchar(255) NOT NULL,
-  `recovery_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `recovery_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `firstName` (`firstName`),
-  KEY `lastName` (`lastName`),
-  KEY `birthday` (`birthday`),
-  KEY `age` (`age`),
-  KEY `sex` (`sex`),
-  KEY `doctorNumber` (`doctorNumber`),
-  KEY `username` (`username`),
-  KEY `email` (`email`),
-  KEY `phoneNumber` (`phoneNumber`),
-  KEY `middleName` (`middleName`),
-  KEY `middleInitial` (`middleInitial`),
-  KEY `suffix` (`suffix`),
-  KEY `verify_token` (`verify_token`),
-  KEY `verify_status` (`verify_status`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `lastName` (`lastName`)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
 --
 -- Dumping data for table `doctor`
@@ -207,12 +194,12 @@ INSERT INTO `doctor` (`id`, `user_id`, `type`, `firstName`, `middleName`, `middl
 DROP TABLE IF EXISTS `inventory`;
 CREATE TABLE IF NOT EXISTS `inventory` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
   `type` varchar(255) NOT NULL,
-  `quantity` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `quantity` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `inventory`
@@ -253,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `nurse` (
   `verify_status` tinyint NOT NULL DEFAULT '0' COMMENT '0 = no, 1 = yes',
   `otp` varchar(255) NOT NULL,
   `activation_code` varchar(255) NOT NULL,
-  `recovery_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `recovery_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `firstName` (`firstName`),
@@ -267,7 +254,7 @@ CREATE TABLE IF NOT EXISTS `nurse` (
   KEY `phoneNumber` (`phoneNumber`),
   KEY `verify_token` (`verify_token`),
   KEY `verify_status` (`verify_status`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `nurse`
@@ -299,7 +286,7 @@ CREATE TABLE IF NOT EXISTS `prescriptions` (
   KEY `familyNumber` (`familyNumber`),
   KEY `cnumber` (`cnumber`),
   KEY `prescription` (`prescription`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `prescriptions`
@@ -320,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `qr_code` (
   `name` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `qr_code`
@@ -345,7 +332,7 @@ DROP TABLE IF EXISTS `queue_id_value`;
 CREATE TABLE IF NOT EXISTS `queue_id_value` (
   `id` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `queue_id_value`
@@ -374,9 +361,9 @@ CREATE TABLE IF NOT EXISTS `queue_list` (
   `qnumber` bigint NOT NULL,
   `name` varchar(255) NOT NULL,
   `type` enum('Medical','Dental') NOT NULL,
-  `status` enum('Active','Waiting','Done','No Show') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `status` enum('Active','Waiting','Done','No Show') CHARACTER SET utf8mb4 NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `queue_list`
@@ -465,7 +452,7 @@ CREATE TABLE IF NOT EXISTS `schedule_list` (
   `start_datetime` datetime NOT NULL,
   `end_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `schedule_list`
@@ -487,7 +474,7 @@ CREATE TABLE IF NOT EXISTS `service` (
   `description` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `service`
@@ -511,7 +498,7 @@ CREATE TABLE IF NOT EXISTS `services` (
   `description` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `services`
@@ -534,14 +521,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_id` bigint NOT NULL,
   `type` enum('Citizen') NOT NULL,
   `firstName` varchar(100) NOT NULL,
-  `middleName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `middleName` varchar(255) CHARACTER SET utf8mb4  NOT NULL,
   `middleInitial` varchar(1) NOT NULL,
   `lastName` varchar(100) NOT NULL,
   `suffix` varchar(255) NOT NULL,
   `birthday` date NOT NULL,
   `age` bigint NOT NULL,
-  `sex` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `familyNumber` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `sex` enum('Male','Female') CHARACTER SET utf8mb4  NOT NULL,
+  `familyNumber` varchar(8) CHARACTER SET utf8mb4  NOT NULL,
   `height` bigint NOT NULL,
   `weight` bigint NOT NULL,
   `bp` varchar(8) NOT NULL,
@@ -554,7 +541,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `verify_status` tinyint NOT NULL DEFAULT '0' COMMENT '0 = no, 1 = yes',
   `otp` varchar(255) NOT NULL,
   `activation_code` varchar(255) NOT NULL,
-  `recovery_time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `recovery_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `firstName` (`firstName`),
@@ -575,7 +562,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `suffix` (`suffix`),
   KEY `verify_token` (`verify_token`),
   KEY `verify_status` (`verify_status`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `users`

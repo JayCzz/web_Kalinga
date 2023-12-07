@@ -47,7 +47,7 @@
             <a href="#features" style="--i:2;">Features</a>
 
             <div class="nav_btn">
-                <a href="#citizen_login.php" class="nav_item" style="--i:3;">register</a>
+                <a href="citizen_signup.php" class="nav_item" style="--i:3;">register</a>
                 <a href="#login" class="nav_item" style="--i:3;">Login</a>
             </div>
         </nav>
@@ -290,6 +290,9 @@
     <!-- Kalinga Features End-->
 
     <!-- FOOTER -->
+    <section class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.7034557097236!2d121.10965139999999!3d14.672763099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b989bda49a3f%3A0x34808daa0bf0a33f!2sMakabayan%20St%2C%20Nangka%2C%20Marikina%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1700483179802!5m2!1sen!2sph" width="100%" height="250" frameborder="0"></iframe>
+    </section>
     <footer>
         <div class="container">
             <div class="row">
@@ -368,7 +371,18 @@
             </div>
         </div>
     </footer>
-
+    <!--/.page-section-->
+    <section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    Copyright 2014 | All Rights Reserved  -- Template by <a href="http://webThemez.com">WebThemez.com</a>
+                </div>
+            </div>
+            <!-- / .row -->
+        </div>
+    </section>
+    <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
     <!-- Scripts -->
 
     <script src="../js/script.js"></script>
