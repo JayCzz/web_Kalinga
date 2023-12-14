@@ -478,27 +478,43 @@ section {
    margin-bottom: 20px;
    justify-content: center;
    padding: 20px;
-   max-width: 1000;
    margin: 0 auto;
    display: flex;
    flex-direction: column;
 }
 
-.prescription_logo {
-   height: 150px;
-   width: 150px;
-   margin-right: 20px;
-
-}
-
-.header_title {
-   font-size: 3rem;
-   font-weight: bold;
-   color: #ef6292;
+/*Head*/
+.header-content {
    display: flex;
    align-items: center;
    justify-content: center;
 }
+
+.prescription_logo {
+   height: 80px;
+   width: 80px;
+   margin-right: 50px;
+   margin-left: 50px;
+}
+
+.header_title,
+.header_title2,
+.header_title3 {
+   font-weight: bold;
+   color: black;
+   text-align: center;
+   margin: 0; /* Remove default margin to prevent unwanted spacing */
+}
+
+.header_title {
+   font-size: 1.1rem;
+}.header_title2 {
+   font-size: 2rem;
+}.header_title3 {
+   font-size: 1.5rem;
+}
+
+/*Patient-Information*/
 
 .header_prescription {
    font-size: 2rem;
@@ -512,17 +528,13 @@ section {
    margin-bottom: 1rem;
 }
 
-hr.style1 {
-   border-top: 1px solid black;
-}
-
 .rx_logo {
-   height: 80px;
-   width: 110px;
+   height: 45px;
+   width: 70px;
 }
 
 .rx_title {
-   font-size: 2rem;
+   font-size: 1.5rem;
    font-weight: bold;
    margin-right: 20px;
    display: flex;
@@ -535,6 +547,12 @@ td {
    border: 1px solid black;
    border-collapse: collapse;
    padding: 5px;
+}
+
+table,
+th,
+td  {
+   border: none;
 }
 
 .center {
@@ -562,35 +580,37 @@ td {
 }
 
 /* Media query for smaller screens (e.g., mobile devices) */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
    .prescription-form {
-      padding: 10px;
+     padding: 10px; /* Adjust padding for smaller screens */
    }
-   .prescription_logo {
-      height: 100px;
-      width: 100px;
-      margin-right: 10px;
+ 
+   .header_title,
+   .header_title2,
+   .header_title3 {
+     font-size: 1rem; /* Adjust font size for smaller screens */
    }
-   .header_title {
-      font-size: 2rem;
-   }
-   .header_prescription {
-      font-size: 1.5rem;
-   }
-   .text {
-      font-size: 1.2rem;
-   }
-   .rx_logo {
-      height: 60px;
-      width: 80px;
-   }
-   .rx_title {
-      font-size: 1.5rem;
-   }
-   .content {
-      font-size: 1.2rem;
-   }
+ 
+   .header_prescription,
+   .text,
+   .rx_title,
+   .content,
    .info {
-      font-size: 1rem;
+     font-size: 1rem; /* Adjust font size for smaller screens */
    }
-}
+   .prescription_logo{
+      height: 50px; /* Adjust logo height for smaller screens */
+      width: 50px; /* Adjust logo width for smaller screens */
+      margin-right: 30px; /* Adjust margin for smaller screens */
+      margin-left: 30px; /* Adjust margin for smaller screens */
+    }
+
+   .rx_logo {
+     height: 30px; /* Adjust logo height for smaller screens */
+     width: 50px; /* Adjust logo width for smaller screens */
+   }
+ 
+   table {
+     width: 100%; /* Make the table full width on smaller screens */
+   }
+ }

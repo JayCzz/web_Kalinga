@@ -48,129 +48,113 @@ $user_data = check_login($con);
 
         <!-- col for the form -->
         <div class="prescription-form ">
-            <br>
-            <br>
-            <div class="container ">
-                <div class="row">
-                    <div class="col">
-                        <h1 class="header_title"> <img class="prescription_logo" src="../img/brgylogoreal.png" alt="">
-                            Medical Prescription Form</h1>
+
+            <div class="container-head mt-5">
+                <div class="header-content">
+                    <div class="logo-container">
+                        <img class="prescription_logo" src="../img/brgylogoreal.png" alt="">
                     </div>
-                </div>
-
-                <br>
-                <br>
-                <br>
-                <br>
-
-                <div class="row">
-                    <div class="col">
-                        <h3 class="header_prescription"> Baranggay Nangka Health Center</h3>
-                        <p class="text"><strong>Address:</strong> Makabayan St., Nangka, Marikina City.</p>
-                        <p class="text"><strong>City:</strong> Marikina City</p>
-                        <p class="text"><strong>Phone:</strong> (123) 456-7890</p>
+                    <div class="text-container">
+                        <h1 class="header_title">Republic of the Philippines</h1>
+                        <h1 class="header_title2">City Health Office</h1>
+                        <h1 class="header_title3">Marikina City</h1>
                     </div>
-
-                    <div class="col">
-                        <h3 class="header_prescription">Doctor's Name</h3>
-                        <p class="text"><strong>Lic No.:</strong>_______</p>
-                        <p class="text"><strong>Date of Issue:</strong>_______</p>
-                        <p class="text"><strong>Phone:</strong>_______</p>
+                    <div class="logo-container">
+                        <img class="prescription_logo" src="../img/brgylogoreal.png" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="col mt-3" style="background-color: #ef6292;">
-                <br>
-            </div>
-
+            <!-- -->
             <div class="container mt-5">
+                <div>
+                    <h3 class="header_prescription"> Patient Information </h3>
+                </div>
                 <div class="item row">
                     <div class="col ">
-                        <h3 class="header_prescription"> Patient Information </h3>
                         <p class="text"><strong>Name:</strong> John Doe</p>
-                        <p class="text"><strong>Email:</strong> JohnDoe@gmail.com</p>
-                        <p class="text"><strong>Address:</strong> 123 Main St, City, State</p>
-                        <p class="text"><strong>Phone:</strong> (123) 456-7890</p>
+                        <p class="text"><strong>Age:</strong> 30</p>
                     </div>
-
-                    <div class="col">
-                        <br>
-                        <br>
+                    <br>
+                    <div class="col ">
                         <p class="text"><strong>Gender:</strong> Male</p>
-                        <p class="text"><strong>Age:</strong>30</p>
-                        <p class="text"><strong>Date of Birth:</strong> 01/01/1980</p>
+                        <p class="text"><strong>Date of Issue:</strong>_______</p>
                     </div>
                 </div>
             </div>
 
-        
-            <hr class="style1">
-           
-
+            <!-- -->
+            <hr class=" mt-3" size="3" width="100%" color="black">
+            <!-- -->
             <div class="container mt-5">
-                <h1 class="rx_title"><img class="rx_logo" src="../img/rx-logo.png" alt="">List of Prescriped
-                    Medication
-                </h1>
+                <div class="col">
+                    <h1 class="rx_title"><img class="rx_logo" src="../img/rx-logo.png" alt="">List of Prescriped
+                        Medication
+                    </h1>
+                </div>
 
-                <br>
-                <br>
-
-                <table class="center">
+                <table class="center  mt-3 mb-3">
                     <thead>
                         <tr class="content">
                             <th class="" scope="col">#</th>
-                            <th class="" scope="col">Medication Name</th>
-                            <th class="" scope="col">Frequency</th>
-                            <th class="" scope="col">Duration</th>
+                            <th class="" scope="col">Name</th>
+                            <th class="" scope="col">Quantity</th>
+                            <th class="" scope="col">Instruction</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="content">
                             <th scope="row">1</th>
                             <td>Biogesic</td>
-                            <td>Headache</td>
-                            <td>1 Tablet</td>
+                            <td>3</td>
                             <td>Every 8 hours</td>
                         </tr>
                         <tr class="content">
                             <th scope="row">2</th>
                             <td>Biogesic</td>
-                            <td>Headache</td>
-                            <td>1 Tablet</td>
+                            <td>3</td>
                             <td>Every 8 hours</td>
                         </tr>
                         <tr class="content">
                             <th scope="row">3</th>
                             <td>Biogesic</td>
-                            <td>Headache</td>
-                            <td>1 Tablet</td>
+                            <td>3</td>
                             <td>Every 8 hours</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <br>
-            <br>
-            <br>
+            <hr class=" mt-3" size="3" width="100%" color="black">
+            <!-- -->
+            <div class="container mt-5 ">
+                <div class="row">
+                    <div class="col">
+                        <p class="text"><strong>M.D.:</strong>_______</p>
+                        <p class="text"><strong>Lic No.:</strong>_______</p>
+                    </div>
 
-            <div class="prescription-footer ">
-
+                    <div class="col mt-3">
+                        <p class="text"><strong>Your next visit is on:</strong>_______</p>
+                    </div>
+                </div>
+            </div>
+            <!-- -->
+            <div class="prescription-footer mt-5">
                 <div class="row">
                     <div class="col ">
-                        <p class="info" ><i class="info fas fa-phone me-3"></i> 586-4836</p>
-
+                        <p class="info"><i class="info fas fa-phone me-3"></i> 586-4836</p>
                     </div>
 
                     <div class="col ">
-                        <p class="info" ><i class="info fas fa-envelope me-3"></i>
-                            nangka.health.center@gmail.com</p>
+                        <p class="info"><i class="info fas fa-envelope me-3"></i>nangka.health.center@gmail.com</p>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
+    
     <!-- Content Ends -->
 
     <!-- custom js file link  -->
