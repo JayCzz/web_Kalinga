@@ -357,6 +357,112 @@ section {
    left: -30rem;
 }
 
+/* Weekly Calendar Start */
+
+.dashboard .weekly-box .weekly-title{
+   text-align: center;
+   margin-bottom: 2rem;
+   padding: 1rem;
+}
+
+.dashboard .weekly-box .weekly-title h3{
+   font-size: 2rem;
+   color: var(--black);
+   text-transform: uppercase;
+}
+
+.dashboard .weekly-box .weekly-title p{
+   font-size: 1.7rem;
+   color: var(--light-color);
+   padding: .3rem 0;
+}
+
+.dashboard .weekly-box {
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding: 2rem;
+}
+
+.dashboard .weekly-box .weekly-box-table {
+   margin: 20px auto;
+}
+
+.dashboard .weekly-box .weekly-box-table-head {
+   display: table;
+   width: 95%;
+   margin: 10px auto;
+   background: var(--main-color);
+   padding: 12px 0;
+   color: #fff;
+   font-weight: 600;
+   font-size: 15px;
+   box-shadow: none;
+}
+
+.dashboard .weekly-box .weekly-box-table-row {
+   display: table;
+   width: 95%;
+   margin: 10px auto;
+   background: transparent;
+   padding: 12px 0;
+   color: var(--weekly-calendar);
+   font-size: 15px;
+   box-shadow: 0 1px 4px 0 rgba(0, 0, 50, .3);
+}
+
+.dashboard .weekly-box .weekly-box-table-head .weekly-box-table-cell {
+   display: table-cell;
+   width: 25%;
+   text-align: center;
+   padding: 4px 0;
+   border-right: none;
+   vertical-align: middle;
+}
+
+.dashboard .weekly-box .weekly-box-table-head .weekly-box-table-cell-day {
+   width: 7.85%;
+   padding: 4px 1px;
+}
+
+.dashboard .weekly-box .weekly-box-table-head .weekly-box-table-cell-time {
+   width: 7%;
+}
+
+.dashboard .weekly-box .weekly-box-table-row .weekly-box-table-cell {
+   display: table-cell;
+   width: 25%;
+   text-align: center;
+   padding: 4px 20px;
+   border-right: 1px solid #d6d4d4;
+   vertical-align: middle;
+}
+
+.dashboard .weekly-box .weekly-box-table-row .weekly-box-table-cell-day {
+   width: 7.85%;
+   padding: 4px 1px;
+}
+
+.dashboard .weekly-box .weekly-box-table-row .weekly-box-table-cell-time {
+   width: 7%;
+}
+
+.dashboard .weekly-box .weekly-box-table-row .weekly-box-last-cell {
+   border-right: none;
+}
+
+.dashboard .weekly-box .weekly-box-table-row .weekly-box-table-cell .weekly-box-table-divider {
+   text-align: center;
+   padding: 10px 0;
+   border-bottom: 1px solid #d6d4d4;
+   vertical-align: middle;
+}
+
+.dashboard .weekly-box .weekly-box-table-row .weekly-box-table-cell .weekly-box-last-divider {
+   border-bottom: none;
+}
+
+/* Weekly Calendar End */
+
 .dashboard .box-container {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
