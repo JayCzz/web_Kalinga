@@ -436,23 +436,35 @@ section{
 
 .row {
    display: flex;
+   flex-wrap: wrap; /* Add this to allow wrapping to next line if needed */
 }
 
-.col-md-4 {
-   flex: 0 0 33.33%;
-   max-width: 33.33%;
+/* Column Styles */
+.col-md-3 {
+   flex: 0 0 25%; /* Adjust the percentage as needed */
+   max-width: 25%;
    padding: 0 15px;
    box-sizing: border-box;
 }
 
-.label 
-{
-   font-size: 1.5rem;
-}.label1
-{
-   font-size: 1.5rem;
+.label {
+   font-weight: bolder;
+   margin-bottom: 15px;
 }
 
+/* Adjust the positioning of the button */
+.col-md-2 {
+   margin-top: 20px; /* Adjust as needed */
+}
+
+/* Label Styles */
+.label, .label1 {
+   font-size: 1.5rem;
+} .label1 {
+   font-weight:bold;
+}
+
+/* Medicine Select Styles */
 .mediv {
    background: #fff;
    border: 1px solid #ddd;
@@ -468,15 +480,16 @@ section{
 select {
    width: 100%;
    padding: 10px;
-   margin: 8px 0;
+  
    display: inline-block;
    border: 1px solid #ccc;
    border-radius: 4px;
    box-sizing: border-box;
-   height: 40px;
+   height: 50%;
 }
 
-input[type="text"] {
+/* Input Styles */
+input[type="text"], .med_quantity {
    width: 100%;
    padding: 12px;
    margin: 8px 0;
@@ -487,18 +500,8 @@ input[type="text"] {
    font-size: 1.5rem;
 }
 
-.med_quantity {
-   width: 100%;
-   padding: 12px;
-   margin: 8px 0;
-   box-sizing: border-box;
-   border: 1px solid #ccc;
-   border-radius: 4px;
-   font-size: 1.5rem;
-}
-
-/*ADD N REMOVE BTN*/
-.property-form a{
+/* Button Styles */
+.property-form a {
    text-decoration: none;
    font-size: small;
 }
@@ -520,11 +523,11 @@ input[type="text"] {
 }
 
 .property-form .col-md-2 {
-   flex: 0 0 20%; /* You can adjust the percentage as needed */
+   flex: 0 0 20%; /* Adjust the percentage as needed */
    max-width: 20%;
 }
 
-.property-form .btn1:hover{
+.property-form .btn1:hover {
    background-color: var(--black);
 }
 

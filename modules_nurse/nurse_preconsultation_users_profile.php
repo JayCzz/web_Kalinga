@@ -122,7 +122,6 @@
 
         <!-- custom js file link  -->
         <script src="../js/script.js"></script>
-
-		<?php include '../components/message.php'; ?>
+		
     </body>
 </html>
