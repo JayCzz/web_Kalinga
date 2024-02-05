@@ -49,6 +49,13 @@ $user_data = check_login($con);
 
     <section class="dashboard">
         <h1 class="heading">Home</h1>
+
+            
+        <!-- Weekly Calendar -->
+        <?php
+            include '../components/weekly_calendar.php'; 
+        ?>
+        
         <!-- Slideshow container -->
         <div class="slideshow-container fade">
 

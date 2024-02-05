@@ -21,16 +21,25 @@
 					$user_data = mysqli_fetch_assoc($result);
 					
 					if($user_data['password'] === $password) {
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: ../modules_admin/admin_index.php");
-						die;
+						if($user_data['verify_status'] == 1) {
+							$_SESSION['user_id'] = $user_data['user_id'];
+							header("Location: ../modules_admin/admin_index.php");
+						}
+
+						else {
+							$_SESSION['status'] = 'Your Email Is Not Yet Verified';
+							$_SESSION['status_code'] = "error";
+							header("Location: ../admin_login.php");
+						}
+					}
+		
+					else {
+						$_SESSION['status'] = 'Wrong Username or Password!';
+						$_SESSION['status_code'] = "error";
+						header("Location: ../admin_login.php");
 					}
 				}
 			}
-			
-			$_SESSION['status'] = 'Wrong Username or Password!';
-			$_SESSION['status_code'] = "error";
-            header("Location: ../admin_login.php");
 		}
 		
 		else {
@@ -57,16 +66,25 @@
 					$user_data = mysqli_fetch_assoc($result);
 					
 					if($user_data['password'] === $password) {
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: ../modules_doctor/doctor_index.php");
-						die;
+						if($user_data['verify_status'] == 1) {
+							$_SESSION['user_id'] = $user_data['user_id'];
+							header("Location: ../modules_doctor/doctor_index.php");
+						}
+
+						else {
+							$_SESSION['status'] = 'Your Email Is Not Yet Verified';
+							$_SESSION['status_code'] = "error";
+							header("Location: ../doctor_login.php");
+						}
+					}
+		
+					else {
+						$_SESSION['status'] = 'Wrong Username or Password!';
+						$_SESSION['status_code'] = "error";
+						header("Location: ../doctor_login.php");
 					}
 				}
 			}
-			
-			$_SESSION['status'] = 'Wrong Username or Password!';
-			$_SESSION['status_code'] = "error";
-            header("Location: ../doctor_login.php");
 		}
 		
 		else {
@@ -93,16 +111,25 @@
 					$user_data = mysqli_fetch_assoc($result);
 					
 					if($user_data['password'] === $password) {
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: ../modules_nurse/nurse_index.php");
-						die;
+						if($user_data['verify_status'] == 1) {
+							$_SESSION['user_id'] = $user_data['user_id'];
+							header("Location: ../modules_nurse/nurse_index.php");
+						}
+
+						else {
+							$_SESSION['status'] = 'Your Email Is Not Yet Verified';
+							$_SESSION['status_code'] = "error";
+							header("Location: ../nurse_login.php");
+						}
+					}
+		
+					else {
+						$_SESSION['status'] = 'Wrong Username or Password!';
+						$_SESSION['status_code'] = "error";
+						header("Location: ../nurse_login.php");
 					}
 				}
 			}
-			
-			$_SESSION['status'] = 'Wrong Username or Password!';
-			$_SESSION['status_code'] = "error";
-            header("Location: ../nurse_login.php");
 		}
 		
 		else {
@@ -129,16 +156,25 @@
 					$user_data = mysqli_fetch_assoc($result);
 					
 					if($user_data['password'] === $password) {
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: ../modules_citizen/citizen_index.php");
-						die;
+						if($user_data['verify_status'] == 1) {
+							$_SESSION['user_id'] = $user_data['user_id'];
+							header("Location: ../modules_citizen/citizen_index.php");
+						}
+
+						else {
+							$_SESSION['status'] = 'Your Email Is Not Yet Verified';
+							$_SESSION['status_code'] = "error";
+							header("Location: ../citizen_login.php");
+						}
+					}
+		
+					else {
+						$_SESSION['status'] = 'Wrong Username or Password!';
+						$_SESSION['status_code'] = "error";
+						header("Location: ../citizen_login.php");
 					}
 				}
 			}
-			
-			$_SESSION['status'] = 'Wrong Username or Password!';
-			$_SESSION['status_code'] = "error";
-            header("Location: ../citizen_login.php");
 		}
 		
 		else {

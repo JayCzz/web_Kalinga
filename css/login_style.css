@@ -100,6 +100,14 @@ input:focus ~ i {
   color: #ef3d59;
 }
 
+.forgot-password {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: 20px;
+}
+
 button.submit {
   color: #fff;
   padding: 14px 64px;
