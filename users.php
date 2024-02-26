@@ -23,8 +23,8 @@
     <!-- icons animation  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-     
- 
+
+
 
 </head>
 </head>
@@ -48,14 +48,11 @@
 
             <div class="nav_btn">
                 <a href="citizen_signup.php" class="nav_item" style="--i:3;">register</a>
-                <a href="#login" class="nav_item" style="--i:3;">Login</a>
+                <a href="citizen_login.php" class="nav_item" style="--i:3;">Login</a>
             </div>
         </nav>
     </header>
-    <!-- Weekly Calendar -->
-    <?php
-    include '../components/weekly_calendar.php';
-    ?>
+
     <!-- Banner -->
     <section class="banner-block home-banner" id="header">
         <div class="container">
@@ -117,12 +114,20 @@
             </div>
         </div>
         <div style="height:32px;"></div>
+
+        
+
+        <!-- Weekly Calendar -->
+        <div class="mt-5">
+            <?php
+            include '../components/weekly_calendar.php';
+            ?>
+        </div>
     </section>
 
 
     <!-- LOG IN AS CONTENT  -->
     <div class="hero" id="login">
-
         <div class="section-header">
             <h2 class="section-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">LOGIN AS</h2>
         </div>

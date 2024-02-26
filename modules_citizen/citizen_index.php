@@ -26,8 +26,7 @@ $user_data = check_login($con);
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
 
     <!-- bootstrap link  -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../css/citizen_index.css">
@@ -50,14 +49,8 @@ $user_data = check_login($con);
     <section class="dashboard">
         <h1 class="heading">Home</h1>
 
-            
-        <!-- Weekly Calendar -->
-        <?php
-            include '../components/weekly_calendar.php'; 
-        ?>
-        
         <!-- Slideshow container -->
-        <div class="slideshow-container fade">
+        <div class="mb-5 slideshow-container fade">
 
             <!-- Full images with numbers and message Info -->
             <div class="Containers">
@@ -76,14 +69,22 @@ $user_data = check_login($con);
             <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
             <a class="forward" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
+
+
+        <!-- Weekly Calendar -->
+        <div class="mt-5">
+            <?php
+            include '../components/weekly_calendar.php';
+            ?>
+        </div>
+
     </section>
 
     <!-- Services section starts  -->
     <section class="services" id="services">
 
         <div class="section-header">
-            <h2 class="section-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" >Our Services</h2>
+            <h2 class="section-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Our Services</h2>
         </div>
 
         <div class="box-container ">
@@ -124,11 +125,9 @@ $user_data = check_login($con);
             </div>
         </div>
     </section>
-    
     <!-- Services section ends  -->
 
     <!-- Guidelines -->
-    <!-- -->
     <section class="guidelines-block ">
         <div class="container">
             <div class="block-introduction ">
@@ -186,11 +185,6 @@ $user_data = check_login($con);
                         </div>
                     </ul>
                 </div>
-            </div>
-
-            <!-- Second row -->
-
-            <div class="guidelines-circle row mt-5">
 
                 <div class="col-sm-4" data-aos="zoom-in-right" data-aos-duration="800">
                     <div class="services-item ">
@@ -241,89 +235,70 @@ $user_data = check_login($con);
                 </div>
             </div>
 
-    </section>
 
+    </section>
     <!-- Guidelines End -->
 
     <!-- Articles -->
-
     <div class="article-block">
 
-        <div class="section-header ">
+        <div class="section-header mt-5">
             <h2 class="section-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Articles</h2>
         </div>
 
         <div class="container row">
-            <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
-                <img src="https://happytummy.aashirvaad.com/en/wp-content/uploads/2023/05/Good-Eating-Habits.jpeg"
-                    class="mask">
-                <div class="h1">Move More, Eat Right</div>
-                <p>A life lived long and healthy starts with a balanced diet and enough exercise. A healthy diet and
-                    exercise protects you from obesity and non-communicable diseases like heart disease, cancers,
-                    diabetes, kidney disease, among others.</p>
 
-                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/move-more-eat-right" target="_"
-                        class="button">Read More</a></div>
+            <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
+                <img src="https://happytummy.aashirvaad.com/en/wp-content/uploads/2023/05/Good-Eating-Habits.jpeg" class="mask">
+                <div class="h1">Move More, Eat Right</div>
+                <p>A life lived long and healthy starts with a balanced diet and enough exercise.</p>
+
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/move-more-eat-right" target="_" class="button">Read More</a></div>
             </div>
 
             <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
                 <img src="https://images.mid-day.com/images/images/2021/aug/environmental%20day_d.jpg" class="mask">
                 <div class="h1">Be Clean, Live Sustainably</div>
-                <p>The environment, climate, and disasters can have a great impact on health. Putting focus on personal
-                    hygiene, cleaner surroundings and sustainable living can greatly improve the health of the
-                    individual and the community.</p>
-
-                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/be-clean-live-sustainably"
-                        target="_" class="button">Read More</a></div>
+                <p>The environment, climate, and disasters can have a great impact on health. </p>
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/be-clean-live-sustainably" target="_" class="button">Read More</a></div>
             </div>
 
             <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
-                <img src="https://www.adb.org/sites/default/files/content-media/124816-vv-12162020-philippines-vaccination090-copy.jpeg"
-                    class="mask">
+                <img src="https://www.adb.org/sites/default/files/content-media/124816-vv-12162020-philippines-vaccination090-copy.jpeg" class="mask">
                 <div class="h1">Get Vaccinated</div>
                 <p>Immunization is the best protection against vaccine preventable diseases for all ages.</p>
 
-                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/get-vaccinated" target="_"
-                        class="button">Read More</a></div>
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/get-vaccinated" target="_" class="button">Read More</a></div>
             </div>
 
             <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
-                <img src="https://t4.ftcdn.net/jpg/04/10/78/23/360_F_410782386_wRjZM340f2erGZjuMKZzcsuKDUUiQ2ZD.jpg"
-                    class="mask">
+                <img src="https://t4.ftcdn.net/jpg/04/10/78/23/360_F_410782386_wRjZM340f2erGZjuMKZzcsuKDUUiQ2ZD.jpg" class="mask">
                 <div class="h1">Don't Smoke, Avoid Alcohol, Say No to Drugs</div>
                 <p>Substance Abuse can be defined as a pattern of harmful use of any substance for mood-altering
-                    purposes. The overwhelming effects of substance abuse on individuals, families and societies demands
-                    an effective mechanism of deterrence.</p>
+                    purposes.</p>
 
-                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/dont-smoke-avoid-alcohol-say-no-to-drugs"
-                        target="_" class="button">Read More</a></div>
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/dont-smoke-avoid-alcohol-say-no-to-drugs" target="_" class="button">Read More</a></div>
             </div>
 
             <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
                 <img src="https://i.ytimg.com/vi/aLKcZu_1_vY/mqdefault.jpg" class="mask">
                 <div class="h1">Care for Yourself, Care for Others</div>
                 <p>There is no health without mental health. Our mental health is an integral part of our overall health
-                    and it is necessary that we take care of it. Remember, your mental health matters.</p>
+                    and it is necessary that we take care of it. </p>
 
-                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/care-for-yourself-care-for-others"
-                        target="_" class="button">Read More</a></div>
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/care-for-yourself-care-for-others" target="_" class="button">Read More</a></div>
             </div>
 
             <div class="square" data-aos="zoom-in-up" data-aos-duration="1200">
-                <img src="https://www.winnetworkdetroit.org/wp/wp-content/uploads/2020/07/Safe-Sex.png" class="mask">
+                <img src="https://blog-images-1.pharmeasy.in/2018/11/30131143/Aids-banners_1-01-01.jpg" class="mask">
                 <div class="h1">Practice Safe Sex</div>
-                <p>Sexual and reproductive health (SRH) is fundamental to one's overall health and well-being. People
-                    must be able to make informed decisions about their SRH, and be assured that their human rights are
-                    respected, protected, and fulfilled.</p>
+                <p>Sexual and reproductive health (SRH) is fundamental to one's overall health and well-being. </p>
 
-                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/practice-safe-sex" target="_"
-                        class="button">Read More</a></div>
+                <div><a href="https://www.healthypilipinas.ph/campaigns/healthy-habits/practice-safe-sex" target="_" class="button">Read More</a></div>
             </div>
 
         </div>
-
     </div>
-
     <!-- Articles Ends -->
 
     <!-- Kalinga Features  -->
@@ -380,33 +355,32 @@ $user_data = check_login($con);
                         </div>
                         <div class="features--item" data-aos="fade-right" data-aos-duration="2000">
                             <div class=" img-block">
-                            <img src="../img/information_pink.png" alt="" width="50" height="50">
-                        </div>
-                        <div class="txt-block">
-                            <h3>Patient Information</h3>
-                            <p>Shows the <span class="emphasize">records</span> of the patient in the health
-                                center.</p>
-                        </div>
+                                <img src="../img/information_pink.png" alt="" width="50" height="50">
+                            </div>
+                            <div class="txt-block">
+                                <h3>Patient Information</h3>
+                                <p>Shows the <span class="emphasize">records</span> of the patient in the health
+                                    center.</p>
+                            </div>
 
-                    </div>
-                    <div class="features--item" data-aos="fade-right" data-aos-duration="2400">
-                        <div class="img-block">
-                            <img src="../img/ticket_pink.png" alt="" width="50" height="50">
                         </div>
-                        <div class="txt-block">
-                            <h3>Queueing</h3>
-                            <p>Log an <span class="emphasize">appointment</span> on the health center.</p>
+                        <div class="features--item" data-aos="fade-right" data-aos-duration="2400">
+                            <div class="img-block">
+                                <img src="../img/ticket_pink.png" alt="" width="50" height="50">
+                            </div>
+                            <div class="txt-block">
+                                <h3>Queueing</h3>
+                                <p>Log an <span class="emphasize">appointment</span> on the health center.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-5" data-aos="fade-left" data-aos-duration="1200">
+                    <img src="../img/Doctor-rafiki.svg" alt="">
+                </div>
             </div>
-            <div class="col-sm-5" data-aos="fade-left" data-aos-duration="1200">
-                <img src="../img/Doctor-rafiki.svg" alt="">
-            </div>
-        </div>
         </div>
     </section>
-
     <!-- Kalinga Features End-->
 
     <!--Parallax-->
@@ -474,10 +448,7 @@ $user_data = check_login($con);
             </div>
         </div>
     </section>
-
-
     <!-- About section ends  -->
-
 
     <!-- footer section starts  -->
     <div class="footer">
@@ -507,28 +478,20 @@ $user_data = check_login($con);
             </div>
         </div>
     </div>
-
     <!-- footer section ends -->
 
     <!-- custom js file link  -->
-
     <script src="../js/citizen_slideShow.js"></script>
     <script src="../js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Include AOS library script at the end of the body -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
 </body>
 
 </html>
