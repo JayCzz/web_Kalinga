@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+
+    include 'components/connection.php';
+    include 'components/functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -14,16 +21,17 @@
     <!-- Vendors -->
     <link rel="icon" href="img/brgylogoreal.png">
     <!-- bootstrap link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
     <!-- css animation  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- icons animation  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-
 
 
 </head>
@@ -31,7 +39,6 @@
 
 <body>
     <!-- Header Start -->
-
     <header class="header">
         <a href="#" class="logo">Kalinga</a>
 
@@ -48,16 +55,24 @@
 
             <div class="nav_btn">
                 <a href="citizen_signup.php" class="nav_item" style="--i:3;">register</a>
-                <a href="citizen_login.php" class="nav_item" style="--i:3;">Login</a>
+                <a href="#login" class="nav_item" style="--i:3;">Login</a>
             </div>
         </nav>
     </header>
+
+    <!-- Weekly Calendar -->
+    <section class="dashboard">
+        <?php
+            include 'components/weekly_calendar.php'; 
+        ?>
+    </section>
 
     <!-- Banner -->
     <section class="banner-block home-banner" id="header">
         <div class="container">
             <!-- -->
-            <a href="https://ibb.co/5KRgHy7"><img class="hero-bg" src="https://i.ibb.co/0sGRbSw/kalinga-wave.png" alt="kalinga Banner"></a>
+            <a href="https://ibb.co/5KRgHy7"><img class="hero-bg" src="https://i.ibb.co/0sGRbSw/kalinga-wave.png"
+                    alt="kalinga Banner"></a>
             <!-- -->
             <div class="row justify-content-between">
                 <div class="col-sm-5">
@@ -69,7 +84,8 @@
                         <li>
                             <p class="subtitle" data-aos="fade-right" data-aos-duration="1200">Forget about storing and
                                 filing patient records.</p>
-                            <p class="subtitle" data-aos="fade-right" data-aos-duration="1200">Use <span class="emphasize">Kalinga</span> an effective medical clinic
+                            <p class="subtitle" data-aos="fade-right" data-aos-duration="1200">Use <span
+                                    class="emphasize">Kalinga</span> an effective medical clinic
                                 management system at your fingertips.</p>
                         </li>
                         <li>
@@ -77,9 +93,12 @@
                                 <a href="#" class="button">
                                     <div class="img-block">
                                         <picture>
-                                            <source srcset="https://klinika.ph/klinika/images/google.webp" type="image/webp">
-                                            <source srcset="https://klinika.ph/klinika/images/google.png" type="image/png">
-                                            <img src="https://klinika.ph/klinika/images/google.png" alt="Klinika - Clinic Management System for Doctors">
+                                            <source srcset="https://klinika.ph/klinika/images/google.webp"
+                                                type="image/webp">
+                                            <source srcset="https://klinika.ph/klinika/images/google.png"
+                                                type="image/png">
+                                            <img src="https://klinika.ph/klinika/images/google.png"
+                                                alt="Klinika - Clinic Management System for Doctors">
                                         </picture>
                                     </div>
                                     <div class="txt-block">
@@ -91,9 +110,12 @@
                                 <a href="#" class="button">
                                     <div class="img-block">
                                         <picture>
-                                            <source srcset="https://klinika.ph/klinika/images/klinika.webp" type="image/webp">
-                                            <source srcset="https://klinika.ph/klinika/images/klinika.png" type="image/png">
-                                            <img src="https://klinika.ph/klinika/images/klinika.png" alt="Klinika - Clinic Management System for Doctors">
+                                            <source srcset="https://klinika.ph/klinika/images/klinika.webp"
+                                                type="image/webp">
+                                            <source srcset="https://klinika.ph/klinika/images/klinika.png"
+                                                type="image/png">
+                                            <img src="https://klinika.ph/klinika/images/klinika.png"
+                                                alt="Klinika - Clinic Management System for Doctors">
                                         </picture>
                                     </div>
                                     <div class="txt-block">
@@ -108,26 +130,19 @@
 
                 <div class="col-sm-6">
                     <div class="banner-hero" data-aos="fade-left" data-aos-duration="1200">
-                        <img src="https://klinika.ph/klinika/images/hero.svg" alt="Klinika - Clinic Management System for Doctors">
+                        <img src="https://klinika.ph/klinika/images/hero.svg"
+                            alt="Klinika - Clinic Management System for Doctors">
                     </div>
                 </div>
             </div>
         </div>
         <div style="height:32px;"></div>
-
-        
-
-        <!-- Weekly Calendar -->
-        <div class="mt-5">
-            <?php
-            include '../components/weekly_calendar.php';
-            ?>
-        </div>
     </section>
 
 
     <!-- LOG IN AS CONTENT  -->
     <div class="hero" id="login">
+
         <div class="section-header">
             <h2 class="section-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">LOGIN AS</h2>
         </div>
@@ -209,7 +224,8 @@
         <div class="container">
 
             <div class="Features-header" id="features">
-                <h2 class="Features-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"><span class="emphasize">Kalinga</span> Features</h2>
+                <h2 class="Features-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"><span
+                        class="emphasize">Kalinga</span> Features</h2>
             </div>
 
             <div class="row justify-content-between align-items-center">
@@ -309,9 +325,12 @@
                                 <a href="" class="button">
                                     <div class="img-block">
                                         <picture>
-                                            <source srcset="https://klinika.ph/klinika/images/google.webp" type="image/webp">
-                                            <source srcset="https://klinika.ph/klinika/images/google.png" type="image/png">
-                                            <img src="https://klinika.ph/klinika/images/google.png" alt="Klinika - Clinic Management System for Doctors">
+                                            <source srcset="https://klinika.ph/klinika/images/google.webp"
+                                                type="image/webp">
+                                            <source srcset="https://klinika.ph/klinika/images/google.png"
+                                                type="image/png">
+                                            <img src="https://klinika.ph/klinika/images/google.png"
+                                                alt="Klinika - Clinic Management System for Doctors">
                                         </picture>
                                     </div>
                                     <div class="txt-block">
@@ -323,9 +342,12 @@
                                 <a href="#" class="button">
                                     <div class="img-block">
                                         <picture>
-                                            <source srcset="https://klinika.ph/klinika/images/klinika.webp" type="image/webp">
-                                            <source srcset="https://klinika.ph/klinika/images/klinika.png" type="image/png">
-                                            <img src="https://klinika.ph/klinika/images/klinika.png" alt="Klinika - Clinic Management System for Doctors">
+                                            <source srcset="https://klinika.ph/klinika/images/klinika.webp"
+                                                type="image/webp">
+                                            <source srcset="https://klinika.ph/klinika/images/klinika.png"
+                                                type="image/png">
+                                            <img src="https://klinika.ph/klinika/images/klinika.png"
+                                                alt="Klinika - Clinic Management System for Doctors">
                                         </picture>
                                     </div>
                                     <div class="txt-block">
@@ -364,23 +386,19 @@
         </div>
     </footer>
     <!--/.page-section-->
-    <section class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    Copyright 2014 | All Rights Reserved -- Template by <a href="http://webThemez.com">WebThemez.com</a>
-                </div>
-            </div>
-            <!-- / .row -->
-        </div>
-    </section>
     <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
     <!-- Scripts -->
 
     <script src="../js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
     <!-- Include AOS library script at the end of the body -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -390,7 +408,7 @@
 
     <!--Custom-->
     <script type="text/javascript">
-        window.addEventListener("scroll", function() {
+        window.addEventListener("scroll", function () {
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0)
         });
