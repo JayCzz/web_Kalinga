@@ -38,7 +38,7 @@ $user_data = check_login($con);
     include '../components/header_citizen.php';
     ?>
 
-    <!-- Calendar -->
+    <!-- Profile -->
     <section class="dashboard">
         <h1 class="heading">Your Profile</h1>
 
@@ -97,6 +97,7 @@ $user_data = check_login($con);
                 <a href="citizen_profile_pi_update.php?edit=<?php echo $user_data['id']; ?>" class="inline-btn">update profile</a>
             </div>
         </div>
+
     </section>
 
     <!-- custom js file link  -->

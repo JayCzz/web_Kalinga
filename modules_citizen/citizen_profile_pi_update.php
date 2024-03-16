@@ -95,8 +95,8 @@ if (isset($_POST['update_profile'])) {
                     <h4>Enter Password:</h4>
                 </div>
                 <input type="text" class="box" name="cpass" placeholder="Enter Password" required>
-                <input type="submit" value="Update Profile" name="update_profile" class="btn">
-                <a href="citizen_profile_pi.php" class="btn">go back!</a>
+                <input type="submit" value="Update Profile" name="update_profile" class="dynamic-btn">
+                <a href="citizen_profile_pi.php" class="dynamic-btn">go back!</a>
             </form>
 
         </div>

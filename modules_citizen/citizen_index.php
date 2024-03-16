@@ -88,37 +88,37 @@ $user_data = check_login($con);
         </div>
 
         <div class="box-container ">
-            <div class="box" data-aos="fade-right" data-aos-duration="800">
+            <div class="box" data-aos="zoom-in-right" data-aos-duration="800">
                 <img src="../img/service01.png" alt="">
                 <h3>Medical Consultation</h3>
                 <p>Free checkups are provided for the residents.</p>
             </div>
 
-            <div class="box" data-aos="fade-up" data-aos-duration="800">
+            <div class="box" data-aos="zoom-in-right" data-aos-duration="800">
                 <img src="../img/service02.png" alt="">
                 <h3>Emergency Help</h3>
                 <p>Emergency hotlines to call or text.</p>
             </div>
 
-            <div class="box" data-aos="fade-left" data-aos-duration="800">
+            <div class="box" data-aos="zoom-in-right" data-aos-duration="800">
                 <img src="../img/service03.png" alt="">
                 <h3>First Aid</h3>
                 <p>First aid services for patients.</p>
             </div>
 
-            <div class="box" data-aos="fade-right" data-aos-duration="1200">
+            <div class="box" data-aos="zoom-in-right" data-aos-duration="1200">
                 <img src="../img/healthcare_pink.png" alt="">
                 <h3>Preventive care</h3>
                 <p>Patient counseling to prevent illnesses, disease, or other health problems.</p>
             </div>
 
-            <div class="box" data-aos="fade-up" data-aos-duration="1200">
+            <div class="box" data-aos="zoom-in-right" data-aos-duration="1200">
                 <img src="../img/medication-bottle_pink.png" alt="">
                 <h3>Pharmaceutical care</h3>
                 <p>Pharmaceutical care for responsible provision of drug therapy to patient.</p>
             </div>
 
-            <div class="box" data-aos="fade-left" data-aos-duration="1200">
+            <div class="box" data-aos="zoom-in-right" data-aos-duration="1200">
                 <img src="../img/medicine_pink.png" alt="">
                 <h3>Medical Assistance Program</h3>
                 <p>Free medicine program for residents.</p>
@@ -131,7 +131,7 @@ $user_data = check_login($con);
     <section class="guidelines-block ">
         <div class="container">
             <div class="block-introduction ">
-                <h2 class="block-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" style="font-size: 4rem;">STOP THE SPREAD OF <span class="emphasize">GERMS</span>
+                <h2 class="block-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" >STOP THE SPREAD OF <span class="emphasize">GERMS</span>
                 </h2>
             </div>
 
@@ -145,7 +145,7 @@ $user_data = check_login($con);
                             </picture>
                         </li>
                         <div class="services-txt">
-                            <h4 class="">Cover your mouth or nose</h4>
+                            <h2 class="">Cover your mouth or nose</h2 >
                             <p class="">Cover your mouth and nose with a tissue when you cough or sneeze. Throw used
                                 tissues in the trash. If you don't have a tissue, cough or sneeze into your elbow, not
                                 your hands. </p>
@@ -157,11 +157,26 @@ $user_data = check_login($con);
                     <div class="services-item ">
                         <li>
                             <picture>
+                                <img src="../img/no-touch.png" alt="distance" class="guide-picture">
+                            </picture>
+                        </li>
+                        <div class="services-txt">
+                            <h2 class="">Avoid touching your eyes, nose and mouth</h2>
+                            <p class="">Hands touch many surfaces and can pick up viruses. Once contaminated, hands can
+                                transfer the virus to your eyes, nose or mouth. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4" data-aos="zoom-in-right" data-aos-duration="800">
+                    <div class="services-item ">
+                        <li>
+                            <picture>
                                 <img src="../img/distance.png" alt="distance" class="guide-picture">
                             </picture>
                         </li>
                         <div class="services-txt">
-                            <h4 class="">Maintain distance</h4>
+                            <h2 class="">Maintain distance</h2 >
                             <p class=""> the practice of keeping distance between yourself and people you don't live
                                 with. It also involves avoiding groups, gatherings and crowds in both indoor and outdoor
                                 spaces.</p>
@@ -177,29 +192,13 @@ $user_data = check_login($con);
                             </picture>
                         </li>
                         <div class="services-txt">
-                            <h4 class="">Disinfect</h4>
+                            <h2 class="">Disinfect</h2>
                             <p class="">
                                 Disinfecting can kill harmful germs that remain on surfaces after cleaning. By killing
                                 germs on a surface after cleaning, disinfecting can further lower the risk of spreading
                                 disease.</p>
                         </div>
                     </ul>
-                </div>
-
-                <div class="col-sm-4" data-aos="zoom-in-right" data-aos-duration="800">
-                    <div class="services-item ">
-                        <li>
-                            <picture>
-                                <img src="../img/no-touch.png" alt="distance" class="guide-picture">
-                            </picture>
-                        </li>
-                        <div class="services-txt">
-                            <h4 class="">Avoid touching your eyes, nose and mouth</h4>
-                            <p class="">Hands touch many surfaces and can pick up viruses. Once contaminated, hands can
-                                transfer the virus to your eyes, nose or mouth. From there, the virus can enter your
-                                body and can make you sick.</p>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="col-sm-4" data-aos="zoom-in-right" data-aos-duration="800">
@@ -210,7 +209,7 @@ $user_data = check_login($con);
                             </picture>
                         </li>
                         <div class="services-txt">
-                            <h4 class="">Seek medical care early</h4>
+                            <h2 class="">Seek medical care early</h2>
                             <p class="">Stay home if you feel unwell. If you have a fever, cough and difficulty
                                 breathing, seek medical attention and call in advance. Follow the directions of your
                                 local health authority.</p>
@@ -226,7 +225,7 @@ $user_data = check_login($con);
                             </picture>
                         </li>
                         <div class="services-txt">
-                            <h4 class="">Wash your hands frequently</h4>
+                            <h2 class="">Wash your hands frequently</h2>
                             <p class="">Wash your hands often with soap and water for at least 20 seconds. Washing your
                                 hands with soap and water or using alcohol-based hand rub kills viruses that may be on
                                 your hands.</p>
@@ -305,8 +304,8 @@ $user_data = check_login($con);
     <section class="features-block block" id="features">
         <div class="container">
 
-            <div class="Features-header">
-                <h2 class="Features-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"><span class="emphasize">Kalinga</span> Features</h2>
+            <div class="section-header">
+                <h2 class="section-title mt-5" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"><span class="emphasize">Kalinga</span> Features</h2>
             </div>
 
             <div class="row justify-content-between align-items-center">
@@ -398,6 +397,13 @@ $user_data = check_login($con);
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+        @media only screen and (max-width: 768px) {
+        /* Adjust the height for smaller screens */
+        .parallax {
+            min-height: 250px; /* You can adjust this value as needed */
+        }
+    }
     </style>
     <div class="parallax mb-5"></div>
     <!-- Container element -->

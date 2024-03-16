@@ -22,7 +22,7 @@
             <img src="../uploaded_qr/<?php echo $user_data['familyNumber']; ?>" class="image" alt="">
             <h3 class="name"><?php echo $user_data['firstName']; ?> <?php echo $user_data['lastName']; ?></h3>
             <p class="role">Citizen</p>
-            <a href="citizen_profile_pi.php" class="btn">view profile</a>
+            <a href="citizen_profile_pi.php" class="dynamic-btn">view profile</a>
         </div>
     </section>
 </header>
@@ -40,7 +40,7 @@
         <img src="../uploaded_qr/<?php echo $user_data['familyNumber']; ?>" class="image" alt="">
         <h3 class="name"><?php echo $user_data['firstName']; ?> <?php echo $user_data['lastName']; ?></h3>
         <p class="role">Citizen</p>
-        <a href="citizen_profile_pi.php" class="btn">view profile</a>
+        <a href="citizen_profile_pi.php" class="dynamic-btn">view profile</a>
     </div>
             
     <!-- Navigation Bar -->

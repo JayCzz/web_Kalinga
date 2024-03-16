@@ -74,6 +74,25 @@ section{
    text-transform: capitalize;
 }
 
+.dynamic-btn {
+   display: block;
+   width: 100%;
+   border-radius: .5rem;
+   color: #fff;
+   font-size: 1.8rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   padding: 1rem 3rem;
+   text-align: center;
+   margin-top: 1rem;
+   background-color: var(--main-color);
+}
+
+.dynamic-btn:hover {
+   background-color: var(--black);
+   color: var(--white);
+}
+
 .inline-btn,
 .inline-option-btn,
 .inline-delete-btn,

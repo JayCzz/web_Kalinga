@@ -74,27 +74,23 @@ section{
    text-transform: capitalize;
 }
 
-.inline-btn,
-.inline-option-btn,
-.inline-delete-btn,
-.btn,
-.delete-btn,
-.option-btn{
+.dynamic-btn {
+   display: block;
+   width: 100%;
    border-radius: .5rem;
-   color:#fff;
+   color: #fff;
    font-size: 1.8rem;
    cursor: pointer;
    text-transform: capitalize;
-   padding:1rem 3rem;
+   padding: 1rem 3rem;
    text-align: center;
    margin-top: 1rem;
+   background-color: var(--main-color);
 }
 
-.btn,
-.delete-btn,
-.option-btn{
-   display: block;
-   width: 100%;
+.dynamic-btn:hover {
+   background-color: var(--black);
+   color: var(--white);
 }
 
 .inline-btn,

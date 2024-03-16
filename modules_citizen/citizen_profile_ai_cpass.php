@@ -79,8 +79,8 @@ if (isset($_POST['update_profile'])) {
                     <h4>Confirm New Password:</h4>
                 </div>
                 <input type="text" class="box" name="cpass" placeholder="Confirm New Password" required>
-                <input type="submit" value="Update Password" name="update_profile" class="btn">
-                <a href="citizen_profile_ai.php" class="btn">go back!</a>
+                <input type="submit" value="Update Password" name="update_profile" class="dynamic-btn">
+                <a href="citizen_profile_ai.php" class="dynamic-btn">go back!</a>
             </form>
 
         </div>
