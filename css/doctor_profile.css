@@ -386,14 +386,16 @@ section{
    padding: 1rem;
 }
 
-.dashboard .info .user img{
-   height: 10rem;
-   width: 10rem;
-   padding:.8rem;
+.dashboard .info .user img {
+   height: 11rem;
+   width: 11rem;
+   padding: .1rem;
    background-color: #fff;
-   border: .5rem solid #000;
+   border-radius: 50%; /* Make the image round */
    object-fit: cover;
    margin-bottom: 1rem;
+   border: none; /* Remove the border */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a background shadow */
 }
 
 .dashboard .info .user h3{
@@ -551,6 +553,34 @@ section{
     border: var(--border);
     background-color: var(--light-bg);
    text-transform: none;
+}
+
+.btn1{
+   display: flex;
+   color: #000000;
+   font-size: 1.5rem;
+   cursor: pointer;
+   text-align: center;
+   margin-top: 1rem;
+}
+
+.dynamic-btn {
+   display: block;
+   width: 100%;
+   border-radius: .5rem;
+   color: #fff;
+   font-size: 1.8rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   padding: 1rem 3rem;
+   text-align: center;
+   margin-top: 1rem;
+   background-color: var(--main-color);
+}
+
+.dynamic-btn:hover {
+   background-color: var(--black);
+   color: var(--white);
 }
 
 @media (max-width:1200px){

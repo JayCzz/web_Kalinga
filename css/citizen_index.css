@@ -317,13 +317,15 @@ section {
 }
 
 .side-bar .profile .image {
-   height: 10rem;
-   width: 10rem;
-   padding: .8rem;
+   height: 11rem;
+   width: 11rem;
+   padding: .1rem;
    background-color: #fff;
-   border: .5rem solid #000;
-   object-fit: contain;
+   border-radius: 50%; /* Make the image round */
+   object-fit: cover;
    margin-bottom: 1rem;
+   border: none; /* Remove the border */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a background shadow */
 }
 
 .side-bar .profile .name {
@@ -477,6 +479,8 @@ section {
 }
 
 /* Weekly Calendar Start */
+
+
 .weekly-box .weekly-title {
    text-align: center;
 }
@@ -495,48 +499,6 @@ section {
    margin-bottom: 4rem;
 }
 
-/* Month & Year */
-.date-info::before,
-.date-info::after {
-   content: "";
-   display: inline-block;
-   height: 1px;
-   width: 20%;
-   /* Adjust the width of the lines */
-   background-color: var(--black);
-   margin: 0 10px;
-   /* Adjust the spacing between the lines and .date-info */
-}
-
-.date-info {
-   text-align: center;
-   width: 40%;
-   margin: 10px auto;
-   color: #fff;
-   font-weight: bold;
-   margin-top: 20px;
-   position: relative;
-}
-
-.date-info p {
-   display: inline-block;
-   /* Display the elements inline */
-   font-size: 1.7rem;
-   color: var(--black);
-   margin: 0 5px;
-   /* Add some spacing between elements */
-}
-
-.month-year {
-   text-align: center;
-   margin-bottom: 10px;
-}
-
-.month-year p {
-   font-size: 1.2rem;
-   color: var(--black);
-   font-weight: bold;
-}
 
 /* Simplify styles for the box */
 .weekly-box {
@@ -641,17 +603,28 @@ section {
    /* Change text color on hover */
 }
 
-/* Hide all schedule tables except the active one */
-.weekly-box-table {
-   display: none;
-}
-
-.weekly-box-table.active {
-   display: block;
-}
 
 /* Media query for mobile devices */
+
+/* Hide day-navigation buttons in website view */
+@media (min-width: 769px) {
+   .day-navigation {
+      display: none;
+   }
+}
+
+
 @media (max-width: 768px) {
+
+   /* Hide all schedule tables except the active one */
+   .weekly-box-table {
+      display: none;
+   }
+
+   .weekly-box-table.active {
+      display: block;
+   }
+
    .day-navigation button {
       padding: 2px 10px;
       border-bottom: 2px solid #ef6292;
@@ -680,12 +653,8 @@ section {
       color: #fff;
    }
 
-   .weekly-box .weekly-box-table-head .weekly-box-table-cell,
-   .weekly-box .weekly-box-table-row .weekly-box-table-cell,
-   .weekly-box .weekly-box-table-head .weekly-box-table-cell-day,
-   .weekly-box .weekly-box-table-row .weekly-box-table-cell-day,
-   .weekly-box .weekly-box-table-head .weekly-box-table-cell-time,
-   .weekly-box .weekly-box-table-row .weekly-box-table-cell-time {
+   .weekly-box .weekly-box-table-head .weekly-box-table-cell
+   {
       flex: 1;
       text-align: center;
       padding: 10px;
@@ -695,7 +664,23 @@ section {
       /* Default text color */
    }
 
-   .weekly-box .weekly-box-table-row .weekly-box-table-cell .weekly-box-table-divider {
+
+   .weekly-box .weekly-box-table-row .weekly-box-table-cell{
+      display: table-cell;
+      width: 25%;
+      text-align: center;
+      padding: 20px;
+      border-right: 1px solid #d6d4d4;
+      vertical-align: middle;
+   }
+   .weekly-box-table-row .weekly-box-table-cell p
+   {
+      font-size: 1rem;
+      text-align: justify;
+   }
+
+   .weekly-box .weekly-box-table-row .weekly-box-table-cell .weekly-box-table-divider,
+   .weekly-box .weekly-box-table-row .weekly-box-table-cell-day {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -704,12 +689,7 @@ section {
       font-size: 10px;
       flex: 1;
    }
-
-   .weekly-box .weekly-box-table-row .weekly-box-table-cell-day {
-      font-size: 10px;
-      margin: auto;
-   }
-
+   
    .weekly-box .weekly-box-table-row .weekly-box-table-cell .weekly-box-last-divider {
       border-bottom: none;
    }
@@ -1067,15 +1047,14 @@ section.guidelines-block .guidelines-circle .col-sm-4 {
 
    section.guidelines-block .block-introduction h2 {
       color: #ef6292;
-      text-align: center;
-      text-transform: capitalize;
-      font-size: 2.5rem;
-      font-weight: bold;
+      font-size: 3rem;
+      font-family: 'Courier New', Courier, monospace;
    }
 
    section.guidelines-block .block-introduction h2 .emphasize {
-      color: #ef6292 !important;
-      font-size: 2.5rem;
+      color: green !important;
+      font-family: 'Courier New', Courier, monospace;
+   }
    }
 
    section.guidelines-block .guidelines-circle .col-sm-4 {
@@ -1091,14 +1070,6 @@ section.guidelines-block .guidelines-circle .col-sm-4 {
       background-size: cover;
    }
 
-   section.guidelines-block .block-introduction h2 {
-      font-size: 1.5rem;
-      /* Adjust the size as needed */
-      margin-bottom: 20px;
-      /* Adjust the margin as needed */
-
-   }
-
    section.guidelines-block .services-txt {
       height: auto;
       padding: 20px;
@@ -1107,7 +1078,6 @@ section.guidelines-block .guidelines-circle .col-sm-4 {
       font-size: 1rem;
    }
 
-}
 
 
 /*ARTICLE CSS*/

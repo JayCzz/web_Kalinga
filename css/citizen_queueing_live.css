@@ -303,13 +303,15 @@ section{
 }
 
 .side-bar .profile .image{
-   height: 10rem;
-   width: 10rem;
-   padding:.8rem;
+   height: 11rem;
+   width: 11rem;
+   padding: .1rem;
    background-color: #fff;
-   border: .5rem solid #000;
-   object-fit: contain;
+   border-radius: 50%; /* Make the image round */
+   object-fit: cover;
    margin-bottom: 1rem;
+   border: none; /* Remove the border */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a background shadow */
 }
 
 .side-bar .profile .name{
@@ -480,49 +482,43 @@ section{
     }
  
  }
+ .container {
+   display: flex;
+   flex-direction: column; /* Set container to a column layout */
+   align-items: center; /* Center align items horizontally */
+}
 
-  .box-form{
+ .box-form {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    align-items: flex-start;
    justify-content: center;
    gap: 1.5rem;
-}
-
-
-.box-form{
-   max-width: 50rem;
-   margin:0 auto;
-   padding:2rem;
-   border-radius: .5rem;
-   background: var(--white);
-   border: var(--border);
-   margin-bottom: 5rem;
-}
-
-.box-form .box{
+   max-width: 60rem; /* Increased max-width for better spacing */
+   margin: 0 auto;
    padding: 2rem;
    border-radius: .5rem;
-   background-color: var(--white);
+   background: none; /* Remove background color */
+   margin-bottom: 5rem;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a box shadow for aesthetic */
+}
+
+.box-form .box {
+   padding: 2rem;
+   border-radius: .5rem;
    text-align: center;
+   background-color: var(--white); /* Add a background color to each box */
+   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a box shadow for aesthetic */
 }
 
-
-.box-form{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   
-}
-
-.box-form  .box h3{
+.box-form .box h3 {
    margin-bottom: .5rem;
    font-size: 2.5rem;
    color: var(--black);
    margin-bottom: 1.5rem;
 }
 
-.box-form  .box p{
+.box-form .box p {
    font-size: 2rem;
    color: var(--light-color);
    padding: 1rem 1.5rem;

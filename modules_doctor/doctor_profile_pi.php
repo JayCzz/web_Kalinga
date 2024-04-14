@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
 
         <!-- custom css file link  -->
-        <link rel="stylesheet" href="../css/doctor_profile.css">
+        <link rel="stylesheet" href="../css/admin_profile.css">
     </head>
 
     <body>

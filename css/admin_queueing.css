@@ -286,11 +286,15 @@ section{
 }
 
 .side-bar .profile .image{
-   height: 10rem;
-   width: 10rem;
-   border-radius: 50%;
-   object-fit: contain;
+   height: 11rem;
+   width: 11rem;
+   padding: .1rem;
+   background-color: #fff;
+   border-radius: 50%; /* Make the image round */
+   object-fit: cover;
    margin-bottom: 1rem;
+   border: none; /* Remove the border */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a background shadow */;
 }
 
 .side-bar .profile .name{

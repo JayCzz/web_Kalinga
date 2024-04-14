@@ -46,7 +46,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
         <!-- custom css file link  -->
-        <link rel="stylesheet" href="../css/doctor_profile.css">
+        <link rel="stylesheet" href="../css/admin_profile.css">
     </head>
 
     <body>

@@ -37,7 +37,7 @@
         <img src="../img/pic-1.jpg" class="image" alt="">
         <h3 class="name"><?php echo $user_data['firstName']; ?> <?php echo $user_data['lastName']; ?></h3>
         <p class="role">Nurse</p>
-        <a href="profile.html" class="btn">view profile</a>
+        <a href="nurse_profile_pi.php" class="btn">view profile</a>
     </div>
             
     <!-- Navigation Bar -->
@@ -79,7 +79,7 @@
             </li>
          
             <li class="logout">
-                <a href="../components/logout.php">
+                <a href="../private_users.php">
                     <i class="fa fa-sign-out"></i>
                     <span>Sign Out</span>
                 </a>

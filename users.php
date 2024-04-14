@@ -29,9 +29,6 @@ include 'components/functions.php';
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- icons animation  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-
-</head>
 </head>
 
 <body>
@@ -51,13 +48,11 @@ include 'components/functions.php';
             <a href="#features" style="--i:2;">Features</a>
 
             <div class="nav_btn">
-                <a href="citizen_signup.php" class="nav_item" style="--i:3;">register</a>
+                <a href="citizen_signup.php" class="nav_item" style="--i:3;">Register</a>
                 <a href="citizen_login.php" class="nav_item" style="--i:3;">Login</a>
             </div>
         </nav>
     </header>
-
-
 
     <!-- Banner -->
     <section class="banner-block home-banner" id="header">
@@ -177,11 +172,11 @@ include 'components/functions.php';
     </section>
 
     <!-- Kalinga Features  -->
-    <section class="features-block block">
+    <section class="features-block block" id="features">
         <div class="container">
 
-            <div class="Features-header" id="features">
-                <h2 class="Features-title" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"><span class="emphasize">Kalinga</span> Features</h2>
+            <div class="section-header">
+                <h2 class="section-title mt-5" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"><span class="emphasize">Kalinga</span> Features</h2>
             </div>
 
             <div class="row justify-content-between align-items-center">

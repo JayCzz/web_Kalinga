@@ -82,7 +82,7 @@ if (isset($_POST['update_profile'])) {
                 <div class="label">
                     <h4>Confirm Password:</h4>
                 </div>
-                <a href="citizen_profile_ai_cpass.php?edit=<?php echo $user_data['id']; ?>" class="btn">Change Password</a>
+                <a href="citizen_profile_ai_cpass.php?edit=<?php echo $user_data['id']; ?>" class="btn1">Change Password</a>
                 <input type="type" class="box" name="cpass" placeholder="Enter Password" required>
                 <input type="submit" value="Update Profile" name="update_profile" class="dynamic-btn">
 

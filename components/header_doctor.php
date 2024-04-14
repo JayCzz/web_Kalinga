@@ -75,7 +75,7 @@
             </li>
          
             <li>
-                <a href="doctor_users_page">
+                <a href="../modules_doctor/doctor_users_page.php">
                     <i class="fa fa-users"></i>
                     <span>Users</span>
                 </a>
@@ -89,7 +89,7 @@
             </li>
          
             <li class="logout">
-                <a href="../components/logout.php">
+                <a href="../private_users.php">
                     <i class="fa fa-sign-out"></i>
                     <span>Sign Out</span>
                 </a>

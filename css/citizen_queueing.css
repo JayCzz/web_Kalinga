@@ -95,6 +95,29 @@ section{
 
 .inline-btn,
 .inline-option-btn,
+.inline-delete-btn,
+.btn,
+.delete-btn,
+.option-btn{
+   border-radius: .5rem;
+   color:#fff;
+   font-size: 1.8rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   padding:1rem 3rem;
+   text-align: center;
+   margin-top: 1rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+   display: block;
+   width: 100%;
+}
+
+.inline-btn,
+.inline-option-btn,
 .inline-delete-btn{
    display: inline-block;
 }
@@ -215,13 +238,15 @@ section{
 }
 
 .header .flex .profile .image{
-   height: 10rem;
-   width: 10rem;
-   padding:.8rem;
+   height: 11rem;
+   width: 11rem;
+   padding: .1rem;
    background-color: #fff;
-   border: .5rem solid #000;
-   object-fit: contain;
+   border-radius: 50%; /* Make the image round */
+   object-fit: cover;
    margin-bottom: 1rem;
+   border: none; /* Remove the border */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a background shadow */
 }
 
 .header .flex .profile .name{

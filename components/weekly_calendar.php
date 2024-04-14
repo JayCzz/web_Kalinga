@@ -12,30 +12,23 @@
         <button onclick="showSchedule('thursday')">Thursday</button>
         <button onclick="showSchedule('friday')">Friday</button>
     </div>
-
-    <!-- Month and Year -->
-    <div class="date-info">
-        <p id="current-month">March</p>
-        <p id="current-date"></p>
-        <p id="current-year">2024</p>
+    <div class="weekly-box-table-head">
+        <div class="weekly-box-table-cell weekly-box-table-cell-day">
+            <p>Day</p>
+        </div>
+        <div class="weekly-box-table-cell weekly-box-table-cell-time">
+            <p>Time</p>
+        </div>
+        <div class="weekly-box-table-cell">
+            <p>Medical</p>
+        </div>
+        <div class="weekly-box-table-cell">
+            <p>Dental</p>
+        </div>
     </div>
-
     <!-- Monday Schedule -->
     <div id="monday" class="weekly-box-table active">
-        <div class="weekly-box-table-head">
-            <div class="weekly-box-table-cell weekly-box-table-cell-day">
-                <p>Day</p>
-            </div>
-            <div class="weekly-box-table-cell weekly-box-table-cell-time">
-                <p>Time</p>
-            </div>
-            <div class="weekly-box-table-cell">
-                <p>Medical</p>
-            </div>
-            <div class="weekly-box-table-cell">
-                <p>Dental</p>
-            </div>
-        </div>
+
 
         <div class="weekly-box-table-row">
             <div class="weekly-box-table-cell weekly-box-table-cell-day">
@@ -112,20 +105,7 @@
     </div>
     <!-- Tuesday Schedule -->
     <div id="tuesday" class="weekly-box-table">
-        <div class="weekly-box-table-head">
-            <div class="weekly-box-table-cell weekly-box-table-cell-day">
-                <p>Day</p>
-            </div>
-            <div class="weekly-box-table-cell weekly-box-table-cell-time">
-                <p>Time</p>
-            </div>
-            <div class="weekly-box-table-cell">
-                <p>Medical</p>
-            </div>
-            <div class="weekly-box-table-cell">
-                <p>Dental</p>
-            </div>
-        </div>
+
         <div class="weekly-box-table-row">
             <div class="weekly-box-table-cell weekly-box-table-cell-day">
                 <p>Tuesday</p>
@@ -200,20 +180,7 @@
     </div>
     <!-- Wednesday Schedule -->
     <div id="wednesday" class="weekly-box-table">
-        <div class="weekly-box-table-head">
-            <div class="weekly-box-table-cell weekly-box-table-cell-day">
-                <p>Day</p>
-            </div>
-            <div class="weekly-box-table-cell weekly-box-table-cell-time">
-                <p>Time</p>
-            </div>
-            <div class="weekly-box-table-cell">
-                <p>Medical</p>
-            </div>
-            <div class="weekly-box-table-cell">
-                <p>Dental</p>
-            </div>
-        </div>
+
         <div class="weekly-box-table-row">
             <div class="weekly-box-table-cell weekly-box-table-cell-day">
                 <p>Wednesday</p>
@@ -289,20 +256,7 @@
     </div>
     <!-- Thursday Schedule -->
     <div id="thursday" class="weekly-box-table">
-        <div class="weekly-box-table-head">
-            <div class="weekly-box-table-cell weekly-box-table-cell-day">
-                <p>Day</p>
-            </div>
-            <div class="weekly-box-table-cell weekly-box-table-cell-time">
-                <p>Time</p>
-            </div>
-            <div class="weekly-box-table-cell">
-                <p>Medical</p>
-            </div>
-            <div class="weekly-box-table-cell">
-                <p>Dental</p>
-            </div>
-        </div>
+
         <div class="weekly-box-table-row">
             <div class="weekly-box-table-cell weekly-box-table-cell-day">
                 <p>Thursday</p>
@@ -377,20 +331,7 @@
     </div>
     <!-- Friday Schedule -->
     <div id="friday" class="weekly-box-table">
-        <div class="weekly-box-table-head">
-            <div class="weekly-box-table-cell weekly-box-table-cell-day">
-                <p>Day</p>
-            </div>
-            <div class="weekly-box-table-cell weekly-box-table-cell-time">
-                <p>Time</p>
-            </div>
-            <div class="weekly-box-table-cell">
-                <p>Medical</p>
-            </div>
-            <div class="weekly-box-table-cell">
-                <p>Dental</p>
-            </div>
-        </div>
+
         <div class="weekly-box-table-row">
             <div class="weekly-box-table-cell weekly-box-table-cell-day">
                 <p>Friday</p>
@@ -481,52 +422,4 @@
 
     // By default, show Monday's schedule
     showSchedule('monday');
-</script>
-
-<script>
-function showSchedule(day) {
-    // Hide all schedule tables
-    var scheduleTables = document.querySelectorAll('.weekly-box-table');
-    scheduleTables.forEach(function(table) {
-        table.classList.remove('active');
-    });
-
-    // Show schedule for the selected day
-    var selectedDay = document.getElementById(day);
-    selectedDay.classList.add('active');
-
-    // Update the month and year information
-    updateDate(day);
-}
-
-// Function to update current month, date, and year
-function updateDate(day) {
-    var currentDate = new Date();
-    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    var currentMonth = months[currentDate.getMonth()];
-    var currentDateOfMonth = currentDate.getDate();
-    var currentYear = currentDate.getFullYear();
-
-    // Update the month and year based on the selected day
-    if (day === 'monday') {
-        currentDay = 11;
-    } else if (day === 'tuesday') {
-        currentDay = 12;
-    } else if (day === 'wednesday') {
-        currentDay = 13;
-    } else if (day === 'thursday') {
-        currentDay = 14;
-    } else if (day === 'friday') {
-        currentDay = 15;
-    } else {
-        currentDay = currentDateOfMonth; // If no specific day is selected, keep the current date
-    }
-
-    document.getElementById('current-month').innerText = currentMonth;
-    document.getElementById('current-date').innerText = currentDay;
-    document.getElementById('current-year').innerText = currentYear;
-}
-
-// By default, show Monday's schedule
-showSchedule('monday');
 </script>

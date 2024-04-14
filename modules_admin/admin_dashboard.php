@@ -31,10 +31,83 @@
             include '../components/header_admin.php'; 
         ?>
 
-        <!-- Admin Header -->
-        <?php
-            include '../components/dashboard.php'; 
-        ?>
+        <!-- Calendar -->
+        <section class="dashboard">
+            <h1 class="heading">Dashboard</h1>
+        
+            <div class="box-container">
+                <div class="box">
+                    <h3>Welcome!</h3>
+                    <p><?php echo $user_data['firstName']; ?> <?php echo $user_data['lastName']; ?></p>
+                    <a href="admin_profile_pi.php" class="btn">View Profile</a>
+                </div>
+
+                <div class="box">
+                    <?php
+                        $sql = "SELECT * FROM `qr_code`";
+                        $result = mysqli_query($con, $sql);
+                        if($result){
+                            $num = mysqli_num_rows($result);
+                        }
+                    ?>
+                    <h3><?= $num; ?></h3>
+                    <p>Total Families</p>
+                    <a href="../modules_admin/admin_staff_page.php" class="btn">View Families</a>
+                </div>
+
+                <div class="box">
+                    <?php
+                        $sql = "SELECT * FROM `users`";
+                        $result = mysqli_query($con, $sql);
+                        if($result){
+                            $num = mysqli_num_rows($result);
+                        }
+                    ?>
+                    <h3><?= $num; ?></h3>
+                    <p>Total Users</p>
+                    <a href="../modules_admin/admin_users_page.php" class="btn">View Users</a>
+                </div>
+
+                <div class="box">
+                    <?php
+                        $sql = "SELECT * FROM `admin`";
+                        $result = mysqli_query($con, $sql);
+                        if($result){
+                            $num = mysqli_num_rows($result);
+                        }
+                    ?>
+                    <h3><?= $num; ?></h3>
+                    <p>Total Admins</p>
+                    <a href="../modules_admin/admin_staff_page.php" class="btn">View Admins</a>
+                </div>
+
+                <div class="box">
+                    <?php
+                        $sql = "SELECT * FROM `doctor`";
+                        $result = mysqli_query($con, $sql);
+                        if($result){
+                            $num = mysqli_num_rows($result);
+                        }
+                    ?>
+                    <h3><?= $num; ?></h3>
+                    <p>Total Doctors</p>
+                    <a href="../modules_admin/admin_staff_page.php" class="btn">View Doctors</a>
+                </div>
+
+                <div class="box">
+                    <?php
+                        $sql = "SELECT * FROM `nurse`";
+                        $result = mysqli_query($con, $sql);
+                        if($result){
+                            $num = mysqli_num_rows($result);
+                        }
+                    ?>
+                    <h3><?= $num; ?></h3>
+                    <p>Total Nurses</p>
+                    <a href="../modules_admin/admin_staff_page.php" class="btn">View Nurses</a>
+                </div>
+            </div>
+        </section>
 
         <!-- custom js file link  -->
         <script src="../js/script.js"></script>
