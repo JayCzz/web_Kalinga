@@ -44,7 +44,13 @@ $user_data = check_login($con);
 
         <div class="info">
             <div class="user">
-                <img src="../uploaded_qr/<?php echo $user_data['familyNumber']; ?>" alt="">
+                <?php
+                if ($user_data['image'] == '') {
+                    echo '<img src="../uploaded_img/default_admin.jpg" alt="">';
+                } else {
+                    echo '<img src="../uploaded_img/' . $user_data['image'] . '" alt="">';
+                }
+                ?>
                 <h3><?php echo $user_data['firstName']; ?> <?php echo $user_data['lastName']; ?></h3>
                 <p><?php echo $user_data['familyNumber']; ?></p>
             </div>

@@ -26,6 +26,7 @@ if (isset($_POST['update_profile'])) {
     } else {
         $update_data = "UPDATE users SET firstName='$update_firstName', lastName='$update_lastName', birthday='$update_birthday', age='$update_age', sex='$update_sex'  WHERE id = '$id'";
         mysqli_query($con, $update_data);
+        move_uploaded_file($product_image_tmp_name, $product_image_folder);
         header("Location: citizen_profile_pi.php");
     }
 };
@@ -90,6 +91,11 @@ if (isset($_POST['update_profile'])) {
                     <h4>Sex:</h4>
                 </div>
                 <input type="text" class="box" name="update_sex" value="<?php echo $user_data['sex']; ?>" placeholder="Enter Sex" required>
+
+                <div class="label">
+                    <h4>Profile Picture:</h4>
+                </div>
+                <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
 
                 <div class="label">
                     <h4>Enter Password:</h4>

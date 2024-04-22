@@ -565,28 +565,30 @@ section{
    padding: 2rem;
 }
 
-.dashboard .info .user {
+.dashboard .info .user{
    text-align: center;
    margin-bottom: 2rem;
    padding: 1rem;
 }
 
 .dashboard .info .user img {
-   height: 10rem;
-   width: 10rem;
-   padding: .8rem;
+   height: 11rem;
+   width: 11rem;
+   padding: .1rem;
    background-color: #fff;
-   border: .5rem solid #000;
+   border-radius: 50%; /* Make the image round */
    object-fit: cover;
    margin-bottom: 1rem;
+   border: none; /* Remove the border */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a background shadow */
 }
 
-.dashboard .info .user h3 {
+.dashboard .info .user h3{
    font-size: 2rem;
    color: var(--black);
 }
 
-.dashboard .info .user p {
+.dashboard .info .user p{
    font-size: 1.7rem;
    color: var(--light-color);
    padding: .3rem 0;
