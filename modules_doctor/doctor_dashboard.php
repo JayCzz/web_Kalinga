@@ -38,7 +38,7 @@
             <div class="box-container">
                 <div class="box">
                     <h3>Welcome!</h3>
-                    <a href="#" class="btn"><?php echo $user_data['firstName']; ?> <?php echo $user_data['lastName']; ?></a>
+                    <a href="doctor_profile_pi.php" class="btn"><?php echo $user_data['firstName']; ?> <?php echo $user_data['lastName']; ?></a>
                 </div>
 
                 <div class="box">
@@ -50,7 +50,7 @@
                         }
                     ?>
                     <h3><?= $num; ?></h3>
-                    <a href="#" class="btn">Total Families</a>
+                    <a href="doctor_qr_page.php" class="btn">Total Families</a>
                 </div>
 
                 <div class="box">
@@ -62,7 +62,7 @@
                         }
                     ?>
                     <h3><?= $num; ?></h3>
-                    <a href="#" class="btn">Total Users</a>
+                    <a href="doctor_users_page.php" class="btn">Total Users</a>
                 </div>
 
                 <div class="box">
@@ -74,7 +74,7 @@
                         }
                     ?>
                     <h3><?= $num; ?></h3>
-                    <a href="#" class="btn">Total Admins</a>
+                    <a href="doctor_staff_page.php" class="btn">Total Admins</a>
                 </div>
 
                 <div class="box">
@@ -86,7 +86,7 @@
                         }
                     ?>
                     <h3><?= $num; ?></h3>
-                    <a href="#" class="btn">Total Doctors</a>
+                    <a href="doctor_staff_page.php" class="btn">Total Doctors</a>
                 </div>
 
                 <div class="box">
@@ -98,7 +98,7 @@
                         }
                     ?>
                     <h3><?= $num; ?></h3>
-                    <a href="#" class="btn">Total Nurses</a>
+                    <a href="doctor_staff_page.php" class="btn">Total Nurses</a>
                 </div>
             </div>
         </section>

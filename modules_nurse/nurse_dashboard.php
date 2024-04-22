@@ -39,7 +39,7 @@
                 <div class="box">
                     <h3>Welcome!</h3>
                     <p><?php echo $user_data['firstName']; ?> <?php echo $user_data['lastName']; ?></p>
-                    <a href="profile.php" class="btn">View Profile</a>
+                    <a href="nurse_profile_pi.php" class="btn">View Profile</a>
                 </div>
 
                 <div class="box">
@@ -52,7 +52,7 @@
                     ?>
                     <h3><?= $num; ?></h3>
                     <p>Total Families</p>
-                    <a href="../modules_admin/admin_qr_page.php" class="btn">View Families</a>
+                    <a href="nurse_users_page.php" class="btn">View Families</a>
                 </div>
 
                 <div class="box">

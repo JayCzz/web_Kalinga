@@ -52,7 +52,7 @@
                     ?>
                     <h3><?= $num; ?></h3>
                     <p>Total Families</p>
-                    <a href="../modules_admin/admin_staff_page.php" class="btn">View Families</a>
+                    <a href="../modules_admin/admin_qr_page.php" class="btn">View Families</a>
                 </div>
 
                 <div class="box">
