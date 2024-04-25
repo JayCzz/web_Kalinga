@@ -133,7 +133,7 @@
                 </div>
 
                 <div class="updt">
-                    <a href="nurse_users_update.php?edit=<?php echo $row['id']; ?>" class="inline-btn">update records</a>
+                    <a href="nurse_preconsultation_users_update.php?edit=<?php echo $row['id']; ?>" class="inline-btn">update records</a>
                 </div>
             </div>
         </section>

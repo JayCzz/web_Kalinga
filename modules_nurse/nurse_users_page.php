@@ -60,7 +60,7 @@
 
                                 <td>
                                     <a href="nurse_users_profile_pc.php?edit=<?php echo $row['id']; ?>" class="btns"> <i class="fa fa-eye"></i> See Details </a>
-                                    <a href="nurse_users_update.php?edit=<?php echo $row['id']; ?>" class="btns"> <i class="fas fa-edit"></i> Update </a>
+                                    <a href="nurse_preconsultation_users_update.php?edit=<?php echo $row['id']; ?>" class="btns"> <i class="fas fa-edit"></i> Update </a>
                                 </td>
                             </tr>
                         <?php } ?>

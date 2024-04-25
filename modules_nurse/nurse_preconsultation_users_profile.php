@@ -47,13 +47,6 @@
                     </div>
 
                     <div class="box">
-                        <h3>SEX</h3>
-                        <p>
-                            <?php echo $row['sex']; ?>
-                        </p>
-                    </div>
-
-                    <div class="box">
                         <h3>HEIGHT</h3>
                         <p>
                             <?php
@@ -80,7 +73,11 @@
                             ?>
                         </p>
                     </div>
+            </div>
                     
+            <div class="info">
+                <div class="box-container">
+                   
                     <div class="box">
                         <h3>BLOOD PRESSURE</h3>
                         <p>

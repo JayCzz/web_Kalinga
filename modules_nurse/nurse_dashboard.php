@@ -52,7 +52,7 @@
                     ?>
                     <h3><?= $num; ?></h3>
                     <p>Total Families</p>
-                    <a href="nurse_users_page.php" class="btn">View Families</a>
+                    <a href="nurse_qr_page.php" class="btn">View Families</a>
                 </div>
 
                 <div class="box">
@@ -78,7 +78,7 @@
                     ?>
                     <h3><?= $num; ?></h3>
                     <p>Total Admins</p>
-                    <a href="../modules_admin/admin_qr_page.php" class="btn">View Admins</a>
+                    <a href="../modules_nurse/nurse_staff_page.php" class="btn">View Admins</a>
                 </div>
 
                 <div class="box">
@@ -91,7 +91,7 @@
                     ?>
                     <h3><?= $num; ?></h3>
                     <p>Total Doctors</p>
-                    <a href="../modules_admin/admin_qr_page.php" class="btn">View Doctors</a>
+                    <a href="../modules_nurse/nurse_staff_page.php" class="btn">View Doctors</a>
                 </div>
 
                 <div class="box">
@@ -104,7 +104,7 @@
                     ?>
                     <h3><?= $num; ?></h3>
                     <p>Total Nurses</p>
-                    <a href="nurse_qr_page.php" class="btn">View Nurses</a>
+                    <a href="nurse_staff_page.php" class="btn">View Nurses</a>
                 </div>
             </div>
         </section>

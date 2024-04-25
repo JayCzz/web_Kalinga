@@ -45,7 +45,7 @@ if (isset($_POST['add_product'])) {
     <!-- custom css file link  -->
     <link rel="stylesheet" href="../css/doctor_prescription.css">
 
- 
+
     <!-- -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 
@@ -230,7 +230,9 @@ if (isset($_POST['add_product'])) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- select search bar  -->
 
-
+    <script>
+        $('.select2').select2();
+    </script>
     <?php include '../components/message.php'; ?>
 </body>
 
