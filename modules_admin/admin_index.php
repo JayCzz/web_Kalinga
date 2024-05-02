@@ -27,8 +27,6 @@
         <!-- footer css file link  -->
         <link rel="stylesheet" href="../css/footer.css">
 
-        <!-- footer css file link  -->
-        <link rel="stylesheet" href="../css/footer.css">
     </head>
 
     <body>

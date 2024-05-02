@@ -572,15 +572,13 @@ section{
 }
 
 .dashboard .info .user img {
-   height: 11rem;
-   width: 11rem;
-   padding: .1rem;
+   height: 10rem;
+   width: 10rem;
+   padding:.8rem;
    background-color: #fff;
-   border-radius: 50%; /* Make the image round */
+   border: .5rem solid #000;
    object-fit: cover;
    margin-bottom: 1rem;
-   border: none; /* Remove the border */
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a background shadow */
 }
 
 .dashboard .info .user h3{

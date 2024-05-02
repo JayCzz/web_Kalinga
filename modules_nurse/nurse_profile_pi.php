@@ -34,7 +34,7 @@ $user_data = check_login($con);
     <?php
     include '../components/header_nurse.php';
     ?>
-    =
+
     <!-- -->
     <section class="dashboard">
         <h1 class="heading">Your Profile</h1>

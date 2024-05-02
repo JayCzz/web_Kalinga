@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
 
         <!-- custom css file link  -->
-        <link rel="stylesheet" href="../css/doctor_consultation.css">
+        <link rel="stylesheet" href="../css/doctor_prescription.css">
     </head>
 
     <body>

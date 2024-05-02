@@ -1,3 +1,25 @@
+<style>
+    .user {
+        text-align: center;
+
+    }
+
+    .user img {
+        height: 9.5rem;
+        width: 9.5rem;
+        padding: .1rem;
+        background-color: #fff;
+        border-radius: 50%;
+        /* Make the image round */
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: none;
+        /* Remove the border */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        /* Add a background shadow */
+    }
+</style>
+
 <!-- header section starts -->
 <header class="header">
     <section class="flex">

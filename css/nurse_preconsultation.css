@@ -246,22 +246,24 @@ section{
    display: none;
 }
 
-.user{
+.user {
    text-align: center;
-   margin-bottom: 2rem;
-   padding: 1rem;
+
 }
 
 .user img {
-   height: 11rem;
-   width: 11rem;
+   height: 9.5rem;
+   width: 9.5rem;
    padding: .1rem;
    background-color: #fff;
-   border-radius: 50%; /* Make the image round */
+   border-radius: 50%;
+   /* Make the image round */
    object-fit: cover;
    margin-bottom: 1rem;
-   border: none; /* Remove the border */
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a background shadow */
+   border: none;
+   /* Remove the border */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   /* Add a background shadow */
 }
 
 .user h3{

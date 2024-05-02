@@ -66,8 +66,6 @@ $user_data = check_login($con);
                         <h3>Account Info</h3>
                     </a>
                 </div>
-
-
             </div>
 
             <div class="details">
